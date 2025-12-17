@@ -376,9 +376,40 @@ CREATE TABLE RECIPE_INGREDIENTS (
 
 ---
 
-## 14-15. COMMENTS 和 COMMENT_HELPFULNESS 表
+## 14. COMMENTS 表（评论表）
 
-类似的设计，COMMENT_HELPFULNESS 采用 **(COMMENT_ID, USER_ID)** 联合主键
+**用途**：存储用户对食谱的评论，支持嵌套回复
+
+**表结构**：
+
+| 字段名 | 数据类型 | 非空 | 主键 | 约束 | 说明 |
+|--------|---------|------|------|------|------|
+| COMMENT_ID | NUMBER(10) | ✓ | ✓ | PK | 评论唯一标识 |
+| RECIPE_ID | NUMBER(10) | ✓ | | FK | 食谱ID（外键） |
+| USER_ID | NUMBER(10) | ✓ | | FK | 评论者用户ID |
+| PARENT_COMMENT_ID | NUMBER(10) | | | FK | 父评论ID（自引用） |
+| COMMENT_TEXT | VARCHAR2(1000) | | | | 评论内容 |
+| IS_DELETED | VARCHAR2(1) | | | DF='N' | 逻辑删除标记 |
+| CREATED_AT | TIMESTAMP | | | DF=SYSTIMESTAMP | 创建时间 |
+| UPDATED_AT | TIMESTAMP | | | DF=SYSTIMESTAMP | 更新时间 |
+
+---
+
+## 15. COMMENT_HELPFULNESS 表（评论有用性投票表）
+
+**用途**：用户对其他用户的评论进行"有用"投票
+
+**表结构**：
+
+| 字段名 | 数据类型 | 非空 | 主键 | 约束 | 说明 |
+|--------|---------|------|------|------|------|
+| COMMENT_ID | NUMBER(10) | ✓ | ✓ | PK, FK | 被投票的评论ID |
+| USER_ID | NUMBER(10) | ✓ | ✓ | PK, FK | 投票者用户ID |
+| VOTED_AT | TIMESTAMP | | | DF=SYSTIMESTAMP | 投票时间 |
+
+**v3.0 变更说明**：
+- 移除代理主键 `HELPFUL_ID`
+- 采用 `(COMMENT_ID, USER_ID)` 复合主键
 
 ---
 
