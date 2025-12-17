@@ -153,19 +153,20 @@ CREATE TABLE RECIPE_INGREDIENTS (
 
 -- 表8：COOKING_STEPS（烹饪步骤表）
 CREATE TABLE COOKING_STEPS (
-    step_id NUMBER(10) PRIMARY KEY,
+    step_id NUMBER(10),
     recipe_id NUMBER(10) NOT NULL,
     step_number NUMBER(5) NOT NULL,
     instruction VARCHAR2(1000) NOT NULL,
     time_required NUMBER(5),
     image_url VARCHAR2(255),
+    PRIMARY KEY (step_id, recipe_id),
     CONSTRAINT fk_cs_recipe FOREIGN KEY (recipe_id) REFERENCES RECIPES(recipe_id) ON DELETE CASCADE,
     CONSTRAINT uk_recipe_step UNIQUE (recipe_id, step_number)
 );
 
 -- 表9：NUTRITION_INFO（营养信息表）
 CREATE TABLE NUTRITION_INFO (
-    nutrition_id NUMBER(10) PRIMARY KEY,
+    nutrition_id NUMBER(10),
     recipe_id NUMBER(10) NOT NULL UNIQUE,
     calories NUMBER(10),
     protein_grams NUMBER(10,2),
@@ -174,6 +175,7 @@ CREATE TABLE NUTRITION_INFO (
     fiber_grams NUMBER(10,2),
     sugar_grams NUMBER(10,2),
     sodium_mg NUMBER(10),
+    PRIMARY KEY (nutrition_id, recipe_id),
     CONSTRAINT fk_ni_recipe FOREIGN KEY (recipe_id) REFERENCES RECIPES(recipe_id) ON DELETE CASCADE
 );
 

@@ -53,4 +53,4 @@
 | **规划与购物** | **MEAL_PLAN_SUMMARY**<br>(计划摘要) | **膳食管理**。<br>统计膳食计划的天数、食谱数及覆盖时段。 | Meal_Plans, Meal_Plan_Entries |
 | | **CONSOLIDATED_SHOPPING_LIST**<br>(购物清单) | **工具功能**。<br>合并膳食计划中所有食谱的食材，自动汇总同类食材数量。 | Meal_Plans, Ingredients |
 | **分析报表** | **RECIPE_QUALITY_METRICS**<br>(质量指标) | **后台审核**。<br>多维度评估食谱质量（图片、步骤完整度、互动率）。 | Recipes, Comments, Steps |
-| | **MONTHLY_STATISTICS**<br>(月度统计) | **管理驾驶舱**。<br>按月统计新增食谱、活跃用户及互动总量。 | Recipes, Ratings, Comments |
+| | **MONTHLY_STATISTICS**<br>(月度统计) | **管理驾驶舱**。<br>按月统计
