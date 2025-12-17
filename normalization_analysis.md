@@ -10,289 +10,243 @@
 
 ---
 
-## 2. 核心基础表分析
+1. **USERS** (<u>user_id</u>, username, email, password_hash, first_name, last_name, bio, profile_image, join_date, last_login, account_status, total_followers, total_recipes, created_at, updated_at)
 
-### 2.1 USERS (用户表)
-*   **属性**：USER_ID, USERNAME, EMAIL, PASSWORD_HASH, FIRST_NAME, LAST_NAME, BIO, PROFILE_IMAGE, JOIN_DATE, LAST_LOGIN, ACCOUNT_STATUS, TOTAL_FOLLOWERS, TOTAL_RECIPES, CREATED_AT, UPDATED_AT
-*   **候选键**：
-    1.  {USER_ID} (主键)
-    2.  {USERNAME} (唯一键)
-    3.  {EMAIL} (唯一键)
-*   **函数依赖**：
-    *   USER_ID → {所有其他属性}
-    *   USERNAME → {所有其他属性}
-    *   EMAIL → {所有其他属性}
-*   **BCNF 分析**：
-    *   所有非平凡函数依赖的左部（决定因素）USER_ID, USERNAME, EMAIL 均为候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{USER_ID} (主键)，{USERNAME} (唯一键)，{EMAIL} (唯一键)
+**函数依赖**：
+USER_ID → {所有其他属性}，USERNAME → {所有其他属性}，EMAIL → {所有其他属性}
+**BCNF 分析**：
+所有非平凡函数依赖的左部（决定因素）USER_ID, USERNAME, EMAIL 均为候选键。符合BCNF。
 
-### 2.2 INGREDIENTS (食材表)
-*   **属性**：INGREDIENT_ID, INGREDIENT_NAME, CATEGORY, DESCRIPTION, CREATED_AT
-*   **候选键**：
-    1.  {INGREDIENT_ID} (主键)
-    2.  {INGREDIENT_NAME} (唯一键)
-*   **函数依赖**：
-    *   INGREDIENT_ID → {所有其他属性}
-    *   INGREDIENT_NAME → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素均为候选键。
-    *   **结论**：符合 BCNF。
+2. **INGREDIENTS** (<u>ingredient_id</u>, ingredient_name, category, description, created_at)
 
-### 2.3 UNITS (单位表)
-*   **属性**：UNIT_ID, UNIT_NAME, ABBREVIATION, DESCRIPTION, CREATED_AT
-*   **候选键**：
-    1.  {UNIT_ID} (主键)
-    2.  {UNIT_NAME} (唯一键)
-*   **函数依赖**：
-    *   UNIT_ID → {所有其他属性}
-    *   UNIT_NAME → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素均为候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{INGREDIENT_ID} (主键)，{INGREDIENT_NAME} (唯一键)
+**函数依赖**：
+INGREDIENT_ID → {所有其他属性}，INGREDIENT_NAME → {所有其他属性}
+**BCNF 分析**：
+决定因素均为候选键。符合 BCNF。
 
-### 2.4 ALLERGENS (过敏原表)
-*   **属性**：ALLERGEN_ID, ALLERGEN_NAME, DESCRIPTION, CREATED_AT
-*   **候选键**：
-    1.  {ALLERGEN_ID} (主键)
-    2.  {ALLERGEN_NAME} (唯一键)
-*   **函数依赖**：
-    *   ALLERGEN_ID → {所有其他属性}
-    *   ALLERGEN_NAME → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素均为候选键。
-    *   **结论**：符合 BCNF。
+3. **UNITS** (<u>unit_id</u>, unit_name, abbreviation, description, created_at)
 
-### 2.5 TAGS (标签表)
-*   **属性**：TAG_ID, TAG_NAME, TAG_DESCRIPTION, CREATED_AT
-*   **候选键**：
-    1.  {TAG_ID} (主键)
-    2.  {TAG_NAME} (唯一键)
-*   **函数依赖**：
-    *   TAG_ID → {所有其他属性}
-    *   TAG_NAME → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素均为候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{UNIT_ID} (主键)，{UNIT_NAME} (唯一键)
+**函数依赖**：
+UNIT_ID → {所有其他属性}，UNIT_NAME → {所有其他属性}
+**BCNF 分析**：
+决定因素均为候选键。符合 BCNF。
 
----
+4. **ALLERGENS** (<u>allergen_id</u>, allergen_name, description, created_at)
 
-## 3. 食谱核心表分析
+**候选键**：
+{ALLERGEN_ID} (主键)，{ALLERGEN_NAME} (唯一键)
+**函数依赖**：
+ALLERGEN_ID → {所有其他属性}，ALLERGEN_NAME → {所有其他属性}
+**BCNF 分析**：
+决定因素均为候选键。符合 BCNF。
 
-### 3.1 RECIPES (食谱表)
-*   **属性**：RECIPE_ID, USER_ID, RECIPE_NAME, DESCRIPTION, CUISINE_TYPE, MEAL_TYPE, DIFFICULTY_LEVEL, PREP_TIME, COOK_TIME, TOTAL_TIME, SERVINGS, CALORIES_PER_SERVING, IMAGE_URL, IS_PUBLISHED, IS_DELETED, VIEW_COUNT, RATING_COUNT, AVERAGE_RATING, CREATED_AT, UPDATED_AT
-*   **候选键**：{RECIPE_ID}
-*   **函数依赖**：
-    *   RECIPE_ID → {所有其他属性}
-    *   注意：USER_ID 是外键，但不是候选键（一个用户可以创建多个食谱）。
-*   **BCNF 分析**：
-    *   唯一的决定因素 RECIPE_ID 是候选键。
-    *   **结论**：符合 BCNF。
+5. **TAGS** (<u>tag_id</u>, tag_name, tag_description, created_at)
 
-### 3.2 RECIPE_INGREDIENTS (食谱食材关联表)
-*   **属性**：RECIPE_ID, INGREDIENT_ID, UNIT_ID, QUANTITY, NOTES, ADDED_AT
-*   **候选键**：{RECIPE_ID, INGREDIENT_ID} (联合主键)
-*   **函数依赖**：
-    *   {RECIPE_ID, INGREDIENT_ID} → UNIT_ID, QUANTITY, NOTES, ADDED_AT
-    *   这里不存在部分依赖（如 RECIPE_ID → QUANTITY 不成立，因为不同食材数量不同）。
-    *   也不存在传递依赖。
-*   **BCNF 分析**：
-    *   决定因素 {RECIPE_ID, INGREDIENT_ID} 是候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{TAG_ID} (主键)，{TAG_NAME} (唯一键)
+**函数依赖**：
+TAG_ID → {所有其他属性}，TAG_NAME → {所有其他属性}
+**BCNF 分析**：
+决定因素均为候选键。符合 BCNF。
 
-### 3.3 COOKING_STEPS (烹饪步骤表)
-*   **属性**：STEP_ID, RECIPE_ID, STEP_NUMBER, INSTRUCTION, TIME_REQUIRED, IMAGE_URL
-*   **候选键**：
-    1.  {STEP_ID} (主键)
-    2.  {RECIPE_ID, STEP_NUMBER} (业务上的唯一键)
-*   **函数依赖**：
-    *   STEP_ID → {所有其他属性}
-    *   {RECIPE_ID, STEP_NUMBER} → {所有其他属性}
-*   **BCNF 分析**：
-    *   两个决定因素均为候选键。
-    *   **结论**：符合 BCNF。
+6. **RECIPES** (<u>recipe_id</u>, user_id, recipe_name, description, cuisine_type, meal_type, difficulty_level, prep_time, cook_time, total_time, servings, calories_per_serving, image_url, is_published, is_deleted, view_count, rating_count, average_rating, created_at, updated_at)
 
-### 3.4 NUTRITION_INFO (营养信息表)
-*   **属性**：NUTRITION_ID, RECIPE_ID, CALORIES, PROTEIN_GRAMS, CARBS_GRAMS, FAT_GRAMS, FIBER_GRAMS, SUGAR_GRAMS, SODIUM_MG
-*   **候选键**：
-    1.  {NUTRITION_ID} (主键)
-    2.  {RECIPE_ID} (唯一键，一对一关系)
-*   **函数依赖**：
-    *   NUTRITION_ID → {所有其他属性}
-    *   RECIPE_ID → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素均为候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{RECIPE_ID} (主键)
+**函数依赖**：
+RECIPE_ID → {所有其他属性}
+**BCNF 分析**：
+唯一的决定因素 RECIPE_ID 是候选键。符合 BCNF。
 
-### 3.5 INGREDIENT_ALLERGENS (食材过敏原关联表)
-*   **属性**：INGREDIENT_ID, ALLERGEN_ID
-*   **候选键**：{INGREDIENT_ID, ALLERGEN_ID}
-*   **函数依赖**：
-    *   这是全键表，只有平凡函数依赖。
-*   **BCNF 分析**：
-    *   没有非平凡函数依赖。
-    *   **结论**：符合 BCNF。
+7. **RECIPE_INGREDIENTS** (<u>recipe_id</u>, <u>ingredient_id</u>, unit_id, quantity, notes, added_at)
 
-### 3.6 INGREDIENT_SUBSTITUTIONS (食材替代品关联表)
-*   **属性**：ORIGINAL_INGREDIENT_ID, SUBSTITUTE_INGREDIENT_ID, SUBSTITUTION_RATIO, NOTES, ADDED_AT
-*   **候选键**：{ORIGINAL_INGREDIENT_ID, SUBSTITUTE_INGREDIENT_ID}
-*   **函数依赖**：
-    *   {ORIGINAL_INGREDIENT_ID, SUBSTITUTE_INGREDIENT_ID} → SUBSTITUTION_RATIO, NOTES, ADDED_AT
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{RECIPE_ID, INGREDIENT_ID} (联合主键)
+**函数依赖**：
+{RECIPE_ID, INGREDIENT_ID} → {UNIT_ID, QUANTITY, NOTES, ADDED_AT}
+**BCNF 分析**：
+决定因素 {RECIPE_ID, INGREDIENT_ID} 是候选键。不存在部分依赖或传递依赖。符合 BCNF。
 
----
+8. **COOKING_STEPS** (<u>step_id</u>, recipe_id, step_number, instruction, time_required, image_url)
 
-## 4. 用户交互表分析
+**候选键**：
+{STEP_ID} (主键)，{RECIPE_ID, STEP_NUMBER} (业务唯一键)
+**函数依赖**：
+STEP_ID → {所有其他属性}，{RECIPE_ID, STEP_NUMBER} → {所有其他属性}
+**BCNF 分析**：
+两个决定因素均为候选键。符合 BCNF。
 
-### 4.1 RATINGS (食谱评价表)
-*   **属性**：RATING_ID, USER_ID, RECIPE_ID, RATING_VALUE, REVIEW_TEXT, RATING_DATE
-*   **候选键**：
-    1.  {RATING_ID} (主键)
-    2.  {USER_ID, RECIPE_ID} (唯一键)
-*   **函数依赖**：
-    *   RATING_ID → {所有其他属性}
-    *   {USER_ID, RECIPE_ID} → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素均为候选键。
-    *   **结论**：符合 BCNF。
+9. **NUTRITION_INFO** (<u>nutrition_id</u>, recipe_id, calories, protein_grams, carbs_grams, fat_grams, fiber_grams, sugar_grams, sodium_mg)
 
-### 4.2 RATING_HELPFULNESS (评价有用性投票表)
-*   **属性**：RATING_ID, USER_ID, HELPFUL_VOTES, VOTED_AT
-*   **候选键**：{RATING_ID, USER_ID}
-*   **函数依赖**：
-    *   {RATING_ID, USER_ID} → HELPFUL_VOTES, VOTED_AT
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{NUTRITION_ID} (主键)，{RECIPE_ID} (唯一键)
+**函数依赖**：
+NUTRITION_ID → {所有其他属性}，RECIPE_ID → {所有其他属性}
+**BCNF 分析**：
+决定因素均为候选键。符合 BCNF。
 
-### 4.3 COMMENTS (评论表)
-*   **属性**：COMMENT_ID, RECIPE_ID, USER_ID, PARENT_COMMENT_ID, COMMENT_TEXT, IS_DELETED, CREATED_AT, UPDATED_AT
-*   **候选键**：{COMMENT_ID}
-*   **函数依赖**：
-    *   COMMENT_ID → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+10. **INGREDIENT_ALLERGENS** (<u>ingredient_id</u>, <u>allergen_id</u>)
 
-### 4.4 COMMENT_HELPFULNESS (评论有用性投票表)
-*   **属性**：COMMENT_ID, USER_ID, VOTED_AT
-*   **候选键**：{COMMENT_ID, USER_ID}
-*   **函数依赖**：
-    *   {COMMENT_ID, USER_ID} → VOTED_AT
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{INGREDIENT_ID, ALLERGEN_ID} (联合主键)
+**函数依赖**：
+无非平凡函数依赖（全键表）。
+**BCNF 分析**：
+没有非平凡函数依赖。符合 BCNF。
 
-### 4.5 SAVED_RECIPES (收藏食谱表)
-*   **属性**：SAVED_RECIPE_ID, USER_ID, RECIPE_ID, SAVED_AT
-*   **候选键**：
-    1.  {SAVED_RECIPE_ID} (主键)
-    2.  {USER_ID, RECIPE_ID} (唯一键)
-*   **函数依赖**：
-    *   SAVED_RECIPE_ID → {所有其他属性}
-    *   {USER_ID, RECIPE_ID} → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素均为候选键。
-    *   **结论**：符合 BCNF。
+11. **INGREDIENT_SUBSTITUTIONS** (<u>original_ingredient_id</u>, <u>substitute_ingredient_id</u>, substitution_ratio, notes, added_at)
 
-### 4.6 FOLLOWERS (用户关注关系表)
-*   **属性**：USER_ID, FOLLOWER_USER_ID, FOLLOWED_AT
-*   **候选键**：{USER_ID, FOLLOWER_USER_ID}
-*   **函数依赖**：
-    *   {USER_ID, FOLLOWER_USER_ID} → FOLLOWED_AT
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{ORIGINAL_INGREDIENT_ID, SUBSTITUTE_INGREDIENT_ID} (联合主键)
+**函数依赖**：
+{ORIGINAL_INGREDIENT_ID, SUBSTITUTE_INGREDIENT_ID} → {SUBSTITUTION_RATIO, NOTES, ADDED_AT}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
 
-### 4.7 USER_ALLERGIES (用户过敏原关联表)
-*   **属性**：USER_ID, ALLERGEN_ID, ADDED_AT
-*   **候选键**：{USER_ID, ALLERGEN_ID}
-*   **函数依赖**：
-    *   {USER_ID, ALLERGEN_ID} → ADDED_AT
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+12. **RATINGS** (<u>rating_id</u>, user_id, recipe_id, rating_value, review_text, rating_date)
 
-### 4.8 RECIPE_TAGS (食谱标签关联表)
-*   **属性**：RECIPE_ID, TAG_ID, ADDED_AT
-*   **候选键**：{RECIPE_ID, TAG_ID}
-*   **函数依赖**：
-    *   {RECIPE_ID, TAG_ID} → ADDED_AT
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{RATING_ID} (主键)，{USER_ID, RECIPE_ID} (唯一键)
+**函数依赖**：
+RATING_ID → {所有其他属性}，{USER_ID, RECIPE_ID} → {所有其他属性}
+**BCNF 分析**：
+决定因素均为候选键。符合 BCNF。
 
-### 4.9 USER_ACTIVITY_LOG (用户活动日志表)
-*   **属性**：ACTIVITY_ID, USER_ID, ACTIVITY_TYPE, RECIPE_ID, ACTIVITY_DESCRIPTION, ACTIVITY_DATE
-*   **候选键**：{ACTIVITY_ID}
-*   **函数依赖**：
-    *   ACTIVITY_ID → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+13. **RATING_HELPFULNESS** (<u>rating_id</u>, <u>user_id</u>, helpful_votes, voted_at)
 
----
+**候选键**：
+{RATING_ID, USER_ID} (联合主键)
+**函数依赖**：
+{RATING_ID, USER_ID} → {HELPFUL_VOTES, VOTED_AT}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
 
-## 5. 个人管理表分析
+14. **COMMENTS** (<u>comment_id</u>, recipe_id, user_id, parent_comment_id, comment_text, is_deleted, created_at, updated_at)
 
-### 5.1 RECIPE_COLLECTIONS (食谱收藏清单表)
-*   **属性**：COLLECTION_ID, USER_ID, COLLECTION_NAME, DESCRIPTION, IS_PUBLIC, CREATED_AT, UPDATED_AT
-*   **候选键**：{COLLECTION_ID}
-*   **函数依赖**：
-    *   COLLECTION_ID → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{COMMENT_ID} (主键)
+**函数依赖**：
+COMMENT_ID → {所有其他属性}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
 
-### 5.2 COLLECTION_RECIPES (清单食谱关联表)
-*   **属性**：COLLECTION_ID, RECIPE_ID, ADDED_AT
-*   **候选键**：{COLLECTION_ID, RECIPE_ID}
-*   **函数依赖**：
-    *   {COLLECTION_ID, RECIPE_ID} → ADDED_AT
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+15. **COMMENT_HELPFULNESS** (<u>comment_id</u>, <u>user_id</u>, voted_at)
 
-### 5.3 SHOPPING_LISTS (购物清单表)
-*   **属性**：LIST_ID, USER_ID, LIST_NAME, CREATED_AT, UPDATED_AT
-*   **候选键**：{LIST_ID}
-*   **函数依赖**：
-    *   LIST_ID → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{COMMENT_ID, USER_ID} (联合主键)
+**函数依赖**：
+{COMMENT_ID, USER_ID} → {VOTED_AT}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
 
-### 5.4 SHOPPING_LIST_ITEMS (购物清单项目表)
-*   **属性**：LIST_ID, INGREDIENT_ID, QUANTITY, UNIT_ID, IS_CHECKED, ADDED_AT
-*   **候选键**：{LIST_ID, INGREDIENT_ID}
-*   **函数依赖**：
-    *   {LIST_ID, INGREDIENT_ID} → QUANTITY, UNIT_ID, IS_CHECKED, ADDED_AT
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+16. **SAVED_RECIPES** (<u>saved_recipe_id</u>, user_id, recipe_id, saved_at)
 
-### 5.5 MEAL_PLANS (膳食计划表)
-*   **属性**：PLAN_ID, USER_ID, PLAN_NAME, DESCRIPTION, START_DATE, END_DATE, IS_PUBLIC, CREATED_AT, UPDATED_AT
-*   **候选键**：{PLAN_ID}
-*   **函数依赖**：
-    *   PLAN_ID → {所有其他属性}
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+**候选键**：
+{SAVED_RECIPE_ID} (主键)，{USER_ID, RECIPE_ID} (唯一键)
+**函数依赖**：
+SAVED_RECIPE_ID → {所有其他属性}，{USER_ID, RECIPE_ID} → {所有其他属性}
+**BCNF 分析**：
+决定因素均为候选键。符合 BCNF。
 
-### 5.6 MEAL_PLAN_ENTRIES (膳食计划条目表)
-*   **属性**：PLAN_ID, RECIPE_ID, MEAL_DATE, MEAL_TYPE, NOTES, ADDED_AT
-*   **候选键**：{PLAN_ID, RECIPE_ID, MEAL_DATE}
-*   **函数依赖**：
-    *   {PLAN_ID, RECIPE_ID, MEAL_DATE} → MEAL_TYPE, NOTES, ADDED_AT
-*   **BCNF 分析**：
-    *   决定因素是候选键。
-    *   **结论**：符合 BCNF。
+17. **FOLLOWERS** (<u>user_id</u>, <u>follower_user_id</u>, followed_at)
+
+**候选键**：
+{USER_ID, FOLLOWER_USER_ID} (联合主键)
+**函数依赖**：
+{USER_ID, FOLLOWER_USER_ID} → {FOLLOWED_AT}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
+
+18. **USER_ALLERGIES** (<u>user_id</u>, <u>allergen_id</u>, added_at)
+
+**候选键**：
+{USER_ID, ALLERGEN_ID} (联合主键)
+**函数依赖**：
+{USER_ID, ALLERGEN_ID} → {ADDED_AT}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
+
+19. **RECIPE_TAGS** (<u>recipe_id</u>, <u>tag_id</u>, added_at)
+
+**候选键**：
+{RECIPE_ID, TAG_ID} (联合主键)
+**函数依赖**：
+{RECIPE_ID, TAG_ID} → {ADDED_AT}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
+
+20. **USER_ACTIVITY_LOG** (<u>activity_id</u>, user_id, activity_type, recipe_id, activity_description, activity_date)
+
+**候选键**：
+{ACTIVITY_ID} (主键)
+**函数依赖**：
+ACTIVITY_ID → {所有其他属性}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
+
+21. **RECIPE_COLLECTIONS** (<u>collection_id</u>, user_id, collection_name, description, is_public, created_at, updated_at)
+
+**候选键**：
+{COLLECTION_ID} (主键)
+**函数依赖**：
+COLLECTION_ID → {所有其他属性}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
+
+22. **COLLECTION_RECIPES** (<u>collection_id</u>, <u>recipe_id</u>, added_at)
+
+**候选键**：
+{COLLECTION_ID, RECIPE_ID} (联合主键)
+**函数依赖**：
+{COLLECTION_ID, RECIPE_ID} → {ADDED_AT}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
+
+23. **SHOPPING_LISTS** (<u>list_id</u>, user_id, list_name, created_at, updated_at)
+
+**候选键**：
+{LIST_ID} (主键)
+**函数依赖**：
+LIST_ID → {所有其他属性}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
+
+24. **SHOPPING_LIST_ITEMS** (<u>list_id</u>, <u>ingredient_id</u>, quantity, unit_id, is_checked, added_at)
+
+**候选键**：
+{LIST_ID, INGREDIENT_ID} (联合主键)
+**函数依赖**：
+{LIST_ID, INGREDIENT_ID} → {QUANTITY, UNIT_ID, IS_CHECKED, ADDED_AT}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
+
+25. **MEAL_PLANS** (<u>plan_id</u>, user_id, plan_name, description, start_date, end_date, is_public, created_at, updated_at)
+
+**候选键**：
+{PLAN_ID} (主键)
+**函数依赖**：
+PLAN_ID → {所有其他属性}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
+
+26. **MEAL_PLAN_ENTRIES** (<u>plan_id</u>, <u>recipe_id</u>, <u>meal_date</u>, meal_type, notes, added_at)
+
+**候选键**：
+{PLAN_ID, RECIPE_ID, MEAL_DATE} (联合主键)
+**函数依赖**：
+{PLAN_ID, RECIPE_ID, MEAL_DATE} → {MEAL_TYPE, NOTES, ADDED_AT}
+**BCNF 分析**：
+决定因素是候选键。符合 BCNF。
 
 ---
 
-## 6. 总结
+## 总结
 
 经过对 AllRecipes 数据库逻辑模型中 26 个表的详细分析，所有表均符合 BCNF 规范。
 
