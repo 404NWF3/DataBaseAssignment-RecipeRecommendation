@@ -20,7 +20,7 @@
 
 AllRecipes 是全球最大的食谱分享平台之一，拥有数百万用户和数百万条食谱。该网站以其用户友好的界面、丰富的食谱内容和强大的社区功能而闻名。
 
-![AllRecipe-Index](image-1.png)!
+![AllRecipe-Index](image-1.png)
 
 ### 核心业务功能
 
