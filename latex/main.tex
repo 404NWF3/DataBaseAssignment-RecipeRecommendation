@@ -1,0 +1,184 @@
+\documentclass[a4paper,12pt]{ctexart}
+
+% --- 宏包引入 ---
+\usepackage{geometry}       % 页面边距设置
+\usepackage{graphicx}       % 图片支持
+\usepackage{float}          % 图片/表格浮动控制
+\usepackage{booktabs}       % 三线表支持 (toprule, midrule, bottomrule)
+\usepackage{tabularx}       % 自动宽度的表格
+\usepackage{longtable}      % 跨页长表格
+\usepackage{listings}       % 代码高亮
+\usepackage{xcolor}         % 颜色支持
+\usepackage{fancyhdr}       % 页眉页脚
+\usepackage{titlesec}       % 标题格式自定义
+\usepackage{hyperref}       % 超链接和书签
+
+% --- 页面设置 ---
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{食谱推荐网站数据库方案设计与实现}
+\fancyfoot[C]{\thepage}
+
+% --- 代码高亮设置 (SQL) ---
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{
+    language=SQL,
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    frame=single
+}
+
+% --- 自定义命令 ---
+% 用于快速生成数据库表结构的命令
+\newcommand{\dbtableheader}{
+    \toprule
+    \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{主键} & \textbf{说明} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endfoot
+}
+
+\begin{document}
+
+% ==================== 封面部分 (还原封面.doc) ====================
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    
+    {\Huge \textbf{综合实验报告}} \\
+    \vspace{2cm}
+    
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{rl}
+        \textbf{\large 实~验~名~称：} & \underline{\makebox[9cm]{食谱推荐网站数据库方案设计与实现}} \\
+        \textbf{\large 实验项目类型：} & \underline{\makebox[9cm]{综合实验—学期项目}} \\
+        \textbf{\large 实~~验~~室：} & \underline{\makebox[9cm]{云计算研究中心实验室520}} \\
+        \textbf{\large 所属课程名称：} & \underline{\makebox[9cm]{《数据库》}} \\
+        \textbf{\large 实~验~日~期：} & \underline{\makebox[9cm]{2025.9 ---- 2025.12}} \\
+    \end{tabular}
+    
+    \vspace{2cm}
+    
+    \begin{tabular}{rl}
+        \textbf{\large 小组成员（签名）：} & \underline{\makebox[9cm]{（在此填入组员姓名）}} \\
+        \textbf{\large 课程序号：} & \underline{\makebox[9cm]{}} \\
+        \textbf{\large 成~~~~~绩：} & \underline{\makebox[9cm]{}} \\
+    \end{tabular}
+
+    \vfill
+    {\large \textbf{【实验环境】} Oracle 11g 或更高版本} \\
+    \vspace{1cm}
+    \today
+\end{titlepage}
+
+% ==================== 目录 ====================
+\tableofcontents
+\newpage
+
+% ==================== 正文部分 ====================
+
+\section{设计部分}
+
+\subsection{项目背景介绍}
+AllRecipes是全球最大的食谱分享平台之一，拥有数百万用户和数百万条食谱。该网站以其用户友好的界面、丰富的食谱内容和强大的社区功能而闻名。
+
+核心业务数据包括：
+\begin{itemize}
+    \item \textbf{用户（Users）：} 平台使用者
+    \item \textbf{食谱（Recipes）：} 烹饪菜谱
+    \item \textbf{食材（Ingredients）：} 烹饪所需原料
+    \item \dots （此处省略其他业务对象，请自行补充）
+\end{itemize}
+
+\subsection{ER图设计（概念模型）}
+% 插入ER图的示例代码，请确保 figures 文件夹下有图片
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=1.0\textwidth]{figures/er_diagram.png} 
+    \fbox{\parbox{10cm}{\centering [此处插入 ER 图] \\ 请替换代码中的图片路径}}
+    \caption{AllRecipes 数据库概念模型 (ER图)}
+    \label{fig:er_diagram}
+\end{figure}
+
+\subsection{数据库库表设计（逻辑模型）}
+本项目严格遵循 BCNF 规范。
+
+\subsection{表的详细设计（物理模型）}
+本系统共包含 26 张表。以下是核心表的详细设计：
+
+% 示例：使用 longtable 处理长表格，即使跨页也能显示表头
+% 这里展示 USERS 表的迁移效果
+\begin{longtable}{p{3cm} p{3cm} c c p{4cm}}
+    \caption{USERS 表（用户表）} \label{tab:users} \\
+    \dbtableheader
+    
+    USER\_ID & NUMBER(10) & $\checkmark$ & $\checkmark$ & 用户唯一标识，自增 \\
+    USERNAME & VARCHAR2(50) & $\checkmark$ & & 用户名，唯一 \\
+    EMAIL & VARCHAR2(100) & $\checkmark$ & & 邮箱，唯一 \\
+    PASSWORD\_HASH & VARCHAR2(255) & $\checkmark$ & & 加密后的密码哈希值 \\
+    ACCOUNT\_STATUS & VARCHAR2(20) & $\checkmark$ & & 状态(active/suspended) \\
+    CREATED\_AT & TIMESTAMP & $\checkmark$ & & 创建时间 (Default: SYSDATE) \\
+    
+\end{longtable}
+
+\section{实现部分}
+
+\subsection{表格创建}
+以下是部分核心表的创建语句，包含完整性约束：
+
+\begin{lstlisting}[caption={用户表创建脚本}]
+CREATE TABLE USERS (
+    user_id NUMBER(10) PRIMARY KEY,
+    username VARCHAR2(50) NOT NULL UNIQUE,
+    email VARCHAR2(100) NOT NULL UNIQUE,
+    password_hash VARCHAR2(255) NOT NULL,
+    account_status VARCHAR2(20) DEFAULT 'active' 
+        CHECK (account_status IN ('active', 'inactive', 'suspended')),
+    created_at TIMESTAMP DEFAULT SYSDATE
+);
+\end{lstlisting}
+
+\subsection{视图设计方案}
+系统设计了多张视图以支持业务查询，例如 \texttt{RECIPE\_DETAIL} 视图。
+
+\subsection{数据库安全的实现}
+\begin{itemize}
+    \item \textbf{应用用户 (APP\_USER)}: 拥有业务数据的增删改查权限。
+    \item \textbf{管理员 (DBA\_ADMIN)}: 拥有 DBA 最高权限。
+\end{itemize}
+
+\begin{lstlisting}[caption={创建用户及赋权}]
+-- 创建应用用户
+CREATE USER app_user IDENTIFIED BY "SecureP@ss123";
+GRANT CONNECT, RESOURCE TO app_user;
+
+-- 限制某些用户无法看到密码哈希
+GRANT SELECT(user_id, username, email) ON USERS TO report_user;
+\end{lstlisting}
+
+\section{总结}
+\subsection{组员分工}
+\subsection{难点与不足分析}
+\subsection{收获或体会及建议}
+
+\end{document}

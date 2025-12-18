@@ -1,3 +1,4 @@
+```sql
 -- ============================================================
 -- AllRecipes 食谱网站数据库设计 - 建表脚本 (Oracle v3.0)
 -- 包含26个表，完整的约束、索引和触发器
@@ -43,7 +44,6 @@ CREATE SEQUENCE seq_shopping_lists START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE seq_user_activity_log START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE seq_meal_plans START WITH 1 INCREMENT BY 1;
 
-SELECT sequence_name, min_value, INCREMENT_BY, LAST_NUMBER FROM user_sequences;
 -- ============================================================
 -- 第二部分：核心基础表
 -- ============================================================
@@ -58,14 +58,16 @@ CREATE TABLE USERS (
     last_name VARCHAR2(50),
     bio VARCHAR2(500),
     profile_image VARCHAR2(255),
-    join_date DATE DEFAULT SYSDATE NOT NULL,
+    join_date DATE NOT NULL DEFAULT SYSDATE,
     last_login DATE,
-    account_status VARCHAR2(20) DEFAULT 'active' NOT NULL ,
+    account_status VARCHAR2(20) NOT NULL DEFAULT 'active',
+    -- user_type VARCHAR2(50) DEFAULT '普通用户',
     total_followers NUMBER(10) DEFAULT 0,
     total_recipes NUMBER(10) DEFAULT 0,
     created_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     updated_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     CONSTRAINT ck_account_status CHECK (account_status IN ('active', 'inactive', 'suspended'))
+    -- CONSTRAINT ck_user_type CHECK (user_type IN ('普通用户', '专业厨师', '美食博主'))
 );
 
 -- 表2：INGREDIENTS（食材表）
@@ -121,8 +123,8 @@ CREATE TABLE RECIPES (
     servings NUMBER(5),
     calories_per_serving NUMBER(10),
     image_url VARCHAR2(255),
-    is_published VARCHAR2(1) DEFAULT 'Y' NOT NULL,
-    is_deleted VARCHAR2(1) DEFAULT 'N' NOT NULL,
+    is_published VARCHAR2(1) NOT NULL DEFAULT 'Y',
+    is_deleted VARCHAR2(1) NOT NULL DEFAULT 'N',
     view_count NUMBER(10) DEFAULT 0,
     rating_count NUMBER(10) DEFAULT 0,
     average_rating NUMBER(3,2) DEFAULT 0,
@@ -238,8 +240,6 @@ CREATE TABLE COMMENTS (
     parent_comment_id NUMBER(10),
     created_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     updated_at TIMESTAMP DEFAULT SYSTIMESTAMP,
-    is_deleted VARCHAR2(1) DEFAULT 'N' NOT NULL,
-    CONSTRAINT ck_comments_is_deleted CHECK (is_deleted IN ('Y', 'N')),
     CONSTRAINT fk_comments_user FOREIGN KEY (user_id) REFERENCES USERS(user_id) ON DELETE CASCADE,
     CONSTRAINT fk_comments_recipe FOREIGN KEY (recipe_id) REFERENCES RECIPES(recipe_id) ON DELETE CASCADE,
     CONSTRAINT fk_comments_parent FOREIGN KEY (parent_comment_id) REFERENCES COMMENTS(comment_id) ON DELETE CASCADE
@@ -320,7 +320,7 @@ CREATE TABLE RECIPE_COLLECTIONS (
     user_id NUMBER(10) NOT NULL,
     collection_name VARCHAR2(100) NOT NULL,
     description VARCHAR2(500),
-    is_public VARCHAR2(1) DEFAULT 'Y' NOT NULL,
+    is_public VARCHAR2(1) NOT NULL DEFAULT 'Y',
     created_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     updated_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     CONSTRAINT fk_collection_user FOREIGN KEY (user_id) REFERENCES USERS(user_id) ON DELETE CASCADE,
@@ -353,7 +353,7 @@ CREATE TABLE SHOPPING_LIST_ITEMS (
     ingredient_id NUMBER(10) NOT NULL,
     quantity NUMBER(10,2),
     unit_id NUMBER(10),
-    is_checked VARCHAR2(1) DEFAULT 'N' NOT NULL,
+    is_checked VARCHAR2(1) NOT NULL DEFAULT 'N',
     added_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     PRIMARY KEY (list_id, ingredient_id),
     CONSTRAINT fk_sli_list FOREIGN KEY (list_id) REFERENCES SHOPPING_LISTS(list_id) ON DELETE CASCADE,
@@ -368,9 +368,9 @@ CREATE TABLE MEAL_PLANS (
     user_id NUMBER(10) NOT NULL,
     plan_name VARCHAR2(100) NOT NULL,
     description VARCHAR2(500),
-    start_date DATE DEFAULT SYSDATE NOT NULL,
-    end_date DATE DEFAULT SYSDATE NOT NULL,
-    is_public VARCHAR2(1) DEFAULT 'Y' NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    is_public VARCHAR2(1) NOT NULL DEFAULT 'Y',
     created_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     updated_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     CONSTRAINT fk_mealplan_user FOREIGN KEY (user_id) REFERENCES USERS(user_id) ON DELETE CASCADE,
@@ -388,24 +388,22 @@ CREATE TABLE MEAL_PLAN_ENTRIES (
     added_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     PRIMARY KEY (plan_id, recipe_id, meal_date),
     CONSTRAINT fk_mpe_plan FOREIGN KEY (plan_id) REFERENCES MEAL_PLANS(plan_id) ON DELETE CASCADE,
-    CONSTRAINT fk_mpe_recipe FOREIGN KEY (recipe_id) REFERENCES RECIPES(recipe_id),
+    CONSTRAINT fk_mpe_recipe FOREIGN KEY (recipe_id) REFERENCES RECIPES(recipe_id) ON DELETE RESTRICT,
     CONSTRAINT ck_mpe_meal_type CHECK (meal_type IN ('breakfast', 'lunch', 'dinner', 'snack'))
 );
 
-select table_name from user_tables;
-
-select table_name, CONSTRAINT_NAME, constraint_type, search_condition 
-from user_constraints
-order by table_name;
 -- ============================================================
 -- 第六部分：创建索引以提升查询性能
 -- ============================================================
 
 -- 用户相关索引
+CREATE INDEX idx_users_username ON USERS(username);
+CREATE INDEX idx_users_email ON USERS(email);
 CREATE INDEX idx_users_status ON USERS(account_status);
 
 -- 食材相关索引
 CREATE INDEX idx_ingredients_category ON INGREDIENTS(category);
+CREATE INDEX idx_ingredients_name ON INGREDIENTS(ingredient_name);
 
 -- 食谱相关索引
 CREATE INDEX idx_recipes_user_id ON RECIPES(user_id);
@@ -439,14 +437,13 @@ CREATE INDEX idx_meal_plan_entries_date ON MEAL_PLAN_ENTRIES(meal_date);
 
 -- 购物清单索引
 CREATE INDEX idx_shopping_lists_user_id ON SHOPPING_LISTS(user_id);
-CREATE INDEX idx_SLI_list_id ON SHOPPING_LIST_ITEMS(list_id);
+CREATE INDEX idx_shopping_list_items_list_id ON SHOPPING_LIST_ITEMS(list_id);
 
 -- 清单索引
 CREATE INDEX idx_collections_user_id ON RECIPE_COLLECTIONS(user_id);
-CREATE INDEX idx_collection_RC_id ON COLLECTION_RECIPES(collection_id);
-CREATE INDEX idx_collection_RC_recipe_id ON COLLECTION_RECIPES(recipe_id);
+CREATE INDEX idx_collection_recipes_collection_id ON COLLECTION_RECIPES(collection_id);
+CREATE INDEX idx_collection_recipes_recipe_id ON COLLECTION_RECIPES(recipe_id);
 
-select index_name, table_name, uniqueness from user_indexes order by table_name;
 -- ============================================================
 -- 提交事务
 -- ============================================================
@@ -475,3 +472,5 @@ SELECT table_name FROM user_tables WHERE table_name NOT LIKE 'BIN$%' ORDER BY ta
 
 PROMPT
 PROMPT ========== 系统已就绪 ==========
+
+```
