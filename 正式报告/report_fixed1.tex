@@ -937,7 +937,7 @@ AllRecipes 的主要数据对象包括：
 \textbf{用户核心表}
 
 \textbf{1. USERS表（用户表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -974,7 +974,7 @@ UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 最后修改时间\\
 \endlongtable}
 
 \textbf{2. INGREDIENTS 表（食材表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -991,7 +991,7 @@ CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \endlongtable}
 
 \textbf{3. UNITS 表（单位表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1008,7 +1008,7 @@ CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \endlongtable}
 
 \textbf{4. ALLERGENS 表（过敏原表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1023,7 +1023,7 @@ CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \endlongtable}
 
 \textbf{5. TAGS 表（标签表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1040,7 +1040,7 @@ CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \textbf{食谱核心表}
 
 \textbf{6. RECIPES 表（食谱表）}
-\begin{longtable}{|L{3.5cm}|L{2.5cm}|c|L{1.8cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1087,7 +1087,7 @@ UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 最后更新时间\\
 \endlongtable}
 
 \textbf{7. RECIPE\_INGREDIENTS 表（食谱食材关联√- 多对多）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1106,7 +1106,7 @@ ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \endlongtable}
 
 \textbf{8. COOKING\_STEPS 表（烹饪步骤表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1125,7 +1125,7 @@ IMAGE\_URL & VARCHAR2(255) & & & 步骤配图URL \\
 \endlongtable}
 
 \textbf{9. NUTRITION\_INFO 表（营养信息表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1150,7 +1150,7 @@ SODIUM\_MG & NUMBER(10) & & & 钠（毫克）\\
 \endlongtable}
 
 \textbf{10. INGREDIENT\_ALLERGENS 表（食材过敏原关联表 - 多对多）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1161,7 +1161,7 @@ ALLERGEN\_ID & NUMBER(10) & √& PK2, FK & 过敏原ID，联合主键第二部�
 \endlongtable}
 
 \textbf{11. INGREDIENT\_SUBSTITUTIONS 表（食材替代品关联表 - 多对多）}
-\begin{longtable}{|L{3.5cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1180,7 +1180,7 @@ ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \textbf{用户交互表}
 
 \textbf{12. RATINGS 表（食谱评价表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1199,7 +1199,7 @@ RATING\_DATE & TIMESTAMP & √& DF=SYSDATE & 评价时间 \\
 \endlongtable}
 
 \textbf{13. RATING\_HELPFULNESS 表（评价有用性投票表 - 多对多）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1214,7 +1214,7 @@ VOTED\_AT & TIMESTAMP & √& DF=SYSDATE & 投票时间 \\
 \endlongtable}
 
 \textbf{14. COMMENTS 表（评论表）}
-\begin{longtable}{|L{3.5cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1237,7 +1237,7 @@ UPDATED\_AT & TIMESTAMP & & DF=SYSTIMESTAMP & 更新时间 \\
 \endlongtable}
 
 \textbf{15. COMMENT\_HELPFULNESS 表（评论有用性投票表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1250,7 +1250,7 @@ VOTED\_AT & TIMESTAMP & & DF=SYSTIMESTAMP & 投票时间 \\
 \endlongtable}
 
 \textbf{16. SAVED\_RECIPES 表（收藏食谱表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1265,7 +1265,7 @@ SAVED\_AT & TIMESTAMP & √& DF=SYSDATE & 收藏时间 \\
 \endlongtable}
 
 \textbf{17. FOLLOWERS 表（用户关注关关系表- 多对多自引用）}
-\begin{longtable}{|L{3.5cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1278,7 +1278,7 @@ FOLLOWED\_AT & TIMESTAMP & √& DF=SYSDATE & 关注时间 \\
 \endlongtable}
 
 \textbf{18. USER\_ALLERGIES 表（用户过敏原关联表 - 多对多）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1291,7 +1291,7 @@ ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \endlongtable}
 
 \textbf{19. RECIPE\_TAGS 表（食谱标签关联√- 多对多）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1304,7 +1304,7 @@ ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \endlongtable}
 
 \textbf{20. USER\_ACTIVITY\_LOG 表（用户活动日志表）}
-\begin{longtable}{|L{3.5cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1325,7 +1325,7 @@ ACTIVITY\_DATE & TIMESTAMP & √& DF=SYSDATE & 活动时间 \\
 \textbf{个人管理表}
 
 \textbf{21. RECIPE\_COLLECTIONS 表（食谱收藏清单表）}
-\begin{longtable}{|L{3.5cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1346,7 +1346,7 @@ UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 更新时间 \\
 \endlongtable}
 
 \textbf{22. COLLECTION\_RECIPES 表（清单食谱关联√- 多对多）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1359,7 +1359,7 @@ ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \endlongtable}
 
 \textbf{23. SHOPPING\_LISTS 表（购物清单表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1376,7 +1376,7 @@ UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 更新时间 \\
 \endlongtable}
 
 \textbf{24. SHOPPING\_LIST\_ITEMS 表（购物清单项目表- 多对多）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1395,7 +1395,7 @@ ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \endlongtable}
 
 \textbf{25. MEAL\_PLANS 表（膳食计划表）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1420,7 +1420,7 @@ UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 更新时间 \\
 \endlongtable}
 
 \textbf{26. MEAL\_PLAN\_ENTRIES 表（膳食计划条目表- 多对多）}
-\begin{longtable}{|L{3cm}|L{2.5cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
