@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+﻿\documentclass[11pt,a4paper]{article}
 
 % 中文支持
 \usepackage[UTF8]{ctex}
@@ -15,6 +15,7 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{array}
+\usepackage{ragged2e}
 \usepackage{multirow}
 \usepackage{makecell}
 
@@ -22,7 +23,7 @@
 \usepackage{listings}
 \usepackage{xcolor}
 
-% 超链✓
+% 超链接
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -35,13 +36,28 @@
 % 列表环境
 \usepackage{enumitem}
 
-% 下划线支✓
+% 下划线支持
 \usepackage[strings]{underscore}
 \usepackage{ulem}
 \normalem
 
-% 自定义左对齐可换行物理列
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{enumitem}
+
+% % 解决勾选符号编译问题
+% \usepackage{amssymb}
+% \usepackage{newunicodechar}
+% \newunicodechar{✓}{\checkmark}
+
+% 下划线支持
+
+% 允许在下划线处换行，以便长的表名（如 RECIPE_INGREDIENTS）自动换行
+\let\origunderscore\_
+\renewcommand{\_}{\origunderscore\allowbreak}
+
+% 自定义左对齐可换行物理列，使用 ragged2e 的 \RaggedRight 避免单词被连字符分割
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+% 为 tabularx 定义一个不带连字符的可换行列类型
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 
 % 代码样式设置
 \lstset{
@@ -65,6 +81,11 @@
 \author{}
 \date{}
 
+% 禁用自动连字符（禁止在换行处插入 "-"）
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\sloppy
+
 \begin{document}
 
 \maketitle
@@ -82,10 +103,10 @@ AllRecipes是全球最大的食谱分享平台之一，拥有数百万用户和�
 
 \begin{itemize}
     \item \textbf{食谱发布与分享}：用户可以上传自己创作的食谱，包括详细的食材清单、烹饪步骤、烹饪时间、难度等级等信息，并支持上传高质量的图片。
-    \item \textbf{多维度食谱搜索与浏览}：用户通过关键词、菜系、食材、难度级别、烹饪时间等多个维度进行灵活搜索，发现适合自己的食谱�✓
-    \item \textbf{用户交互与社交功能}：包括食谱评价、评论、收藏、关注其他用户等丰富的互动方式，建立活跃的社区文化�✓
-    \item \textbf{个性化食谱管理}：用户可以创建多个食谱收藏清单、购物清单、膳食计划等，提高烹饪的便利性和计划性�✓
-    \item \textbf{健康饮食支持}：系统支持用户管理过敏原信息、查看营养信息、推荐过敏源安全食谱等功能�✓
+    \item \textbf{多维度食谱搜索与浏览}：用户通过关键词、菜系、食材、难度级别、烹饪时间等多个维度进行灵活搜索，发现适合自己的食谱。
+    \item \textbf{用户交互与社交功能}：包括食谱评价、评论、收藏、关注其他用户等丰富的互动方式，建立活跃的社区文化。
+    \item \textbf{个性化食谱管理}：用户可以创建多个食谱收藏清单、购物清单、膳食计划等，提高烹饪的便利性和计划性。
+    \item \textbf{健康饮食支持}：系统支持用户管理过敏原信息、查看营养信息、推荐过敏源安全食谱等功能。
 \end{itemize}
 
 \begin{figure}[H]
@@ -117,7 +138,7 @@ AllRecipes 的主要数据对象包括：
 \hline
 \textbf{食材（Ingredients）} & 烹饪所需原料 & 食材名称、分类、描述、过敏原信息 \\
 \hline
-\textbf{膳食计划（MealPlans）} & 用户的一周/一月食谱安排& 计划名称、时间范围、公开状�✓\\
+\textbf{膳食计划（MealPlans）} & 用户的一周/一月食谱安排& 计划名称、时间范围、公开状态\\
 \hline
 \textbf{购物清单（ShoppingLists）} & 用户需要购买的食材 & 清单名称、食材列表、购买状态\\
 \hline
@@ -130,30 +151,30 @@ AllRecipes 的主要数据对象包括：
 \subsubsection{业务流程分析}
 
 \textbf{1.1.3.1 食谱发布流程}
-\begin{lstlisting}[language={}]
-用户注册 -> 登录 -> 创建食谱 -> 添加基本信息 -> 添加食材 -> 设置烹饪步骤 -> 上传图片 -> 验证和预览 -> 发布
-\end{lstlisting}
+\begin{quote}
+用户注册 → 登录 → 创建食谱 → 添加基本信息 → 添加食材 → 设置烹饪步骤 → 上传图片 → 验证和预览 → 发布
+\end{quote}
 
 \textbf{1.1.3.2 食谱浏览与评价流程}
-\begin{lstlisting}[language={}]
-用户浏览 -> 搜索（按菜系/食材/难度等） -> 查看食谱详情 -> 查看评价和评论 -> 添加到收藏清单 -> 评价或评价
-\end{lstlisting}
+\begin{quote}
+用户浏览 → 搜索（按菜系/食材/难度等）→ 查看食谱详情 → 查看评价和评论 → 添加到收藏清单 → 评价或评论
+\end{quote}
 
 \textbf{1.1.3.3 膳食规划流程}
-\begin{lstlisting}[language={}]
-查看推荐食谱 -> 创建膳食计划 -> 为每天安排食谱 -> 系统整合购物清单 -> 生成购物清单 -> 管理购物进度
-\end{lstlisting}
+\begin{quote}
+查看推荐食谱 → 创建膳食计划 → 为每天安排食谱 → 系统整合购物清单 → 生成购物清单 → 管理购物进度
+\end{quote}
 
 \textbf{1.1.3.4 社区互动流程}
-\begin{lstlisting}[language={}]
-浏览用户资料 -> 关注用户 -> 查看关注用户的食谱-> 与用户互动（评价、评论、私信等。
-\end{lstlisting}
+\begin{quote}
+浏览用户资料 → 关注用户 → 查看关注用户的食谱 → 与用户互动（评价、评论、私信等）
+\end{quote}
 
 \subsection{ER图设计（概念模型）}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{images/media/image2.png}
+\includegraphics[width=0.9\textwidth]{images/media/ER_Color.drawio.png}
 \caption{ER图设计（概念模型）}
 \end{figure}
 
@@ -190,12 +211,12 @@ AllRecipes 的主要数据对象包括：
 
 \subsection{规范化}
 
-本设计严格遵✓\textbf{BCNF（Boyce-Codd Normal Form）} 规范：
+本设计严格遵循\textbf{BCNF（Boyce-Codd Normal Form）} 规范：
 
 \begin{itemize}
     \item \textbf{第一范式（1NF）}：所有字段包含原子值，不可再分析
-    \item \textbf{第二范式（1NF）}：所有非主键字段完全依赖于主键（特别是针对联合主键的表，如\texttt{RECIPE\_INGREDIENTS}，\texttt{quantity} 依赖于\texttt{recipe\_id} ✓\texttt{ingredient\_id} 的组合）。
-    \item \textbf{第三范式（1NF）}：消除了所有传递依赖。例如，✓\texttt{RECIPES} 表中，用户信息只存储 \texttt{user\_id}，而不存储 \texttt{username}（通过连接查询获取），避免了数据冗余�✓
+    \item \textbf{第二范式（2NF）}：所有非主键字段完全依赖于主键（特别是针对联合主键的表，如\texttt{RECIPE\_INGREDIENTS}，\texttt{quantity} 依赖于\texttt{recipe\_id} 和\texttt{ingredient\_id} 的组合）。
+    \item \textbf{第三范式（3NF）}：消除了所有传递依赖。例如，在\texttt{RECIPES} 表中，用户信息只存储 \texttt{user\_id}，而不存储 \texttt{username}（通过连接查询获取），避免了数据冗余。
     \item \textbf{BCNF}：消除了所有异常依赖，主键是唯一的候选键。
 \end{itemize}
 
@@ -268,7 +289,7 @@ INGREDIENT\_SUBSTITUTIONS & substitution\_id & BCNF & 食材替代品知识库 \
 
 \subsection{常见操作归纳}
 
-\subsubsection{1.5.1 查询操作（SELECT）}
+\subsubsection{查询操作（SELECT）}
 
 \begin{longtable}{|L{2.5cm}|L{4cm}|L{8.5cm}|}
 \caption{查询操作归纳} \\
@@ -321,7 +342,7 @@ INGREDIENT\_SUBSTITUTIONS & substitution\_id & BCNF & 食材替代品知识库 \
 \hline
 \end{longtable}
 
-\subsubsection{1.5.2 数据变更操作}
+\subsubsection{数据变更操作}
 
 \begin{longtable}{|L{2.5cm}|L{2.5cm}|L{3cm}|L{7cm}|}
 \caption{数据变更操作归纳} \\
@@ -362,7 +383,7 @@ INGREDIENT\_SUBSTITUTIONS & substitution\_id & BCNF & 食材替代品知识库 \
 \cline{2-4}
 & \multirow{2}{*}{状态} & 禁用账户 & 修改用户账户状态为挂起 \\
 \cline{3-4}
-& & 购物清单勾�✓& 标记清单中的物品为已购买 \\
+& & 购物清单勾选& 标记清单中的物品为已购买 \\
 \hline
 \multirow{5}{*}{删除 (DELETE)} & \multirow{5}{*}{清理} & 删除评价/收藏 & 物理删除评价记录或取消收藏\\
 \cline{3-4}
@@ -372,26 +393,26 @@ INGREDIENT\_SUBSTITUTIONS & substitution\_id & BCNF & 食材替代品知识库 \
 \cline{3-4}
 & & 撤销投票 & 取消对评价评论✓“有用”标记 \\
 \cline{3-4}
-& & 移除过敏✓& 删除用户的过敏记录\\
+& & 移除过敏源& 删除用户的过敏记录\\
 \hline
 \end{longtable}
 
 \subsection{完整性约束方案设计}
 
-\subsubsection{1.6.1 约束类型说明}
+\subsubsection{约束类型说明}
 
 \begin{itemize}
     \item \textbf{PK (Primary Key)}: 主键约束，保证记录唯一性，非空。
-    \item \textbf{FK (Foreign Key)}: 外键约束，保证引用完整性�✓
+    \item \textbf{FK (Foreign Key)}: 外键约束，保证引用完整性。
     \item \textbf{UK (Unique Key)}: 唯一约束，保证字段值不重复。
     \item \textbf{CK (Check Constraint)}: 检查约束，保证数据符合特定条件或值域。
-    \item \textbf{NN (Not Null)}: 非空约束，保证字段必须有值�✓
+    \item \textbf{NN (Not Null)}: 非空约束，保证字段必须有值。
     \item \textbf{DF (Default)}: 默认值，当未提供值时自动填充。
 \end{itemize}
 
-\subsubsection{1.6.2 详细表约束定义}
+\subsubsection{详细表约束定义}
 
-\textbf{1. USERS (用户动态}
+\textbf{1. USERS (用户表)}
 \begin{longtable}{|L{2cm}|L{8cm}|L{5cm}|}
 \hline
 \textbf{约束类型} & \textbf{字段/表达式} & \textbf{详情/规则} \\
@@ -698,7 +719,7 @@ INGREDIENT\_SUBSTITUTIONS & substitution\_id & BCNF & 食材替代品知识库 \
 \hline
 \textbf{PK} & \texttt{(USER\_ID, FOLLOWER\_USER\_ID)} & \textbf{联合主键}，确保关注关系唯一 \\
 \hline
-\textbf{FK} & \texttt{USER\_ID} & 引用 \texttt{USERS(USER\_ID)} (被关注�✓ \\
+\textbf{FK} & \texttt{USER\_ID} & 引用 \texttt{USERS(USER\_ID)} (被关注者) \\
 \hline
 \textbf{FK} & \texttt{FOLLOWER\_USER\_ID} & 引用 \texttt{USERS(USER\_ID)} (关注册 \\
 \hline
@@ -753,7 +774,7 @@ INGREDIENT\_SUBSTITUTIONS & substitution\_id & BCNF & 食材替代品知识库 \
 \hline
 \textbf{FK} & \texttt{USER\_ID} & 引用 \texttt{USERS(USER\_ID)} \\
 \hline
-\textbf{FK} & \texttt{RECIPE\_ID} & 引用 \texttt{RECIPES(RECIPE\_ID)} (可�✓ \\
+\textbf{FK} & \texttt{RECIPE\_ID} & 引用 \texttt{RECIPES(RECIPE\_ID)} (可选) \\
 \hline
 \textbf{NN} & \texttt{ACTIVITY\_ID, USER\_ID, ACTIVITY\_DATE} & 必填字段 \\
 \hline
@@ -881,13 +902,13 @@ INGREDIENT\_SUBSTITUTIONS & substitution\_id & BCNF & 食材替代品知识库 \
 \hline
 \end{longtable}
 
-\subsection{1.7 表的详细设计（物理模型）}
+\subsection{表的详细设计（物理模型）}
 
-\subsubsection{1.7.1 表的分类和数量统计}
+\subsubsection{表的分类和数量统计}
 
 \begin{table}[H]
 \centering
-\begin{tabularx}{\textwidth}{|l|X|c|l|}
+\begin{tabularx}{\textwidth}{|l|Y|c|l|}
 \hline
 \textbf{模块} & \textbf{表名} & \textbf{数量} & \textbf{说明} \\
 \hline
@@ -905,7 +926,7 @@ INGREDIENT\_SUBSTITUTIONS & substitution\_id & BCNF & 食材替代品知识库 \
 \caption{表的分类和数量统计}
 \end{table}
 
-\subsubsection{1.7.2 核心表详细设计}
+\subsubsection{核心表详细设计}
 
 \textbf{用户核心表}
 
@@ -1411,7 +1432,7 @@ ADDED\_AT & TIMESTAMP & ✓& & DF=SYSDATE & 添加时间 \\
 \hline
 \endlongtable}
 
-\subsection{1.8 视图设计方案}
+\subsection{视图设计方案}
 
 \begin{longtable}{|L{2cm}|L{4cm}|L{5cm}|L{4cm}|}
 \caption{视图设计方案} \\
@@ -1460,7 +1481,7 @@ ADDED\_AT & TIMESTAMP & ✓& & DF=SYSDATE & 添加时间 \\
 \hline
 \end{longtable}
 
-\subsection{1.9 数据库安全方案的设计}
+\subsection{数据库安全方案的设计}
 
 \subsubsection{用户认证和权限管理}
 
@@ -1520,27 +1541,23 @@ ADDED\_AT & TIMESTAMP & ✓& & DF=SYSDATE & 添加时间 \\
 \hline
 \end{longtable}
 
-\subsubsection{数据加密策略}
-
-用户密码使用哈希存储。
-
 \section{实现部分}
 
-\subsection{2.1 表格创建（可同时包括约束条件的创建）}
+\subsection{表格创建（可同时包括约束条件的创建）}
 
 为了节省正文篇幅，sql代码实现部分见附录，正文部分仅展示运行结果�✓
 
-\subsubsection{2.2.1 创建序列（主键自增）}
+\subsubsection{创建序列（主键自增）}
 
-\subsection{2.2 数据录入}
+\subsection{数据录入}
 
-\subsection{2.3 视图创建和使用}
+\subsection{视图创建和使用}
 
-\subsection{2.4 常见操作的实例演示}
+\subsection{常见操作的实例演示}
 
-\subsection{2.5 数据库安全的实现}
+\subsection{数据库安全的实现}
 
-\subsubsection{2.5.1 数据库用户角色划分}
+\subsubsection{数据库用户角色划分}
 
 \begin{lstlisting}[language=SQL]
 -- 创建不同权限等级的数据库用户
@@ -1566,7 +1583,7 @@ CREATE USER audit_user IDENTIFIED BY "AuditP@ss111";
 GRANT CONNECT TO audit_user;
 \end{lstlisting}
 
-\subsubsection{2.5.2 精细化权限分配}
+\subsubsection{精细化权限分配}
 
 \begin{lstlisting}[language=SQL]
 -- 为APP_USER分配表级权限
@@ -1601,7 +1618,7 @@ GRANT EXECUTE ON rate_recipe TO app_user;
 GRANT EXECUTE ON save_recipe TO app_user;
 \end{lstlisting}
 
-\subsubsection{2.5.3 列级安全}
+\subsubsection{列级安全}
 
 \begin{lstlisting}[language=SQL]
 -- 限制某些用户无法看到密码哈希
@@ -1612,7 +1629,7 @@ ON USERS TO report_user;
 GRANT SELECT ON USERS TO dba_admin;
 \end{lstlisting}
 
-\subsubsection{2.5.4 密码哈希加密}
+\subsubsection{密码哈希加密}
 
 \begin{lstlisting}[language=SQL]
 -- 在应用层或触发器中实现密码哈希
@@ -1635,10 +1652,10 @@ END;
 
 \section{总结}
 
-\subsection{3.1 组员分工}
+\subsection{组员分工}
 
-\subsection{3.2 难点与不足分析}
+\subsection{难点与不足分析}
 
-\subsection{3.3 收获或体会及建议}
+\subsection{收获或体会及建议}
 
 \end{document}

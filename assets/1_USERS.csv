@@ -1,0 +1,11 @@
+"USER_ID","USERNAME","EMAIL","PASSWORD_HASH","FIRST_NAME","LAST_NAME","BIO","PROFILE_IMAGE","JOIN_DATE","LAST_LOGIN","ACCOUNT_STATUS","TOTAL_FOLLOWERS","TOTAL_RECIPES","CREATED_AT","UPDATED_AT"
+2,"zhang_wei","zhang.wei@email.com","pwd_hash_zw123","Zhang","Wei","专业美食摄影师，运营家常菜那些事公众号，分享地道家常菜做法","",25-JUN-25,20-DEC-25,"active",450,8,22-DEC-25 02.05.45.649000000 PM,22-DEC-25 02.05.45.649000000 PM
+3,"li_na","li.na.cooking@email.com","pwd_hash_ln456","Li","Na","餐厅主厨5年，擅长川菜和湖南菜，热爱分享烹饪技巧","",05-JUN-25,21-DEC-25,"active",320,6,22-DEC-25 02.05.45.656000000 PM,22-DEC-25 02.05.45.656000000 PM
+4,"wang_jun","wangjun1990@email.com","pwd_hash_wj789","Wang","Jun","上班族，热爱快手菜和健身餐，记录美食生活","",24-AUG-25,22-DEC-25,"active",0,2,22-DEC-25 02.05.45.658000000 PM,22-DEC-25 02.05.45.658000000 PM
+5,"liu_fang","fang.liu.home@email.com","pwd_hash_lf111","Liu","Fang","全职妈妈，分享家常菜和儿童食谱，让孩子享受美食","",25-JUL-25,19-DEC-25,"active",180,4,22-DEC-25 02.05.45.661000000 PM,22-DEC-25 02.05.45.661000000 PM
+6,"chen_ming","chen.ming.chef@email.com","pwd_hash_cm222","Chen","Ming","面食专家，自有面馆，专注于传统面食制作和创新","",16-MAY-25,17-DEC-25,"active",280,5,22-DEC-25 02.05.45.663000000 PM,22-DEC-25 02.05.45.663000000 PM
+7,"xu_hui","hui.xu.health@email.com","pwd_hash_xh333","Xu","Hui","注册营养师，分享科学健康的食谱和营养知识","",15-JUL-25,21-DEC-25,"active",520,5,22-DEC-25 02.05.45.667000000 PM,22-DEC-25 02.05.45.667000000 PM
+8,"zhou_tao","tao.zhou@email.com","pwd_hash_zt444","Zhou","Tao","美食爱好者，热爱尝试新菜谱，分享心得体会","",13-SEP-25,18-DEC-25,"active",0,1,22-DEC-25 02.05.45.669000000 PM,22-DEC-25 02.05.45.669000000 PM
+9,"guo_qiang","guo.qiang.food@email.com","pwd_hash_gq555","Guo","Qiang","资深吃货，热爱测评各地特色菜，探寻美食故事","",04-AUG-25,20-DEC-25,"active",380,4,22-DEC-25 02.05.45.675000000 PM,22-DEC-25 02.05.45.675000000 PM
+10,"sun_yue","sun.yue.cook@email.com","pwd_hash_sy666","Sun","Yue","大学生，想学做家常菜，与家人分享美食","",03-OCT-25,22-DEC-25,"active",0,1,22-DEC-25 02.05.45.678000000 PM,22-DEC-25 02.05.45.678000000 PM
+11,"jiang_lin","jiang.lin.baker@email.com","pwd_hash_jl777","Jiang","Lin","西点烘焙师，分享烘焙技巧和精致甜品食谱","",05-JUL-25,19-DEC-25,"active",290,3,22-DEC-25 02.05.45.681000000 PM,22-DEC-25 02.05.45.681000000 PM

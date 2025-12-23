@@ -16,24 +16,28 @@
 -- 1. 插入USERS（50个用户）
 -- ============================================================
 
-INSERT INTO USERS (user_id, username, email, password_hash, first_name, last_name, bio, profile_image, join_date, last_login, account_status, user_type, total_followers, total_recipes, created_at, updated_at)
-VALUES (seq_users.NEXTVAL, 'admin', 'admin@allrecipes.com', 'hash_admin_123', 'Admin', 'User', '系统管理员', NULL, TRUNC(SYSDATE - 365), TRUNC(SYSDATE - 1), 'active', '普通用户', 10, 5, SYSTIMESTAMP, SYSTIMESTAMP);
+delete from USERS;
+SELECT * from USERS;
+drop sequence seq_users;
+create SEQUENCE seq_users START WITH 1 INCREMENT BY 1;
 
--- 专业厨师用户 (11-22)
-INSERT INTO USERS (user_id, username, email, password_hash, first_name, last_name, bio, profile_image, join_date, last_login, account_status, user_type, total_followers, total_recipes, created_at, updated_at)
-SELECT seq_users.NEXTVAL, 'chef_master_' || LPAD(i, 3, '0'), 'chef.master.' || LPAD(i, 3, '0') || '@allrecipes.com', 'hash_chef_' || i, 'Chef', 'Master' || i, '专业厨师，专注' || CASE MOD(i, 3) WHEN 0 THEN '中式烹饪' WHEN 1 THEN '西餐烹饪' ELSE '日式料理' END, NULL, TRUNC(SYSDATE - 300 + MOD(i*11, 200)), TRUNC(SYSDATE - MOD(i*7, 30)), 'active', '专业厨师', 50 + i*5, 20 + i*2, SYSTIMESTAMP, SYSTIMESTAMP
-FROM (SELECT ROWNUM i FROM DUAL WHERE ROWNUM <= 12);
+INSERT INTO USERS (user_id, username, email, password_hash, first_name, last_name, bio, profile_image, join_date, last_login, account_status,  total_followers, total_recipes, created_at, updated_at)
+VALUES (seq_users.NEXTVAL, 'admin', 'admin@allrecipes.com', 'hash_admin_123', 'Admin', 'User', '系统管理员', NULL, TRUNC(SYSDATE - 365), TRUNC(SYSDATE - 1), 'active', 0, 0, SYSTIMESTAMP, SYSTIMESTAMP);
 
--- 美食博主用户 (23-30)
-INSERT INTO USERS (user_id, username, email, password_hash, first_name, last_name, bio, profile_image, join_date, last_login, account_status, user_type, total_followers, total_recipes, created_at, updated_at)
-SELECT seq_users.NEXTVAL, 'foodblogger_' || LPAD(i, 3, '0'), 'foodblog.' || LPAD(i, 3, '0') || '@allrecipes.com', 'hash_blog_' || i, 'Food', 'Blogger' || i, '美食博主，粉丝数' || 1000 + i*100, NULL, TRUNC(SYSDATE - 250 + MOD(i*13, 150)), TRUNC(SYSDATE - MOD(i*3, 15)), 'active', '美食博主', 100 + i*10, 30 + i*3, SYSTIMESTAMP, SYSTIMESTAMP
-FROM (SELECT ROWNUM i FROM DUAL WHERE ROWNUM <= 8);
+INSERT INTO USERS (user_id, username, email, password_hash, first_name, last_name, bio, profile_image, join_date, last_login, account_status, total_followers, total_recipes, created_at, updated_at)
+SELECT seq_users.NEXTVAL, 'chef_master_' || LPAD(i, 3, '0'), 'chef.master.' || LPAD(i, 3, '0') || '@allrecipes.com', 'hash_chef_' || i, 'Chef', 'Master' || i, '专业厨师，专注' || CASE MOD(i, 3) WHEN 0 THEN '中式烹饪' WHEN 1 THEN '西餐烹饪' ELSE '日式料理' END, NULL, TRUNC(SYSDATE - 300 + MOD(i*11, 200)), TRUNC(SYSDATE - MOD(i*7, 30)), 'active', 0, 0, SYSTIMESTAMP, SYSTIMESTAMP
+FROM (SELECT LEVEL i FROM DUAL CONNECT BY LEVEL <= 12);
 
--- 普通用户 (31-50)
-INSERT INTO USERS (user_id, username, email, password_hash, first_name, last_name, bio, profile_image, join_date, last_login, account_status, user_type, total_followers, total_recipes, created_at, updated_at)
-SELECT seq_users.NEXTVAL, 'user_common_' || LPAD(i, 3, '0'), 'user.common.' || LPAD(i, 3, '0') || '@allrecipes.com', 'hash_user_' || i, 'User', 'Common' || i, '烹饪爱好者，分享日常美食', NULL, TRUNC(SYSDATE - 180 + MOD(i*17, 100)), TRUNC(SYSDATE - MOD(i*5, 25)), CASE WHEN MOD(i, 12) = 0 THEN 'inactive' ELSE 'active' END, '普通用户', MOD(i*3, 20), MOD(i*2, 10), SYSTIMESTAMP, SYSTIMESTAMP
-FROM (SELECT ROWNUM i FROM DUAL WHERE ROWNUM <= 20);
+INSERT INTO USERS (user_id, username, email, password_hash, first_name, last_name, bio, profile_image, join_date, last_login, account_status, total_followers, total_recipes, created_at, updated_at)
+SELECT seq_users.NEXTVAL, 'foodblogger_' || LPAD(i, 3, '0'), 'foodblog.' || LPAD(i, 3, '0') || '@allrecipes.com', 'hash_blog_' || i, 'Food', 'Blogger' || i, '美食博主，粉丝数' || (1000 + i*100), NULL, TRUNC(SYSDATE - 250 + MOD(i*13, 150)), TRUNC(SYSDATE - MOD(i*3, 15)), 'active', 0, 0, SYSTIMESTAMP, SYSTIMESTAMP
+FROM (SELECT LEVEL i FROM DUAL CONNECT BY LEVEL <= 8);
 
+INSERT INTO USERS (user_id, username, email, password_hash, first_name, last_name, bio, profile_image, join_date, last_login, account_status, total_followers, total_recipes, created_at, updated_at)
+SELECT seq_users.NEXTVAL, 'user_common_' || LPAD(i, 3, '0'), 'user.common.' || LPAD(i, 3, '0') || '@allrecipes.com', 'hash_user_' || i, 'User', 'Common' || i, '烹饪爱好者，分享日常美食', NULL, TRUNC(SYSDATE - 180 + MOD(i*17, 100)), TRUNC(SYSDATE - MOD(i*5, 25)), CASE WHEN MOD(i, 12) = 0 THEN 'inactive' ELSE 'active' END, 0, 0, SYSTIMESTAMP, SYSTIMESTAMP
+FROM (SELECT LEVEL i FROM DUAL CONNECT BY LEVEL <= 20);
+
+
+select * from USERS;
 COMMIT;
 
 -- ============================================================
@@ -144,6 +148,7 @@ INSERT INTO TAGS (tag_id, tag_name, tag_description, created_at)
 VALUES (19, '甜点', '甜品糕点', SYSTIMESTAMP);
 INSERT INTO TAGS (tag_id, tag_name, tag_description, created_at)
 VALUES (20, '零食', '小食品', SYSTIMESTAMP);
+select * from TAGS;
 
 COMMIT;
 
@@ -182,11 +187,13 @@ UNION ALL SELECT '萝卜', '十字花科根菜' FROM DUAL
 UNION ALL SELECT '山药', '淀粉含量高' FROM DUAL
 );
 
+select * from INGREDIENTS;
+
 -- 肉类 (26-45)
 INSERT INTO INGREDIENTS (ingredient_id, ingredient_name, category, description, created_at)
 SELECT seq_ingredients.NEXTVAL, ingredient_name, '肉类', description, SYSTIMESTAMP
 FROM (
-SELECT '鸡肉', '低脂肉类' FROM DUAL
+SELECT '鸡肉' AS ingredient_name, '低脂肉类' AS description FROM DUAL
 UNION ALL SELECT '鸡腿', '鸡腿肉' FROM DUAL
 UNION ALL SELECT '鸡翅', '鸡翅' FROM DUAL
 UNION ALL SELECT '鸡胸', '低脂高蛋白' FROM DUAL
@@ -208,11 +215,12 @@ UNION ALL SELECT '蟹', '海鲜，美味营养' FROM DUAL
 UNION ALL SELECT '贝类', '海鲜贝类' FROM DUAL
 );
 
+
 -- 调味料 (46-60)
 INSERT INTO INGREDIENTS (ingredient_id, ingredient_name, category, description, created_at)
 SELECT seq_ingredients.NEXTVAL, ingredient_name, '调味料', description, SYSTIMESTAMP
 FROM (
-SELECT '盐', '基础调味料' FROM DUAL
+SELECT '盐' AS ingredient_name, '基础调味料' AS description FROM DUAL
 UNION ALL SELECT '糖', '甜味来源' FROM DUAL
 UNION ALL SELECT '酱油', '传统调味料' FROM DUAL
 UNION ALL SELECT '醋', '酸味来源' FROM DUAL
@@ -233,7 +241,7 @@ UNION ALL SELECT '味精', '鲜味增强剂' FROM DUAL
 INSERT INTO INGREDIENTS (ingredient_id, ingredient_name, category, description, created_at)
 SELECT seq_ingredients.NEXTVAL, ingredient_name, '乳制品', description, SYSTIMESTAMP
 FROM (
-SELECT '牛奶', '新鲜牛奶' FROM DUAL
+SELECT '牛奶' AS ingredient_name, '新鲜牛奶' AS description FROM DUAL
 UNION ALL SELECT '黄油', '乳脂提取' FROM DUAL
 UNION ALL SELECT '奶酪', '发酵乳制品' FROM DUAL
 UNION ALL SELECT '酸奶', '益生菌乳制品' FROM DUAL
@@ -249,14 +257,13 @@ UNION ALL SELECT '羊奶', '山羊奶' FROM DUAL
 INSERT INTO INGREDIENTS (ingredient_id, ingredient_name, category, description, created_at)
 SELECT seq_ingredients.NEXTVAL, ingredient_name, '谷物', description, SYSTIMESTAMP
 FROM (
-SELECT '白米', '日常主食' FROM DUAL
+SELECT '白米' AS ingredient_name, '日常主食' AS description FROM DUAL
 UNION ALL SELECT '黑米', '营养米类' FROM DUAL
 UNION ALL SELECT '糯米', '粘性米' FROM DUAL
 UNION ALL SELECT '面粉', '小麦粉' FROM DUAL
 UNION ALL SELECT '面条', '面食' FROM DUAL
 UNION ALL SELECT '馄饨皮', '馄饨制作用' FROM DUAL
 UNION ALL SELECT '饺子皮', '饺子制作用' FROM DUAL
-UNION ALL SELECT '玉米', '玉米谷物' FROM DUAL
 UNION ALL SELECT '燕麦', '燕麦粥原料' FROM DUAL
 UNION ALL SELECT '大豆', '豆类谷物' FROM DUAL
 UNION ALL SELECT '绿豆', '豆类' FROM DUAL
@@ -266,11 +273,12 @@ UNION ALL SELECT '花生', '坚果豆类' FROM DUAL
 UNION ALL SELECT '芝麻', '油料作物' FROM DUAL
 );
 
+select * from INGREDIENTS;
 -- 其他 (86-100)
 INSERT INTO INGREDIENTS (ingredient_id, ingredient_name, category, description, created_at)
 SELECT seq_ingredients.NEXTVAL, ingredient_name, '其他', description, SYSTIMESTAMP
 FROM (
-SELECT '鸡蛋', '优质蛋白' FROM DUAL
+SELECT '鸡蛋' AS ingredient_name, '优质蛋白' AS description FROM DUAL
 UNION ALL SELECT '面包', '烘焙食品' FROM DUAL
 UNION ALL SELECT '巧克力', '甜味料' FROM DUAL
 UNION ALL SELECT '果酱', '果实制品' FROM DUAL
@@ -427,6 +435,8 @@ SELECT seq_recipes.NEXTVAL,
        SYSTIMESTAMP as updated_at
 FROM DUAL
 WHERE ROWNUM <= 30;
+
+select * from RECIPES;
 
 COMMIT;
 

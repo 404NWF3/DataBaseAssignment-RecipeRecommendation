@@ -1,0 +1,1730 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.21)  23 DEC 2025 09:25
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**report_fixed1.tex
+(./report_fixed1.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(d:/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(d:/texlive/2025/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count192
+\c@section=\count193
+\c@subsection=\count194
+\c@subsubsection=\count195
+\c@paragraph=\count196
+\c@subparagraph=\count197
+\c@figure=\count198
+\c@table=\count199
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(d:/texlive/2025/texmf-dist/tex/latex/ctex/ctex.sty
+(d:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+
+(d:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
+\g__graphics_track_int=\count266
+\l__pdf_internal_box=\box52
+\g__pdf_backend_annotation_int=\count267
+\g__pdf_backend_link_int=\count268
+))
+Package: ctex 2022/07/14 v2.5.10 Chinese adapter in LaTeX (CTEX)
+
+(d:/texlive/2025/texmf-dist/tex/latex/ctex/ctexhook.sty
+Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
+)
+(d:/texlive/2025/texmf-dist/tex/latex/ctex/ctexpatch.sty
+Package: ctexpatch 2022/07/14 v2.5.10 Patching commands (CTEX)
+)
+(d:/texlive/2025/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+
+(d:/texlive/2025/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\l__ctex_tmp_int=\count269
+\l__ctex_tmp_box=\box53
+\l__ctex_tmp_dim=\dimen142
+\g__ctex_section_depth_int=\count270
+\g__ctex_font_size_int=\count271
+
+(d:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+File: ctexopts.cfg 2022/07/14 v2.5.10 Option configuration file (CTEX)
+)
+(d:/texlive/2025/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+File: ctex-engine-xetex.def 2022/07/14 v2.5.10 XeLaTeX adapter (CTEX)
+
+(d:/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
+
+(d:/texlive/2025/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
+)
+\l__xeCJK_tmp_int=\count272
+\l__xeCJK_tmp_box=\box54
+\l__xeCJK_tmp_dim=\dimen143
+\l__xeCJK_tmp_skip=\skip51
+\g__xeCJK_space_factor_int=\count273
+\l__xeCJK_begin_int=\count274
+\l__xeCJK_end_int=\count275
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip52
+\c__xeCJK_none_node=\count276
+\g__xeCJK_node_int=\count277
+\c__xeCJK_CJK_node_dim=\dimen144
+\c__xeCJK_CJK-space_node_dim=\dimen145
+\c__xeCJK_default_node_dim=\dimen146
+\c__xeCJK_CJK-widow_node_dim=\dimen147
+\c__xeCJK_normalspace_node_dim=\dimen148
+\c__xeCJK_default-space_node_skip=\skip53
+\l__xeCJK_ccglue_skip=\skip54
+\l__xeCJK_ecglue_skip=\skip55
+\l__xeCJK_punct_kern_skip=\skip56
+\l__xeCJK_indent_box=\box55
+\l__xeCJK_last_penalty_int=\count278
+\l__xeCJK_last_bound_dim=\dimen149
+\l__xeCJK_last_kern_dim=\dimen150
+\l__xeCJK_widow_penalty_int=\count279
+
+LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
+(template)           argument(s) on line 2396.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen151
+\l__xeCJK_mixed_punct_width_dim=\dimen152
+\l__xeCJK_middle_punct_width_dim=\dimen153
+\l__xeCJK_fixed_margin_width_dim=\dimen154
+\l__xeCJK_mixed_margin_width_dim=\dimen155
+\l__xeCJK_middle_margin_width_dim=\dimen156
+\l__xeCJK_bound_punct_width_dim=\dimen157
+\l__xeCJK_bound_margin_width_dim=\dimen158
+\l__xeCJK_margin_minimum_dim=\dimen159
+\l__xeCJK_kerning_total_width_dim=\dimen160
+\l__xeCJK_same_align_margin_dim=\dimen161
+\l__xeCJK_different_align_margin_dim=\dimen162
+\l__xeCJK_kerning_margin_width_dim=\dimen163
+\l__xeCJK_kerning_margin_minimum_dim=\dimen164
+\l__xeCJK_bound_dim=\dimen165
+\l__xeCJK_reverse_bound_dim=\dimen166
+\l__xeCJK_margin_dim=\dimen167
+\l__xeCJK_minimum_bound_dim=\dimen168
+\l__xeCJK_kerning_margin_dim=\dimen169
+\g__xeCJK_family_int=\count280
+\l__xeCJK_fam_int=\count281
+\g__xeCJK_fam_allocation_int=\count282
+\l__xeCJK_verb_case_int=\count283
+\l__xeCJK_verb_exspace_skip=\skip57
+
+(d:/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.sty
+(d:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+
+(d:/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count284
+\l__fontspec_language_int=\count285
+\l__fontspec_strnum_int=\count286
+\l__fontspec_tmp_int=\count287
+\l__fontspec_tmpa_int=\count288
+\l__fontspec_tmpb_int=\count289
+\l__fontspec_tmpc_int=\count290
+\l__fontspec_em_int=\count291
+\l__fontspec_emdef_int=\count292
+\l__fontspec_strong_int=\count293
+\l__fontspec_strongdef_int=\count294
+\l__fontspec_tmpa_dim=\dimen170
+\l__fontspec_tmpb_dim=\dimen171
+\l__fontspec_tmpc_dim=\dimen172
+
+(d:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(d:/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(d:/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
+))
+\ccwd=\dimen173
+\l__ctex_ccglue_skip=\skip58
+)
+\l__ctex_ziju_dim=\dimen174
+
+(d:/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+Package: zhnumber 2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count295
+\l__zhnum_tmp_int=\count296
+
+(d:/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+File: zhnumber-utf8.cfg 2022/07/14 v3.0 Chinese numerals with UTF8 encoding
+))
+(d:/texlive/2025/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.def
+File: ctex-scheme-chinese.def 2022/07/14 v2.5.10 Chinese scheme for generic (CT
+EX)
+
+(d:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+File: ctex-name-utf8.cfg 2022/07/14 v2.5.10 Caption with encoding UTF-8 (CTEX)
+))
+(d:/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+)
+(d:/texlive/2025/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-windows.def
+File: ctex-fontset-windows.def 2022/07/14 v2.5.10 Windows fonts definition (CTE
+X)
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "KaiTi/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimHei/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimSun/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'SimSun(0)' created for font 'SimSun' with
+(fontspec)             options
+(fontspec)             [Script={CJK},BoldFont={SimHei},ItalicFont={KaiTi}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"SimHei/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;"
+
+))
+(d:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex.cfg
+File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
+)
+(d:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(d:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(d:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(d:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count297
+\Gm@cntv=\count298
+\c@Gm@tempcnt=\count299
+\Gm@bindingoffset=\dimen175
+\Gm@wd@mp=\dimen176
+\Gm@odd@mp=\dimen177
+\Gm@even@mp=\dimen178
+\Gm@layoutwidth=\dimen179
+\Gm@layoutheight=\dimen180
+\Gm@layouthoffset=\dimen181
+\Gm@layoutvoffset=\dimen182
+\Gm@dimlist=\toks18
+)
+(d:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(d:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(d:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(d:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+
+(d:/texlive/2025/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen183
+\Gin@req@width=\dimen184
+)
+(d:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count300
+\float@exts=\toks19
+\float@box=\box56
+\@float@everytoks=\toks20
+\@floatcapt=\box57
+)
+(d:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+\LTleft=\skip59
+\LTright=\skip60
+\LTpre=\skip61
+\LTpost=\skip62
+\LTchunksize=\count301
+\LTcapwidth=\dimen185
+\LT@head=\box58
+\LT@firsthead=\box59
+\LT@foot=\box60
+\LT@lastfoot=\box61
+\LT@gbox=\box62
+\LT@cols=\count302
+\LT@rows=\count303
+\c@LT@tables=\count304
+\c@LT@chunks=\count305
+\LT@p@ftn=\toks21
+)
+(d:/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen186
+\lightrulewidth=\dimen187
+\cmidrulewidth=\dimen188
+\belowrulesep=\dimen189
+\belowbottomsep=\dimen190
+\aboverulesep=\dimen191
+\abovetopsep=\dimen192
+\cmidrulesep=\dimen193
+\cmidrulekern=\dimen194
+\defaultaddspace=\dimen195
+\@cmidla=\count306
+\@cmidlb=\count307
+\@aboverulesep=\dimen196
+\@belowrulesep=\dimen197
+\@thisruleclass=\count308
+\@lastruleclass=\count309
+\@thisrulewidth=\dimen198
+)
+(d:/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(d:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen199
+\ar@mcellbox=\box63
+\extrarowheight=\dimen256
+\NC@list=\toks22
+\extratabsurround=\skip63
+\backup@length=\skip64
+\ar@cellbox=\box64
+)
+\TX@col@width=\dimen257
+\TX@old@table=\dimen258
+\TX@old@col=\dimen259
+\TX@target=\dimen260
+\TX@delta=\dimen261
+\TX@cols=\count310
+\TX@ftn=\toks23
+)
+(d:/texlive/2025/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip65
+\RaggedLeftLeftskip=\skip66
+\RaggedRightLeftskip=\skip67
+\CenteringRightskip=\skip68
+\RaggedLeftRightskip=\skip69
+\RaggedRightRightskip=\skip70
+\CenteringParfillskip=\skip71
+\RaggedLeftParfillskip=\skip72
+\RaggedRightParfillskip=\skip73
+\JustifyingParfillskip=\skip74
+\CenteringParindent=\skip75
+\RaggedLeftParindent=\skip76
+\RaggedRightParindent=\skip77
+\JustifyingParindent=\skip78
+)
+(d:/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip79
+\multirow@cntb=\count311
+\multirow@dima=\skip80
+\bigstrutjot=\dimen262
+)
+(d:/texlive/2025/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen263
+\c@nlinenum=\count312
+\TeXr@lab=\toks24
+)
+(d:/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count313
+\lst@gtempboxa=\box65
+\lst@token=\toks25
+\lst@length=\count314
+\lst@currlwidth=\dimen264
+\lst@column=\count315
+\lst@pos=\count316
+\lst@lostspace=\dimen265
+\lst@width=\dimen266
+\lst@newlines=\count317
+\lst@lineno=\count318
+\lst@maxwidth=\dimen267
+
+(d:/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+)
+(d:/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count319
+\lst@skipnumbers=\count320
+\lst@framebox=\box66
+)
+(d:/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+
+(d:/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
+\l__xeCJK_listings_max_char_int=\count321
+\l__xeCJK_listings_flag_int=\count322
+)
+(d:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(d:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(d:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(d:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+
+(d:/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(d:/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(d:/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(d:/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(d:/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(d:/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+))
+(d:/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(d:/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(d:/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(d:/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(d:/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count323
+)
+(d:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count324
+)
+(d:/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen268
+\Hy@linkcounter=\count325
+\Hy@pagecounter=\count326
+
+(d:/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+)
+(d:/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count327
+
+(d:/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4040.
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count328
+
+(d:/texlive/2025/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen269
+
+(d:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(d:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count329
+\Field@Width=\dimen270
+\Fld@charsize=\dimen271
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(d:/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count330
+\c@Item=\count331
+\c@Hfootnote=\count332
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(d:/texlive/2025/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2024-11-05 v7.01l Hyperref driver for XeTeX
+\pdfm@box=\box67
+\c@Hy@AnnotLevel=\count333
+\HyField@AnnotCount=\count334
+\Fld@listcount=\count335
+\c@bookmark@seq@number=\count336
+
+(d:/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(d:/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(d:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip81
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 34.
+
+(d:/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip82
+\enit@outerparindent=\dimen272
+\enit@toks=\toks26
+\enit@inbox=\box68
+\enit@count@id=\count337
+\enitdp@description=\count338
+)
+(d:/texlive/2025/texmf-dist/tex/latex/underscore/underscore.sty
+Package: underscore 2006/09/13
+LaTeX Info: Redefining \_ on input line 42.
+)
+(d:/texlive/2025/texmf-dist/tex/latex/firstaid/underscore-ltx.sty
+Package: underscore-ltx 2023/09/20 LaTeX firstaid to make underscore protected 
+
+)
+(d:/texlive/2025/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box69
+\UL@hyphenbox=\box70
+\UL@skip=\skip83
+\UL@hook=\toks27
+\UL@height=\dimen273
+\UL@pe=\count339
+\UL@pixel=\dimen274
+\ULC@box=\box71
+Package: ulem 2019/11/18
+\ULdepth=\dimen275
+)
+(d:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+(./report_fixed1.aux)
+\openout1 = `report_fixed1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 91.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 91.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 91.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 91.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 91.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 91.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 91.
+LaTeX Font Info:    Redeclaring math accent \check on input line 91.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 91.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 91.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 91.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 91.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 91.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 91.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 91.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 91.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 91.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 91.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 91.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 91.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 91.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 91.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 91.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 91.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 91.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count340
+Package hyperref Info: Link coloring ON on input line 91.
+(./report_fixed1.out) (./report_fixed1.out)
+\@outlinefile=\write3
+\openout3 = `report_fixed1.out'.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 94.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 94.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 94.
+ (./report_fixed1.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 2.
+
+
+[1
+
+])
+\tf@toc=\write4
+\openout4 = `report_fixed1.toc'.
+
+
+
+[2]
+File: images/media/image1.png Graphic file (type bmp)
+<images/media/image1.png>
+
+Underfull \hbox (badness 2326) in paragraph at lines 141--141
+[]|\TU/SimSun(0)/b/n/10.95 食 材 
+ []
+
+
+
+[3]
+File: images/media/ER_Color.drawio.png Graphic file (type bmp)
+<images/media/ER_Color.drawio.png>
+
+
+[4]
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FangSong(0)' created for font 'FangSong'
+(fontspec)             with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
+
+
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+
+[5]
+Overfull \hbox (3.7004pt too wide) in paragraph at lines 363--363
+[]|[]|  
+ []
+
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Overfull \hbox (9.32869pt too wide) in paragraph at lines 383--383
+[]|[]|  
+ []
+
+
+Overfull \hbox (8.41985pt too wide) in paragraph at lines 391--391
+[]|[]|  
+ []
+
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+[6]
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 946--946
+[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 948--948
+[]|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 950--950
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 952--952
+[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
+ []
+
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 954--954
+[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 956--956
+[]|\TU/lmr/m/n/10.95 VARCHAR2(500)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 958--958
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 964--964
+[]|\TU/lmr/m/n/10.95 VARCHAR2(20)|  
+ []
+
+
+Overfull \hbox (11.32555pt too wide) in paragraph at lines 964--965
+[]|\TU/lmr/m/n/10.95 active/inactive/suspended|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 970--970
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 972--972
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+
+
+[7]
+! Extra }, or forgotten \endgroup.
+l.974 \endlongtable}
+                    
+? 
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 983--983
+[]|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
+ []
+
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 985--985
+[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 987--987
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 989--989
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.991 \endlongtable}
+                    
+? 
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 1000--1000
+[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
+ []
+
+
+Overfull \hbox (1.93512pt too wide) in paragraph at lines 1002--1002
+[]|\TU/lmr/m/n/10.95 ABBREVIATION|  
+ []
+
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 1002--1002
+[]|\TU/lmr/m/n/10.95 VARCHAR2(20)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1004--1004
+[]|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1006--1006
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+[8]
+! Extra }, or forgotten \endgroup.
+l.1008 \endlongtable}
+                     
+? 
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1017--1017
+[]|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1019--1019
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1021--1021
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1023 \endlongtable}
+                     
+? 
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 1032--1032
+[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 1034--1034
+[]|\TU/lmr/m/n/10.95 TAG_- 
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1034--1034
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1036--1036
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1038 \endlongtable}
+                     
+? 
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1051--1051
+[]|\TU/lmr/m/n/10.95 VARCHAR2(200)|  
+ []
+
+
+Overfull \hbox (20.11446pt too wide) in paragraph at lines 1053--1053
+[]|\TU/lmr/m/n/10.95 VARCHAR2(1000)|  
+ []
+
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 1055--1055
+[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
+ []
+
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 1057--1057
+[]|\TU/lmr/m/n/10.95 VARCHAR2(20)|  
+ []
+
+
+Overfull \hbox (67.52094pt too wide) in paragraph at lines 1057--1058
+[]|\TU/lmr/m/n/10.95 breakfast/lunch/dinner/snack/dessert|  
+ []
+
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 1059--1059
+[]|\TU/lmr/m/n/10.95 VARCHAR2(20)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1071--1071
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+
+Overfull \hbox (3.68945pt too wide) in paragraph at lines 1073--1073
+[]|\TU/lmr/m/n/10.95 VARCHAR2(1)|  
+ []
+
+
+Overfull \hbox (3.68945pt too wide) in paragraph at lines 1075--1075
+[]|\TU/lmr/m/n/10.95 VARCHAR2(1)|  
+ []
+
+
+Overfull \hbox (1.1162pt too wide) in paragraph at lines 1081--1081
+[]|\TU/lmr/m/n/10.95 NUMBER(3,2)|  
+ []
+
+
+Overfull \hbox (23.93478pt too wide) in paragraph at lines 1083--1083
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+
+Overfull \hbox (23.93478pt too wide) in paragraph at lines 1085--1085
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+[9]
+! Extra }, or forgotten \endgroup.
+l.1087 \endlongtable}
+                     
+? 
+
+Overfull \hbox (6.5912pt too wide) in paragraph at lines 1100--1100
+[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1102--1102
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1104--1104
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1106 \endlongtable}
+                     
+? 
+
+Underfull \hbox (badness 1067) in paragraph at lines 1117--1117
+[]|\TU/lmr/m/n/10.95 STEP_- 
+ []
+
+
+Overfull \hbox (20.11446pt too wide) in paragraph at lines 1119--1119
+[]|\TU/lmr/m/n/10.95 VARCHAR2(1000)|  
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 1121--1121
+[]|\TU/lmr/m/n/10.95 TIME_- 
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1123--1123
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1125 \endlongtable}
+                     
+? 
+
+Overfull \hbox (6.5912pt too wide) in paragraph at lines 1138--1138
+[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
+ []
+
+
+Overfull \hbox (6.5912pt too wide) in paragraph at lines 1140--1140
+[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
+ []
+
+
+Overfull \hbox (6.5912pt too wide) in paragraph at lines 1142--1142
+[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
+ []
+
+
+Overfull \hbox (6.5912pt too wide) in paragraph at lines 1144--1144
+[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
+ []
+
+
+Overfull \hbox (6.5912pt too wide) in paragraph at lines 1146--1146
+[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
+ []
+
+[10]
+! Extra }, or forgotten \endgroup.
+l.1150 \endlongtable}
+                     
+? 
+! Extra }, or forgotten \endgroup.
+l.1161 \endlongtable}
+                     
+? 
+
+Overfull \hbox (1.1162pt too wide) in paragraph at lines 1172--1172
+[]|\TU/lmr/m/n/10.95 NUMBER(5,2)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1174--1174
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1176--1176
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1178 \endlongtable}
+                     
+? 
+
+Overfull \hbox (1.1162pt too wide) in paragraph at lines 1193--1193
+[]|\TU/lmr/m/n/10.95 NUMBER(3,2)|  
+ []
+
+
+Overfull \hbox (20.11446pt too wide) in paragraph at lines 1195--1195
+[]|\TU/lmr/m/n/10.95 VARCHAR2(1000)|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1197--1197
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+[11]
+! Extra }, or forgotten \endgroup.
+l.1199 \endlongtable}
+                     
+? 
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1212--1212
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1214 \endlongtable}
+                     
+? 
+
+Overfull \hbox (20.11446pt too wide) in paragraph at lines 1229--1229
+[]|\TU/lmr/m/n/10.95 VARCHAR2(1000)|  
+ []
+
+
+Overfull \hbox (3.68945pt too wide) in paragraph at lines 1231--1231
+[]|\TU/lmr/m/n/10.95 VARCHAR2(1)|  
+ []
+
+
+Overfull \hbox (55.67142pt too wide) in paragraph at lines 1233--1233
+[]|\TU/lmr/m/n/10.95 DF=SYSTIMESTAMP|  
+ []
+
+
+Overfull \hbox (55.67142pt too wide) in paragraph at lines 1235--1235
+[]|\TU/lmr/m/n/10.95 DF=SYSTIMESTAMP|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1237 \endlongtable}
+                     
+? 
+
+Overfull \hbox (55.67142pt too wide) in paragraph at lines 1248--1248
+[]|\TU/lmr/m/n/10.95 DF=SYSTIMESTAMP|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1250 \endlongtable}
+                     
+? 
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1263--1263
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+[12]
+! Extra }, or forgotten \endgroup.
+l.1265 \endlongtable}
+                     
+? 
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1276--1276
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1278 \endlongtable}
+                     
+? 
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1289--1289
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1291 \endlongtable}
+                     
+? 
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1302--1302
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1304 \endlongtable}
+                     
+? 
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 1315--1315
+[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
+ []
+
+
+Underfull \hbox (badness 2884) in paragraph at lines 1315--1316
+[]|\TU/SimSun(0)/m/n/10.95 活 动 类 型 
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1319--1319
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1321--1321
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+[13]
+! Extra }, or forgotten \endgroup.
+l.1323 \endlongtable}
+                     
+? 
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1336--1336
+[]|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1338--1338
+[]|\TU/lmr/m/n/10.95 VARCHAR2(500)|  
+ []
+
+
+Overfull \hbox (3.68945pt too wide) in paragraph at lines 1340--1340
+[]|\TU/lmr/m/n/10.95 VARCHAR2(1)|  
+ []
+
+
+Overfull \hbox (0.89954pt too wide) in paragraph at lines 1340--1340
+[]|\TU/lmr/m/n/10.95 DF=’Y’,CK|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1342--1342
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1344--1344
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1346 \endlongtable}
+                     
+? 
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1357--1357
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1359 \endlongtable}
+                     
+? 
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1370--1370
+[]|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1372--1372
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1374--1374
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1376 \endlongtable}
+                     
+? 
+
+Overfull \hbox (6.5912pt too wide) in paragraph at lines 1387--1387
+[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
+ []
+
+
+Overfull \hbox (3.68945pt too wide) in paragraph at lines 1391--1391
+[]|\TU/lmr/m/n/10.95 VARCHAR2(1)|  
+ []
+
+
+Overfull \hbox (0.89954pt too wide) in paragraph at lines 1391--1391
+[]|\TU/lmr/m/n/10.95 DF=’N’,CK|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1393--1393
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+[14]
+! Extra }, or forgotten \endgroup.
+l.1395 \endlongtable}
+                     
+? 
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1406--1406
+[]|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1408--1408
+[]|\TU/lmr/m/n/10.95 VARCHAR2(500)|  
+ []
+
+
+Overfull \hbox (3.68945pt too wide) in paragraph at lines 1414--1414
+[]|\TU/lmr/m/n/10.95 VARCHAR2(1)|  
+ []
+
+
+Overfull \hbox (0.89954pt too wide) in paragraph at lines 1414--1414
+[]|\TU/lmr/m/n/10.95 DF=’Y’,CK|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1416--1416
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1418--1418
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1420 \endlongtable}
+                     
+? 
+
+Overfull \hbox (9.16444pt too wide) in paragraph at lines 1433--1433
+[]|\TU/lmr/m/n/10.95 VARCHAR2(20)|  
+ []
+
+
+Underfull \hbox (badness 7081) in paragraph at lines 1433--1434
+[]|\TU/SimSun(0)/m/n/10.95 餐 型 
+ []
+
+
+Overfull \hbox (38.96985pt too wide) in paragraph at lines 1433--1434
+|\TU/SimSun(0)/m/n/10.95 （\TU/lmr/m/n/10.95 breakfast/lunch/dinner/snack√|  
+ []
+
+
+Overfull \hbox (14.63945pt too wide) in paragraph at lines 1435--1435
+[]|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
+ []
+
+
+Overfull \hbox (18.24432pt too wide) in paragraph at lines 1437--1437
+[]|\TU/lmr/m/n/10.95 DF=SYSDATE|  
+ []
+
+! Extra }, or forgotten \endgroup.
+l.1439 \endlongtable}
+                     
+? 
+
+Underfull \hbox (badness 3240) in paragraph at lines 1456--1456
+[]|\TU/lmr/bx/n/10.95 USER_- 
+ []
+
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Underfull \hbox (badness 3240) in paragraph at lines 1460--1460
+[]|\TU/lmr/bx/n/10.95 USER_- 
+ []
+
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Underfull \hbox (badness 4416) in paragraph at lines 1474--1474
+[]|\TU/lmr/bx/n/10.95 TOP_- 
+ []
+
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Underfull \hbox (badness 1297) in paragraph at lines 1476--1476
+\TU/lmr/bx/n/10.95 HEALTH_- 
+ []
+
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Underfull \hbox (badness 1394) in paragraph at lines 1482--1483
+[]|\TU/lmr/m/n/10.95 Meal_-Plans, 
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 1484--1484
+[]|\TU/lmr/bx/n/10.95 RECIPE_- 
+ []
+
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+[15] [16]
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Overfull \hbox (5.4944pt too wide) in alignment at lines 1525--1530
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (5.4944pt too wide) in alignment at lines 1530--1535
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (5.4944pt too wide) in alignment at lines 1535--1537
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 1538--1538
+[]|\TU/lmr/m/n/10.95 RECIPES, 
+ []
+
+Missing character: There is no � (U+FFFD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Overfull \hbox (5.4944pt too wide) in alignment at lines 1537--1548
+ [] [] [] [] [] 
+ []
+
+[17]
+! Extra }, or forgotten \endgroup.
+l.1556 \subsubsection{最最核心的表USERS与RECIPES创建的}}
+                                              
+? 
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1564.
+
+Overfull \hbox (80.30887pt too wide) in paragraph at lines 1578--1579
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][]  
+ []
+
+
+
+[18]
+File: images/media/users.png Graphic file (type bmp)
+<images/media/users.png>
+
+Overfull \hbox (98.30905pt too wide) in paragraph at lines 1606--1607
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (128.30936pt too wide) in paragraph at lines 1607--1608
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ 
+ []
+
+
+Overfull \hbox (56.30862pt too wide) in paragraph at lines 1608--1609
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][]  
+ []
+
+File: images/media/recipes.png Graphic file (type bmp)
+<images/media/recipes.png>
+
+
+[19]
+Overfull \hbox (116.30923pt too wide) in paragraph at lines 1633--1634
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (104.30911pt too wide) in paragraph at lines 1634--1635
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][]  
+ []
+
+File: images/media/recipe_ingredients.png Graphic file (type bmp)
+<images/media/recipe_ingredients.png>
+
+
+[20]
+Overfull \hbox (104.30911pt too wide) in paragraph at lines 1662--1663
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (152.3096pt too wide) in paragraph at lines 1663--1664
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (206.31015pt too wide) in paragraph at lines 1664--1665
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+File: images/media/comments1.png Graphic file (type bmp)
+<images/media/comments1.png>
+
+Overfull \hbox (110.30917pt too wide) in paragraph at lines 1683--1684
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (188.30997pt too wide) in paragraph at lines 1684--1685
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+File: images/media/followers.png Graphic file (type bmp)
+<images/media/followers.png>
+
+
+[21]
+File: images/media/每张表的基数.png Graphic file (type bmp)
+<images/media/每张表的基数.png>
+
+
+[22]
+File: images/media/view_user_overview.png Graphic file (type bmp)
+<images/media/view_user_overview.png>
+
+
+[23]
+File: images/media/view_user_safe_recipes.png Graphic file (type bmp)
+<images/media/view_user_safe_recipes.png>
+
+
+[24]
+File: images/media/view_recipe_ingredient.png Graphic file (type bmp)
+<images/media/view_recipe_ingredient.png>
+
+Overfull \hbox (98.30905pt too wide) in paragraph at lines 1840--1841
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (74.3088pt too wide) in paragraph at lines 1841--1842
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+File: images/media/view_recipe_step.png Graphic file (type bmp)
+<images/media/view_recipe_step.png>
+
+
+[25]
+Overfull \hbox (122.3093pt too wide) in paragraph at lines 1872--1873
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+File: images/media/view_recipe_comment.png Graphic file (type bmp)
+<images/media/view_recipe_comment.png>
+
+
+[26]
+
+[27]
+
+! LaTeX Error: \begin{longtable} on input line 1423 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2013 \end{document}
+                     
+? 
+
+
+[28] (./report_fixed1.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2022/08/05>
+ ***********
+Package rerunfilecheck Info: File `report_fixed1.out' has not changed.
+(rerunfilecheck)             Checksum: 52CBF427F74EFFA7508DE70EBE016544;4925.
+ )
+(\end occurred inside a group at level 26)
+
+### semi simple group (level 26) entered at line 1423 (\begingroup)
+### semi simple group (level 25) entered at line 1398 (\begingroup)
+### semi simple group (level 24) entered at line 1379 (\begingroup)
+### semi simple group (level 23) entered at line 1362 (\begingroup)
+### semi simple group (level 22) entered at line 1349 (\begingroup)
+### semi simple group (level 21) entered at line 1328 (\begingroup)
+### semi simple group (level 20) entered at line 1307 (\begingroup)
+### semi simple group (level 19) entered at line 1294 (\begingroup)
+### semi simple group (level 18) entered at line 1281 (\begingroup)
+### semi simple group (level 17) entered at line 1268 (\begingroup)
+### semi simple group (level 16) entered at line 1253 (\begingroup)
+### semi simple group (level 15) entered at line 1240 (\begingroup)
+### semi simple group (level 14) entered at line 1217 (\begingroup)
+### semi simple group (level 13) entered at line 1202 (\begingroup)
+### semi simple group (level 12) entered at line 1183 (\begingroup)
+### semi simple group (level 11) entered at line 1164 (\begingroup)
+### semi simple group (level 10) entered at line 1153 (\begingroup)
+### semi simple group (level 9) entered at line 1128 (\begingroup)
+### semi simple group (level 8) entered at line 1109 (\begingroup)
+### semi simple group (level 7) entered at line 1090 (\begingroup)
+### semi simple group (level 6) entered at line 1043 (\begingroup)
+### semi simple group (level 5) entered at line 1026 (\begingroup)
+### semi simple group (level 4) entered at line 1011 (\begingroup)
+### semi simple group (level 3) entered at line 994 (\begingroup)
+### semi simple group (level 2) entered at line 977 (\begingroup)
+### semi simple group (level 1) entered at line 940 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 17552 strings out of 475749
+ 372005 string characters out of 5772358
+ 1216581 words of memory out of 5000000
+ 40226 multiletter control sequences out of 15000+600000
+ 564869 words of font info for 86 fonts, out of 8000000 for 9000
+ 46 hyphenation exceptions out of 8191
+ 93i,11n,111p,352b,2503s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on report_fixed1.pdf (28 pages).

@@ -1,0 +1,50 @@
+\contentsline {section}{\numberline {1}设计部分}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}项目背景介绍}{3}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}AllRecipes网站概述}{3}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}核心业务数据}{3}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}业务流程分析}{4}{subsubsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.2}ER图设计（概念模型）}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}数据库库表设计（逻辑模型）}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}规范化}{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}常见操作归纳}{6}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}查询操作（SELECT）}{6}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}数据变更操作}{6}{subsubsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.6}完整性约束方案设计}{7}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}表的详细设计（物理模型）}{7}{subsection.1.7}%
+\contentsline {subsubsection}{\numberline {1.7.1}表的分类和数量统计}{7}{subsubsection.1.7.1}%
+\contentsline {subsubsection}{\numberline {1.7.2}核心表详细设计}{7}{subsubsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.8}视图设计方案}{15}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}数据库安全方案的设计}{17}{subsection.1.9}%
+\contentsline {subsubsection}{\numberline {1.9.1}用户认证和权限管理}{17}{subsubsection.1.9.1}%
+\contentsline {subsubsection}{\numberline {1.9.2}数据库人员}{17}{subsubsection.1.9.2}%
+\contentsline {subsubsection}{\numberline {1.9.3}权限分配}{17}{subsubsection.1.9.3}%
+\contentsline {section}{\numberline {2}实现部分}{18}{section.2}%
+\contentsline {subsection}{\numberline {2.1}表格创建（可同时包括约束条件的创建）}{18}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}最最核心的表USERS与RECIPES创建的}{18}{subsubsection.2.1.1}%
+\contentsline {paragraph}{USERS表创建}{18}{section*.2}%
+\contentsline {paragraph}{RECIPES表创建}{19}{section*.3}%
+\contentsline {subsubsection}{\numberline {2.1.2}转表RECIPE_INGREDIENTS创建}{20}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}有自引用的表}{21}{subsubsection.2.1.3}%
+\contentsline {paragraph}{COMMENTS表创建}{21}{lstlisting.-4}%
+\contentsline {paragraph}{FOLLOWERS表创建}{21}{lstlisting.-5}%
+\contentsline {subsection}{\numberline {2.2}数据录入}{22}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}视图创建和使用}{23}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}视图创建概览}{23}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}用户相关视图}{23}{subsubsection.2.3.2}%
+\contentsline {paragraph}{USER_OVERVIEW视图创建}{23}{section*.6}%
+\contentsline {paragraph}{USER_SAFE_RECIPES视图创建}{23}{section*.7}%
+\contentsline {subsubsection}{\numberline {2.3.3}食谱相关视图}{24}{subsubsection.2.3.3}%
+\contentsline {paragraph}{RECIPE_WITH_INGREDIENT视图创建}{24}{section*.8}%
+\contentsline {paragraph}{RECIPE_WITH_STEPS视图创建}{25}{section*.9}%
+\contentsline {subsubsection}{\numberline {2.3.4}社交互动视图}{26}{subsubsection.2.3.4}%
+\contentsline {paragraph}{RECIPE_COMMENTS_DETAIL视图创建}{26}{lstlisting.-10}%
+\contentsline {subsubsection}{\numberline {2.3.5}分析报表视图}{27}{subsubsection.2.3.5}%
+\contentsline {paragraph}{MONTHLY_STATISTICS视图创建}{27}{lstlisting.-11}%
+\contentsline {subsection}{\numberline {2.4}常见操作的实例演示}{27}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}数据库安全的实现}{27}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}数据库用户角色划分}{27}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}精细化权限分配}{28}{subsubsection.2.5.2}%
+\contentsline {section}{\numberline {3}总结}{28}{section.3}%
+\contentsline {subsection}{\numberline {3.1}组员分工}{28}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}难点与不足分析}{28}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}收获或体会及建议}{28}{subsection.3.3}%

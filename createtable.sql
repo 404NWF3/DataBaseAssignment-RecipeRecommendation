@@ -1,52 +1,68 @@
--- ============================================================
--- AllRecipes 食谱网站数据库设计 - 建表脚本 (Oracle v3.0)
--- 包含26个表，完整的约束、索引和触发器
--- 修改多对多关系：采用联合主键设计
--- ============================================================
-
--- ============================================================
--- 清理已存在的对象（可选）
--- ============================================================
-
+SET SERVEROUTPUT ON;
 BEGIN
-FOR cur IN (SELECT object_name FROM user_objects WHERE object_type='TABLE')
-LOOP
-EXECUTE IMMEDIATE 'DROP TABLE ' || cur.object_name || ' CASCADE CONSTRAINTS';
-END LOOP;
-FOR cur IN (SELECT sequence_name FROM user_sequences)
-LOOP
-EXECUTE IMMEDIATE 'DROP SEQUENCE ' || cur.sequence_name;
-END LOOP;
+  -- 删除所有表、视图和物化视图
+  FOR cur IN (SELECT object_name, object_type FROM user_objects WHERE object_type IN ('TABLE', 'VIEW', 'MATERIALIZED VIEW') AND object_name NOT LIKE 'BIN$%')
+  LOOP
+    BEGIN
+      IF cur.object_type = 'VIEW' THEN
+        EXECUTE IMMEDIATE 'DROP VIEW "' || cur.object_name || '"';
+      ELSIF cur.object_type = 'MATERIALIZED VIEW' THEN
+        EXECUTE IMMEDIATE 'DROP MATERIALIZED VIEW "' || cur.object_name || '"';
+      ELSE
+        -- CASCADE CONSTRAINTS 会自动删除关联的外键
+        EXECUTE IMMEDIATE 'DROP TABLE "' || cur.object_name || '" CASCADE CONSTRAINTS PURGE';
+      END IF;
+    EXCEPTION
+      WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Failed to drop ' || cur.object_type || ' ' || cur.object_name || ': ' || SQLERRM);
+    END;
+  END LOOP;
+
+  -- 删除所有序列
+  FOR cur IN (SELECT sequence_name FROM user_sequences)
+  LOOP
+    BEGIN
+      EXECUTE IMMEDIATE 'DROP SEQUENCE "' || cur.sequence_name || '"';
+    EXCEPTION
+      WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Failed to drop sequence ' || cur.sequence_name || ': ' || SQLERRM);
+    END;
+  END LOOP;
 END;
 /
+commit;
 
--- ============================================================
--- 第一部分：创建序列（主键自增）
--- ============================================================
+select * from user_tables;
+select * from user_sequences;
+select * from user_views;
+select * from user_indexes;
 
-CREATE SEQUENCE seq_users START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_ingredients START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_units START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_recipes START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_cooking_steps START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_nutrition_info START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_ratings START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_rating_helpfulness START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_comments START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_comment_helpfulness START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_saved_recipes START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_followers START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_tags START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_allergens START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_recipe_collections START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_shopping_lists START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_user_activity_log START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_meal_plans START WITH 1 INCREMENT BY 1;
+-- 第一部分：创建序列
+
+CREATE SEQUENCE seq_users START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_ingredients START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_units START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_recipes START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_cooking_steps START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_nutrition_info START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_ratings START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_rating_helpfulness START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_comments START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_comment_helpfulness START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_saved_recipes START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_followers START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_tags START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_allergens START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_recipe_collections START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_shopping_lists START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_user_activity_log START WITH 0 INCREMENT BY 1;
+CREATE SEQUENCE seq_meal_plans START WITH 0 INCREMENT BY 1;
 
 SELECT sequence_name, min_value, INCREMENT_BY, LAST_NUMBER FROM user_sequences;
+
+
 -- ============================================================
--- 第二部分：核心基础表
--- ============================================================
+-- 第二部分：插入表
 
 -- 表1：USERS（用户表）
 CREATE TABLE USERS (
@@ -102,10 +118,6 @@ CREATE TABLE TAGS (
     created_at TIMESTAMP DEFAULT SYSTIMESTAMP
 );
 
--- ============================================================
--- 第三部分：食谱核心表
--- ============================================================
-
 -- 表6：RECIPES（食谱表）
 CREATE TABLE RECIPES (
     recipe_id NUMBER(10) PRIMARY KEY,
@@ -133,7 +145,7 @@ CREATE TABLE RECIPES (
     CONSTRAINT ck_difficulty_level CHECK (difficulty_level IN ('easy', 'medium', 'hard')),
     CONSTRAINT ck_is_published CHECK (is_published IN ('Y', 'N')),
     CONSTRAINT ck_is_deleted CHECK (is_deleted IN ('Y', 'N')),
-    CONSTRAINT ck_cook_time CHECK (cook_time > 0)
+    CONSTRAINT ck_cook_time CHECK (cook_time >= 0)
 );
 
 -- 表7：RECIPE_INGREDIENTS（食谱食材关联表 - 多对多 - 联合主键）
@@ -199,10 +211,6 @@ CREATE TABLE INGREDIENT_SUBSTITUTIONS (
     CONSTRAINT fk_is_substitute FOREIGN KEY (substitute_ingredient_id) REFERENCES INGREDIENTS(ingredient_id),
     CONSTRAINT ck_different_ingredient CHECK (original_ingredient_id != substitute_ingredient_id)
 );
-
--- ============================================================
--- 第四部分：用户交互表
--- ============================================================
 
 -- 表12：RATINGS（食谱评价表）
 CREATE TABLE RATINGS (
@@ -310,10 +318,6 @@ CREATE TABLE USER_ACTIVITY_LOG (
     CONSTRAINT fk_ual_recipe FOREIGN KEY (recipe_id) REFERENCES RECIPES(recipe_id) ON DELETE SET NULL
 );
 
--- ============================================================
--- 第五部分：个人管理表
--- ============================================================
-
 -- 表21：RECIPE_COLLECTIONS（食谱收藏清单表）
 CREATE TABLE RECIPE_COLLECTIONS (
     collection_id NUMBER(10) PRIMARY KEY,
@@ -397,81 +401,47 @@ select table_name from user_tables;
 select table_name, CONSTRAINT_NAME, constraint_type, search_condition 
 from user_constraints
 order by table_name;
--- ============================================================
--- 第六部分：创建索引以提升查询性能
+
 -- ============================================================
 
--- 用户相关索引
+-- 第三部分：创建索引
+
 CREATE INDEX idx_users_status ON USERS(account_status);
 
--- 食材相关索引
 CREATE INDEX idx_ingredients_category ON INGREDIENTS(category);
 
--- 食谱相关索引
 CREATE INDEX idx_recipes_user_id ON RECIPES(user_id);
 CREATE INDEX idx_recipes_is_published ON RECIPES(is_published);
 CREATE INDEX idx_recipes_difficulty ON RECIPES(difficulty_level);
 CREATE INDEX idx_recipes_cuisine ON RECIPES(cuisine_type);
 CREATE INDEX idx_recipes_created_at ON RECIPES(created_at);
 
--- 评价相关索引
 CREATE INDEX idx_ratings_user_id ON RATINGS(user_id);
 CREATE INDEX idx_ratings_recipe_id ON RATINGS(recipe_id);
 CREATE INDEX idx_ratings_value ON RATINGS(rating_value);
 
--- 评论相关索引
 CREATE INDEX idx_comments_user_id ON COMMENTS(user_id);
 CREATE INDEX idx_comments_recipe_id ON COMMENTS(recipe_id);
 CREATE INDEX idx_comments_created_at ON COMMENTS(created_at);
 
--- 关注相关索引
 CREATE INDEX idx_followers_user_id ON FOLLOWERS(user_id);
 CREATE INDEX idx_followers_follower_id ON FOLLOWERS(follower_user_id);
 
--- 收藏相关索引
 CREATE INDEX idx_saved_recipes_user_id ON SAVED_RECIPES(user_id);
 CREATE INDEX idx_saved_recipes_recipe_id ON SAVED_RECIPES(recipe_id);
 
--- 膳食计划索引
 CREATE INDEX idx_meal_plans_user_id ON MEAL_PLANS(user_id);
 CREATE INDEX idx_meal_plan_entries_plan_id ON MEAL_PLAN_ENTRIES(plan_id);
 CREATE INDEX idx_meal_plan_entries_date ON MEAL_PLAN_ENTRIES(meal_date);
 
--- 购物清单索引
 CREATE INDEX idx_shopping_lists_user_id ON SHOPPING_LISTS(user_id);
 CREATE INDEX idx_SLI_list_id ON SHOPPING_LIST_ITEMS(list_id);
 
--- 清单索引
 CREATE INDEX idx_collections_user_id ON RECIPE_COLLECTIONS(user_id);
 CREATE INDEX idx_collection_RC_id ON COLLECTION_RECIPES(collection_id);
 CREATE INDEX idx_collection_RC_recipe_id ON COLLECTION_RECIPES(recipe_id);
 
 select index_name, table_name, uniqueness from user_indexes order by table_name;
--- ============================================================
--- 提交事务
--- ============================================================
+
 
 COMMIT;
-
--- ============================================================
--- 输出验证信息
--- ============================================================
-
-PROMPT
-PROMPT ========== AllRecipes 数据库对象统计 ==========
-PROMPT
-
-SELECT 'TABLES' AS object_type, COUNT(*) AS count FROM user_tables
-UNION ALL
-SELECT 'INDEXES', COUNT(*) FROM user_indexes
-UNION ALL
-SELECT 'SEQUENCES', COUNT(*) FROM user_sequences;
-
-PROMPT
-PROMPT ========== 已创建的表列表 ==========
-PROMPT
-
-SELECT table_name FROM user_tables WHERE table_name NOT LIKE 'BIN$%' ORDER BY table_name;
-
-PROMPT
-PROMPT ========== 系统已就绪 ==========
