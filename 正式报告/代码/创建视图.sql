@@ -21,6 +21,7 @@ LEFT JOIN RATINGS rt ON r.recipe_id = rt.recipe_id
 GROUP BY u.user_id, u.username, u.first_name, u.last_name, u.profile_image, 
          u.bio, u.join_date, u.account_status;
 
+
 -- 视图2：带原料的食谱
 
 CREATE OR REPLACE VIEW RECIPE_WITH_INGREDIENTS AS
@@ -117,7 +118,7 @@ WITH READ ONLY;
 -- GROUP BY u.user_id, r.recipe_id, r.recipe_name, r.average_rating;
 
 
--- CREATE OR REPLACE VIEW MONTHLY_STATISTICS AS
+CREATE OR REPLACE VIEW MONTHLY_STATISTICS AS
 SELECT 
     TRUNC(r.created_at, 'MM') AS month,
     COUNT(DISTINCT r.recipe_id) AS new_recipes,
@@ -133,3 +134,4 @@ GROUP BY TRUNC(r.created_at, 'MM')
 ORDER BY month DESC;
 
 select * from user_views;
+

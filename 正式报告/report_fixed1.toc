@@ -26,25 +26,38 @@
 \contentsline {subsubsection}{\numberline {2.1.2}转表RECIPE_INGREDIENTS创建}{20}{subsubsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.3}有自引用的表}{21}{subsubsection.2.1.3}%
 \contentsline {paragraph}{COMMENTS表创建}{21}{lstlisting.-4}%
-\contentsline {paragraph}{FOLLOWERS表创建}{21}{lstlisting.-5}%
+\contentsline {paragraph}{FOLLOWERS表创建}{22}{lstlisting.-5}%
 \contentsline {subsection}{\numberline {2.2}数据录入}{22}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}视图创建和使用}{23}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}视图创建概览}{23}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}用户相关视图}{23}{subsubsection.2.3.2}%
 \contentsline {paragraph}{USER_OVERVIEW视图创建}{23}{section*.6}%
-\contentsline {paragraph}{USER_SAFE_RECIPES视图创建}{23}{section*.7}%
-\contentsline {subsubsection}{\numberline {2.3.3}食谱相关视图}{24}{subsubsection.2.3.3}%
-\contentsline {paragraph}{RECIPE_WITH_INGREDIENT视图创建}{24}{section*.8}%
-\contentsline {paragraph}{RECIPE_WITH_STEPS视图创建}{25}{section*.9}%
-\contentsline {subsubsection}{\numberline {2.3.4}社交互动视图}{26}{subsubsection.2.3.4}%
-\contentsline {paragraph}{RECIPE_COMMENTS_DETAIL视图创建}{26}{lstlisting.-10}%
+\contentsline {paragraph}{USER_SAFE_RECIPES视图创建}{24}{section*.7}%
+\contentsline {subsubsection}{\numberline {2.3.3}食谱相关视图}{25}{subsubsection.2.3.3}%
+\contentsline {paragraph}{RECIPE_WITH_INGREDIENT视图创建}{25}{section*.8}%
+\contentsline {paragraph}{RECIPE_WITH_STEPS视图创建}{26}{section*.9}%
+\contentsline {subsubsection}{\numberline {2.3.4}社交互动视图}{27}{subsubsection.2.3.4}%
+\contentsline {paragraph}{RECIPE_COMMENTS_DETAIL视图创建}{27}{lstlisting.-10}%
 \contentsline {subsubsection}{\numberline {2.3.5}分析报表视图}{27}{subsubsection.2.3.5}%
 \contentsline {paragraph}{MONTHLY_STATISTICS视图创建}{27}{lstlisting.-11}%
-\contentsline {subsection}{\numberline {2.4}常见操作的实例演示}{27}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}数据库安全的实现}{27}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}数据库用户角色划分}{27}{subsubsection.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.5.2}精细化权限分配}{28}{subsubsection.2.5.2}%
-\contentsline {section}{\numberline {3}总结}{28}{section.3}%
-\contentsline {subsection}{\numberline {3.1}组员分工}{28}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}难点与不足分析}{28}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}收获或体会及建议}{28}{subsection.3.3}%
+\contentsline {subsection}{\numberline {2.4}常见操作的实例演示}{28}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}插入操作}{28}{subsubsection.2.4.1}%
+\contentsline {paragraph}{新用户注册}{28}{section*.12}%
+\contentsline {paragraph}{新食谱发布}{28}{lstlisting.-13}%
+\contentsline {subsubsection}{\numberline {2.4.2}查询操作}{30}{subsubsection.2.4.2}%
+\contentsline {paragraph}{用户查看某一食谱}{30}{lstlisting.-14}%
+\contentsline {paragraph}{用户查看食谱排行榜}{30}{lstlisting.-15}%
+\contentsline {subsubsection}{\numberline {2.4.3}更新操作}{31}{subsubsection.2.4.3}%
+\contentsline {paragraph}{用户更新个人资料}{31}{lstlisting.-16}%
+\contentsline {paragraph}{用户发布食谱}{31}{lstlisting.-17}%
+\contentsline {paragraph}{系统自动更新}{32}{section*.18}%
+\contentsline {subsubsection}{\numberline {2.4.4}删除操作}{32}{subsubsection.2.4.4}%
+\contentsline {paragraph}{逻辑删除}{32}{section*.19}%
+\contentsline {paragraph}{物理删除}{33}{section*.20}%
+\contentsline {subsection}{\numberline {2.5}数据库安全的实现}{33}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}数据库用户角色划分}{33}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}精细化权限分配}{33}{subsubsection.2.5.2}%
+\contentsline {section}{\numberline {3}总结}{34}{section.3}%
+\contentsline {subsection}{\numberline {3.1}组员分工}{34}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}难点与不足分析}{34}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}收获或体会及建议}{34}{subsection.3.3}%

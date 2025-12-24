@@ -937,7 +937,7 @@ AllRecipes 的主要数据对象包括：
 \textbf{用户核心表}
 
 \textbf{1. USERS表（用户表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -971,10 +971,10 @@ CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建记录时间 \\
 \hline
 UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 最后修改时间\\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{2. INGREDIENTS 表（食材表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -988,10 +988,10 @@ DESCRIPTION & VARCHAR2(255) & & & 食材描述和特√\\
 \hline
 CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{3. UNITS 表（单位表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1005,10 +1005,10 @@ DESCRIPTION & VARCHAR2(100) & & & 单位描述和转换信息\\
 \hline
 CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{4. ALLERGENS 表（过敏原表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1020,10 +1020,10 @@ DESCRIPTION & VARCHAR2(255) & & & 过敏原详细描述和影响 \\
 \hline
 CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{5. TAGS 表（标签表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1035,12 +1035,12 @@ TAG\_DESCRIPTION & VARCHAR2(255) & & & 标签描述 \\
 \hline
 CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{食谱核心表}
 
 \textbf{6. RECIPES 表（食谱表）}
-\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.9cm}|c|L{2.2cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1084,10 +1084,10 @@ CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \hline
 UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 最后更新时间\\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{7. RECIPE\_INGREDIENTS 表（食谱食材关联√- 多对多）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1103,10 +1103,10 @@ NOTES & VARCHAR2(255) & & & 特殊说明（如：切碎、预先煮沸） \\
 \hline
 ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{8. COOKING\_STEPS 表（烹饪步骤表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1122,10 +1122,10 @@ TIME\_REQUIRED & NUMBER(5) & & & 该步骤所需时间（分钟） \\
 \hline
 IMAGE\_URL & VARCHAR2(255) & & & 步骤配图URL \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{9. NUTRITION\_INFO 表（营养信息表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1147,10 +1147,10 @@ SUGAR\_GRAMS & NUMBER(10,2) & & & 糖（克） \\
 \hline
 SODIUM\_MG & NUMBER(10) & & & 钠（毫克）\\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{10. INGREDIENT\_ALLERGENS 表（食材过敏原关联表 - 多对多）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1158,10 +1158,10 @@ INGREDIENT\_ID & NUMBER(10) & √& PK1, FK & 食材ID，联合主键第一部分
 \hline
 ALLERGEN\_ID & NUMBER(10) & √& PK2, FK & 过敏原ID，联合主键第二部分\\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{11. INGREDIENT\_SUBSTITUTIONS 表（食材替代品关联表 - 多对多）}
-\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1175,12 +1175,12 @@ NOTES & VARCHAR2(255) & & & 替代说明 \\
 \hline
 ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{用户交互表}
 
 \textbf{12. RATINGS 表（食谱评价表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1196,10 +1196,10 @@ REVIEW\_TEXT & VARCHAR2(1000) & & & 评价文本 \\
 \hline
 RATING\_DATE & TIMESTAMP & √& DF=SYSDATE & 评价时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{13. RATING\_HELPFULNESS 表（评价有用性投票表 - 多对多）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1211,10 +1211,10 @@ HELPFUL\_VOTES & NUMBER(10) & & DF=0 & 有用投票数\\
 \hline
 VOTED\_AT & TIMESTAMP & √& DF=SYSDATE & 投票时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{14. COMMENTS 表（评论表）}
-\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1234,10 +1234,10 @@ CREATED\_AT & TIMESTAMP & & DF=SYSTIMESTAMP & 创建时间 \\
 \hline
 UPDATED\_AT & TIMESTAMP & & DF=SYSTIMESTAMP & 更新时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{15. COMMENT\_HELPFULNESS 表（评论有用性投票表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1247,10 +1247,10 @@ USER\_ID & NUMBER(10) & √& PK, FK & 投票者用户ID \\
 \hline
 VOTED\_AT & TIMESTAMP & & DF=SYSTIMESTAMP & 投票时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{16. SAVED\_RECIPES 表（收藏食谱表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1262,10 +1262,10 @@ RECIPE\_ID & NUMBER(10) & √& FK & 被收藏的食谱ID \\
 \hline
 SAVED\_AT & TIMESTAMP & √& DF=SYSDATE & 收藏时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{17. FOLLOWERS 表（用户关注关关系表- 多对多自引用）}
-\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1275,10 +1275,10 @@ FOLLOWER\_USER\_ID & NUMBER(10) & √& PK2, FK & 关注者用户ID，联合主�
 \hline
 FOLLOWED\_AT & TIMESTAMP & √& DF=SYSDATE & 关注时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{18. USER\_ALLERGIES 表（用户过敏原关联表 - 多对多）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1288,10 +1288,10 @@ ALLERGEN\_ID & NUMBER(10) & √& PK2, FK & 过敏原ID，联合主键第二部�
 \hline
 ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{19. RECIPE\_TAGS 表（食谱标签关联√- 多对多）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1301,10 +1301,10 @@ TAG\_ID & NUMBER(10) & √& PK2, FK & 标签ID，联合主键第二部分\\
 \hline
 ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{20. USER\_ACTIVITY\_LOG 表（用户活动日志表）}
-\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1320,12 +1320,12 @@ ACTIVITY\_DESCRIPTION & VARCHAR2(255) & & & 活动描述 \\
 \hline
 ACTIVITY\_DATE & TIMESTAMP & √& DF=SYSDATE & 活动时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{个人管理表}
 
 \textbf{21. RECIPE\_COLLECTIONS 表（食谱收藏清单表）}
-\begin{longtable}{|L{3.5cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3.5cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1343,10 +1343,10 @@ CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \hline
 UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 更新时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{22. COLLECTION\_RECIPES 表（清单食谱关联√- 多对多）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1356,10 +1356,10 @@ RECIPE\_ID & NUMBER(10) & √& PK2, FK & 食谱ID，联合主键第二部分\\
 \hline
 ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{23. SHOPPING\_LISTS 表（购物清单表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1373,10 +1373,10 @@ CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \hline
 UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 更新时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{24. SHOPPING\_LIST\_ITEMS 表（购物清单项目表- 多对多）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1392,10 +1392,10 @@ IS\_CHECKED & VARCHAR2(1) & √& DF='N',CK & 是否已购（Y/N）\\
 \hline
 ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{25. MEAL\_PLANS 表（膳食计划表）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1417,10 +1417,10 @@ CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \hline
 UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 更新时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \textbf{26. MEAL\_PLAN\_ENTRIES 表（膳食计划条目表- 多对多）}
-\begin{longtable}{|L{3cm}|L{2.7cm}|c|L{2.2cm}|L{4cm}|}
+\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
 \hline
@@ -1436,7 +1436,7 @@ NOTES & VARCHAR2(255) & & & 特殊说明 \\
 \hline
 ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \hline
-\endlongtable}
+\end{longtable}
 
 \subsection{视图设计方案}
 
@@ -1553,7 +1553,7 @@ ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 
 为了节省正文篇幅，纸质版我们只展示部分表格的实现代码，以及表的查询结果，完整代码我们将保存在电子版提交的附件。
 
-\subsubsection{最最核心的表USERS与RECIPES创建的}}
+\subsubsection{最最核心的表USERS与RECIPES创建的}
 
 \paragraph{USERS表创建}
 
@@ -1575,7 +1575,8 @@ CREATE TABLE USERS (
     account_status VARCHAR2(20) DEFAULT 'active' NOT NULL ,
     created_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     updated_at TIMESTAMP DEFAULT SYSTIMESTAMP,
-    CONSTRAINT ck_account_status CHECK (account_status IN ('active', 'inactive', 'suspended'))
+    CONSTRAINT ck_account_status CHECK (account_status IN 
+    ('active', 'inactive', 'suspended'))
 );
 \end{lstlisting}
 
@@ -1603,11 +1604,16 @@ CREATE TABLE RECIPES (
     is_deleted VARCHAR2(1) DEFAULT 'N' NOT NULL,
     created_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     updated_at TIMESTAMP DEFAULT SYSTIMESTAMP,
-    CONSTRAINT fk_recipes_user FOREIGN KEY (user_id) REFERENCES USERS(user_id) ON DELETE CASCADE,
-    CONSTRAINT ck_meal_type CHECK (meal_type IN ('breakfast', 'lunch', 'dinner', 'snack', 'dessert')),
-    CONSTRAINT ck_difficulty_level CHECK (difficulty_level IN ('easy', 'medium', 'hard')),
-    CONSTRAINT ck_is_published CHECK (is_published IN ('Y', 'N')),
-    CONSTRAINT ck_is_deleted CHECK (is_deleted IN ('Y', 'N'))
+    CONSTRAINT fk_recipes_user FOREIGN KEY (user_id) 
+    REFERENCES USERS(user_id) ON DELETE CASCADE,
+    CONSTRAINT ck_meal_type CHECK (meal_type IN 
+    ('breakfast', 'lunch', 'dinner', 'snack', 'dessert')),
+    CONSTRAINT ck_difficulty_level CHECK 
+    (difficulty_level IN ('easy', 'medium', 'hard')),
+    CONSTRAINT ck_is_published CHECK 
+    (is_published IN ('Y', 'N')),
+    CONSTRAINT ck_is_deleted CHECK 
+    (is_deleted IN ('Y', 'N'))
 );
 \end{lstlisting}
 
@@ -1630,9 +1636,12 @@ CREATE TABLE RECIPE_INGREDIENTS (
     notes VARCHAR2(255),
     added_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     PRIMARY KEY (recipe_id, ingredient_id),
-    CONSTRAINT fk_ri_recipe FOREIGN KEY (recipe_id) REFERENCES RECIPES(recipe_id) ON DELETE CASCADE,
-    CONSTRAINT fk_ri_ingredient FOREIGN KEY (ingredient_id) REFERENCES INGREDIENTS(ingredient_id),
-    CONSTRAINT fk_ri_unit FOREIGN KEY (unit_id) REFERENCES UNITS(unit_id)
+    CONSTRAINT fk_ri_recipe FOREIGN KEY (recipe_id) 
+    REFERENCES RECIPES(recipe_id) ON DELETE CASCADE,
+    CONSTRAINT fk_ri_ingredient FOREIGN KEY (ingredient_id) 
+    REFERENCES INGREDIENTS(ingredient_id),
+    CONSTRAINT fk_ri_unit FOREIGN KEY (unit_id) 
+    REFERENCES UNITS(unit_id)
 );
 \end{lstlisting}
 
@@ -1659,9 +1668,12 @@ CREATE TABLE COMMENTS (
     updated_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     is_deleted VARCHAR2(1) DEFAULT 'N' NOT NULL,
     CONSTRAINT ck_comments_is_deleted CHECK (is_deleted IN ('Y', 'N')),
-    CONSTRAINT fk_comments_user FOREIGN KEY (user_id) REFERENCES USERS(user_id) ON DELETE CASCADE,
-    CONSTRAINT fk_comments_recipe FOREIGN KEY (recipe_id) REFERENCES RECIPES(recipe_id) ON DELETE CASCADE,
-    CONSTRAINT fk_comments_parent FOREIGN KEY (parent_comment_id) REFERENCES COMMENTS(comment_id) ON DELETE CASCADE
+    CONSTRAINT fk_comments_user FOREIGN KEY (user_id) 
+    REFERENCES USERS(user_id) ON DELETE CASCADE,
+    CONSTRAINT fk_comments_recipe FOREIGN KEY (recipe_id) 
+    REFERENCES RECIPES(recipe_id) ON DELETE CASCADE,
+    CONSTRAINT fk_comments_parent FOREIGN KEY (parent_comment_id) 
+    REFERENCES COMMENTS(comment_id) ON DELETE CASCADE
 );
 \end{lstlisting}
 
@@ -1680,8 +1692,10 @@ CREATE TABLE FOLLOWERS (
     follower_user_id NUMBER(10) NOT NULL,
     followed_at TIMESTAMP DEFAULT SYSTIMESTAMP,
     PRIMARY KEY (user_id, follower_user_id),
-    CONSTRAINT fk_followers_user FOREIGN KEY (user_id) REFERENCES USERS(user_id) ON DELETE CASCADE,
-    CONSTRAINT fk_followers_follower FOREIGN KEY (follower_user_id) REFERENCES USERS(user_id) ON DELETE CASCADE,
+    CONSTRAINT fk_followers_user FOREIGN KEY (user_id) 
+    REFERENCES USERS(user_id) ON DELETE CASCADE,
+    CONSTRAINT fk_followers_follower FOREIGN KEY (follower_user_id) 
+    REFERENCES USERS(user_id) ON DELETE CASCADE,
     CONSTRAINT ck_not_self_follow CHECK (user_id != follower_user_id)
 );
 \end{lstlisting}
@@ -1713,17 +1727,17 @@ Followers的每条record只表示一个用户关注另一个用户。
 
 我们尽可能完成了前面设计方案中的大部分视图，以下是我们创建的视图列表：
 
-% \begin{figure}[H]
-% \centering
-% \includegraphics[width=0.3\textwidth]{images/media/user_views.png}
-% \caption{视图用户数据字典截图}
-% \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{images/media/data_dict_views.png}
+\caption{视图用户数据字典截图}
+\end{figure}
 
 \subsubsection{用户相关视图}
 
 \paragraph{USER_OVERVIEW视图创建}
 
-用户相关视图主要用在用户个人主页展示用户的主要信息。
+用户相关视图主要用在用户个人主页展示用户的主要信息。其中，用户的食谱总数于用户的关注人数还有粉丝人数是派生属性，需要通过聚合函数计算得到。
 \begin{lstlisting}[language=SQL]
 -- 视图：USER_OVERVIEW（用户概览视图）
 CREATE OR REPLACE VIEW USER_OVERVIEW AS
@@ -1762,7 +1776,6 @@ SELECT
     r.recipe_id,
     r.recipe_name,
     r.average_rating
-    -- STRING_AGG(t.tag_name, ', ') AS tags
 FROM USERS u
 CROSS JOIN RECIPES r
 LEFT JOIN RECIPE_TAGS rt ON r.recipe_id = rt.recipe_id
@@ -1830,6 +1843,7 @@ WITH READ ONLY;
 该视图用于进一步展示食谱的烹饪步骤，方便网页的浏览者查看，也应该是只读视图。
 
 \begin{lstlisting}[language=SQL]
+CREATE OR REPLACE VIEW RECIPE_WITH_STEPS AS
 SELECT 
     r.recipe_id,
     r.recipe_name,
@@ -1837,8 +1851,10 @@ SELECT
     cs.instruction,
     cs.time_required,
     cs.image_url,
-    LAG(cs.step_number) OVER (PARTITION BY r.recipe_id ORDER BY cs.step_number) AS previous_step,
-    LEAD(cs.step_number) OVER (PARTITION BY r.recipe_id ORDER BY cs.step_number) AS next_step
+    LAG(cs.step_number) OVER (PARTITION BY r.recipe_id ORDER BY cs.step_number) 
+    AS previous_step,
+    LEAD(cs.step_number) OVER (PARTITION BY r.recipe_id ORDER BY cs.step_number) 
+    AS next_step
 FROM RECIPES r
 LEFT JOIN COOKING_STEPS cs ON r.recipe_id = cs.recipe_id
 WHERE r.is_deleted = 'N'
@@ -1869,7 +1885,8 @@ SELECT
     c.comment_text,
     c.parent_comment_id,
     c.created_at,
-    (SELECT COUNT(*) FROM COMMENT_HELPFULNESS ch WHERE ch.comment_id = c.comment_id) AS helpful_count
+    (SELECT COUNT(*) FROM COMMENT_HELPFULNESS ch 
+    WHERE ch.comment_id = c.comment_id) AS helpful_count
 FROM COMMENTS c
 JOIN RECIPES r ON c.recipe_id = r.recipe_id
 JOIN USERS u ON c.user_id = u.user_id
@@ -1907,6 +1924,252 @@ ORDER BY month DESC;
 
 \subsection{常见操作的实例演示}
 
+\subsubsection{插入操作}
+
+由于我们的视图中绝大多数都使用了聚合函数或者WITH READ ONLY选项，所以插入操作只能在表上进行。
+
+\paragraph{新用户注册}
+
+下面以USERS表为例，展示插入操作。
+
+\begin{lstlisting}[language=SQL]
+-- 创建新用户
+INSERT INTO USERS (
+    user_id, username, email, password_hash, first_name, last_name, 
+    bio, join_date, account_status, created_at, updated_at
+)
+VALUES (
+    seq_users.NEXTVAL,'new_user','newuser@example.com','hashed_password_123',
+    'New','User','我是一位美食爱好者',SYSDATE,'active',SYSTIMESTAMP,SYSTIMESTAMP
+);
+COMMIT;
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/新用户注册.png}
+\caption{新用户注册截图}
+\end{figure}
+
+实际上这个操作一般在网站上注册用户时由应用程序完成。
+
+\paragraph{新食谱发布}
+
+\begin{lstlisting}[language=SQL]
+-- 第一步：插入食谱主表
+INSERT INTO RECIPES (
+    recipe_id, user_id, recipe_name, description, cuisine_type, 
+    meal_type, difficulty_level, prep_time, cook_time, servings,
+    is_published, is_deleted, created_at, updated_at
+)
+VALUES (
+    seq_recipes.NEXTVAL,11,'番茄鸡蛋汤',
+    '清汤营养，简单快手，适合全年龄段食用',
+    '家常','lunch','easy',5,10,2,
+    'Y','N',SYSTIMESTAMP,SYSTIMESTAMP
+);
+
+select * from RECIPES where recipe_name='番茄鸡蛋汤';
+
+-- 第二步：插入食谱食材（外键依赖 RECIPES、INGREDIENTS、UNITS）
+INSERT INTO RECIPE_INGREDIENTS (
+    recipe_id, ingredient_id, unit_id, quantity, notes
+)VALUES (15, 1,1,300,'新鲜番茄，切块');
+
+INSERT INTO RECIPE_INGREDIENTS (
+    recipe_id, ingredient_id, unit_id, quantity, notes
+)VALUES (15,11,8,2,'打散后倒入汤中');
+
+select * from RECIPE_INGREDIENTS where recipe_id=15;
+
+-- 第三步：插入烹饪步骤
+INSERT INTO COOKING_STEPS (
+    step_id, recipe_id, step_number, instruction, time_required
+)VALUES (seq_cooking_steps.NEXTVAL,15,1,'番茄洗净切块，鸡蛋打碎备用',5);
+
+INSERT INTO COOKING_STEPS (
+    step_id, recipe_id, step_number, instruction, time_required
+)VALUES (seq_cooking_steps.NEXTVAL,15,2,'烧开一锅清水，加入番茄块，煮 5 分钟至番茄软烂',5);
+
+INSERT INTO COOKING_STEPS (
+    step_id, recipe_id, step_number, instruction, time_required
+)VALUES (seq_cooking_steps.NEXTVAL,15,3,'倒入打散的鸡蛋，边倒边搅拌形成蛋花，加盐调味，完成',5);
+\end{lstlisting}[language=SQL]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/创建新食谱1.png}
+\caption{创建新食谱截图}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/创建新食谱2.png}
+\caption{加入食材截图}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/创建新食谱3.png}
+\caption{更新烹饪步骤截图}
+\end{figure}
+
+\subsubsection{查询操作}
+
+查询操作可以使用我们创建的诸多视图来简化复杂的查询。
+
+\paragraph{用户查看某一食谱}
+
+\begin{lstlisting}[language=SQL]
+select * from RECIPE_WITH_INGREDIENTS where recipe_id=1;
+select * from RECIPE_WITH_STEPs where recipe_id=1;
+select * from RECIPE_COMMENTS_DETAIL where recipe_id=1;
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/查询食谱1.png}
+\caption{网站显示食谱的原料}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/查询食谱2.png}
+\caption{网站显示食谱的烹饪步骤}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/查询食谱3.png}
+\caption{网站显示食谱的用户评论}
+\end{figure}
+
+\paragraph{用户查看食谱排行榜}
+\begin{lstlisting}[language=SQL]
+SELECT 
+    r.recipe_id,r.recipe_name,r.cuisine_type,r.average_rating,
+    r.rating_count,r.view_count,u.username,
+    ROUND(
+        r.average_rating * 0.5 +
+        LEAST(r.rating_count / 100.0, 5) * 0.3 +
+        LEAST(r.view_count / 10000.0, 5) * 0.2
+    , 2) AS popularity_score
+FROM RECIPES r
+JOIN USERS u ON r.user_id = u.user_id
+WHERE r.is_published = 'Y' 
+  AND r.is_deleted = 'N'
+  AND r.created_at > SYSDATE - 180  -- 过去6个月
+ORDER BY popularity_score DESC;
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/用户查看排行榜.png}
+\caption{网站显示食谱排行榜}
+\end{figure}
+
+这里面我们也是寄了一个视图，但没在前面展示，其实是可以直接调用视图查询的。
+另外这里的推荐算法实际应用中可以使用更加复杂的模型来实现，我们使用了一个简单的加权评分模型。
+
+\subsubsection{更新操作}
+
+\paragraph{用户更新个人资料}
+\begin{lstlisting}[language=SQL]
+UPDATE USERS
+SET 
+    bio = '新手烹饪爱好者，分享家常菜做法',
+    profile_image = 'https://avatars.githubusercontent.com/u/145841814?v=4',
+    updated_at = SYSTIMESTAMP
+WHERE user_id = 11;
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/用户更新头像.png}
+\caption{网站显示用户更新后的个人资料}
+\end{figure}
+
+\paragraph{用户发布食谱}
+\begin{lstlisting}[language=SQL]
+UPDATE RECIPES
+SET 
+    is_published = 'Y',
+    updated_at = SYSTIMESTAMP
+WHERE recipe_id = 5;
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/用户发布食谱.png}
+\caption{网站显示用户发布后的食谱}
+\end{figure}
+
+\paragraph{系统自动更新}
+
+我们考虑到数据库中有许多派生属性，其中有些属性需要定期更新，从而提高系统性能，避免每次调用系统都要做复杂的查询，比如用户的好友总数喝食谱总数。
+但是，食谱的准备时间、烹饪时间、总时间、营养等派生属性我们认为不需要定期更新，每次查询时计算即可，因为这些属性不会频繁变化。
+
+\begin{lstlisting}
+UPDATE USERS
+SET 
+    total_recipes = (
+        SELECT COUNT(*)
+        FROM RECIPES
+        WHERE user_id = USERS.user_id
+          AND is_deleted = 'N'
+    ),
+    updated_at = SYSTIMESTAMP
+WHERE account_status = 'active';
+\end{lstlisting}
+
+\begin{lstlisting}[language=SQL]
+UPDATE RECIPES r
+SET 
+    average_rating = (
+        SELECT ROUND(AVG(rating_value), 2)
+        FROM RATINGS WHERE recipe_id = r.recipe_id
+    ),
+    rating_count = (
+        SELECT COUNT(*) FROM RATINGS
+        WHERE recipe_id = r.recipe_id
+    ), updated_at = SYSTIMESTAMP
+WHERE recipe_id IN (
+    SELECT DISTINCT recipe_id FROM RATINGS
+    WHERE rating_date >= SYSDATE - 1
+);
+\end{lstlisting}
+
+\subsubsection{删除操作}
+
+我们了解到，一个网站的删除操作分物理删除和逻辑删除，其实逻辑删除应该属于更新操作的一种，但为了突出其重要性，我们单独列出来。
+
+\paragraph{逻辑删除}
+
+只需要将is_deleted字段更新为'Y'即可。
+
+\begin{lstlisting}[language=SQL]
+UPDATE RECIPES
+SET 
+is_deleted = 'Y', updated_at = SYSTIMESTAMP
+WHERE recipe_id = 10;
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/media/逻辑删除.png}
+\caption{用户删除食谱}
+\end{figure}
+
+\paragraph{物理删除}
+
+物理删除一般由系统定期执行的清理任务完成，删除那些逻辑删除且超过一定时间未恢复的数据。
+
+\begin{lstlisting}[language=SQL]
+DELETE FROM RECIPES
+WHERE is_deleted = 'Y'
+  AND SYSDATE - updated_at > 90;
+\end{lstlisting}
+
 \subsection{数据库安全的实现}
 
 \subsubsection{数据库用户角色划分}
@@ -1926,13 +2189,6 @@ GRANT CONNECT TO report_user;
 CREATE USER dba_admin IDENTIFIED BY "AdminP@ss789";
 GRANT DBA TO dba_admin;
 
--- 4. 备份用户（BACKUP_USER）：备份和恢复
-CREATE USER backup_user IDENTIFIED BY "BackupP@ss000";
-GRANT CREATE SESSION, EXPORT_FULL_DATABASE TO backup_user;
-
--- 5. 审计用户（AUDIT_USER）：审计日志查看
-CREATE USER audit_user IDENTIFIED BY "AuditP@ss111";
-GRANT CONNECT TO audit_user;
 \end{lstlisting}
 
 \subsubsection{精细化权限分配}

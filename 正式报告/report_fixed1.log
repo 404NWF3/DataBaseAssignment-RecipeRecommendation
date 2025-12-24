@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.21)  23 DEC 2025 09:38
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.8.21)  24 DEC 2025 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -803,43 +803,23 @@ ex-text;!
 Missing character: There is no ✓ (U+2713) in font [lmroman10-regular]:mapping=t
 ex-text;!
 
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 946--946
-[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
- []
-
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 948--948
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 948--948
 []|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
  []
 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 950--950
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 950--950
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
  []
 
 
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 952--952
-[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
- []
-
-
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 954--954
-[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
- []
-
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 956--956
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 956--956
 []|\TU/lmr/m/n/10.95 VARCHAR2(500)|  
  []
 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 958--958
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 958--958
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
- []
-
-
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 964--964
-[]|\TU/lmr/m/n/10.95 VARCHAR2(20)|  
  []
 
 
@@ -848,49 +828,30 @@ Overfull \hbox (11.32555pt too wide) in paragraph at lines 964--965
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 970--970
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 970--970
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 972--972
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 972--972
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 
 
 [7]
-! Extra }, or forgotten \endgroup.
-l.974 \endlongtable}
-                    
-? 
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 983--983
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 983--983
 []|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
  []
 
 
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 985--985
-[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
- []
-
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 987--987
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 987--987
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 989--989
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 989--989
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
- []
-
-! Extra }, or forgotten \endgroup.
-l.991 \endlongtable}
-                    
-? 
-
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 1000--1000
-[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
  []
 
 
@@ -899,47 +860,28 @@ Overfull \hbox (1.93512pt too wide) in paragraph at lines 1002--1002
  []
 
 
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 1002--1002
-[]|\TU/lmr/m/n/10.95 VARCHAR2(20)|  
- []
-
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1004--1004
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1004--1004
 []|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1006--1006
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1006--1006
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 [8]
-! Extra }, or forgotten \endgroup.
-l.1008 \endlongtable}
-                     
-? 
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1017--1017
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1017--1017
 []|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
  []
 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1019--1019
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1019--1019
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1021--1021
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1021--1021
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
- []
-
-! Extra }, or forgotten \endgroup.
-l.1023 \endlongtable}
-                     
-? 
-
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 1032--1032
-[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
  []
 
 
@@ -948,37 +890,23 @@ Underfull \hbox (badness 1466) in paragraph at lines 1034--1034
  []
 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1034--1034
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1034--1034
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1036--1036
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1036--1036
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1038 \endlongtable}
-                     
-? 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1051--1051
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1051--1051
 []|\TU/lmr/m/n/10.95 VARCHAR2(200)|  
  []
 
 
-Overfull \hbox (14.424pt too wide) in paragraph at lines 1053--1053
+Overfull \hbox (8.73352pt too wide) in paragraph at lines 1053--1053
 []|\TU/lmr/m/n/10.95 VARCHAR2(1000)|  
- []
-
-
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 1055--1055
-[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
- []
-
-
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 1057--1057
-[]|\TU/lmr/m/n/10.95 VARCHAR2(20)|  
  []
 
 
@@ -987,56 +915,37 @@ Overfull \hbox (67.52094pt too wide) in paragraph at lines 1057--1058
  []
 
 
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 1059--1059
-[]|\TU/lmr/m/n/10.95 VARCHAR2(20)|  
- []
-
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1071--1071
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1071--1071
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
  []
 
 
-Overfull \hbox (18.24432pt too wide) in paragraph at lines 1083--1083
+Overfull \hbox (12.55386pt too wide) in paragraph at lines 1083--1083
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 
-Overfull \hbox (18.24432pt too wide) in paragraph at lines 1085--1085
+Overfull \hbox (12.55386pt too wide) in paragraph at lines 1085--1085
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 [9]
-! Extra }, or forgotten \endgroup.
-l.1087 \endlongtable}
-                     
-? 
-
-Overfull \hbox (0.90074pt too wide) in paragraph at lines 1100--1100
-[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
- []
-
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1102--1102
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1102--1102
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1104--1104
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1104--1104
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1106 \endlongtable}
-                     
-? 
 
 Underfull \hbox (badness 1067) in paragraph at lines 1117--1117
 []|\TU/lmr/m/n/10.95 STEP_- 
  []
 
 
-Overfull \hbox (14.424pt too wide) in paragraph at lines 1119--1119
+Overfull \hbox (8.73352pt too wide) in paragraph at lines 1119--1119
 []|\TU/lmr/m/n/10.95 VARCHAR2(1000)|  
  []
 
@@ -1046,154 +955,73 @@ Underfull \hbox (badness 1038) in paragraph at lines 1121--1121
  []
 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1123--1123
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1123--1123
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
- []
-
-! Extra }, or forgotten \endgroup.
-l.1125 \endlongtable}
-                     
-? 
-
-Overfull \hbox (0.90074pt too wide) in paragraph at lines 1138--1138
-[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
- []
-
-
-Overfull \hbox (0.90074pt too wide) in paragraph at lines 1140--1140
-[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
- []
-
-
-Overfull \hbox (0.90074pt too wide) in paragraph at lines 1142--1142
-[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
- []
-
-
-Overfull \hbox (0.90074pt too wide) in paragraph at lines 1144--1144
-[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
- []
-
-
-Overfull \hbox (0.90074pt too wide) in paragraph at lines 1146--1146
-[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
  []
 
 [10]
-! Extra }, or forgotten \endgroup.
-l.1150 \endlongtable}
-                     
-? 
-! Extra }, or forgotten \endgroup.
-l.1161 \endlongtable}
-                     
-? 
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1174--1174
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1174--1174
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1176--1176
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1176--1176
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1178 \endlongtable}
-                     
-? 
 
-Overfull \hbox (14.424pt too wide) in paragraph at lines 1195--1195
+Overfull \hbox (8.73352pt too wide) in paragraph at lines 1195--1195
 []|\TU/lmr/m/n/10.95 VARCHAR2(1000)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1197--1197
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1197--1197
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 [11]
-! Extra }, or forgotten \endgroup.
-l.1199 \endlongtable}
-                     
-? 
-
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1212--1212
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1212--1212
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1214 \endlongtable}
-                     
-? 
 
-Overfull \hbox (14.424pt too wide) in paragraph at lines 1229--1229
+Overfull \hbox (8.73352pt too wide) in paragraph at lines 1229--1229
 []|\TU/lmr/m/n/10.95 VARCHAR2(1000)|  
  []
 
 
-Overfull \hbox (49.98096pt too wide) in paragraph at lines 1233--1233
+Overfull \hbox (44.29048pt too wide) in paragraph at lines 1233--1233
 []|\TU/lmr/m/n/10.95 DF=SYSTIMESTAMP|  
  []
 
 
-Overfull \hbox (49.98096pt too wide) in paragraph at lines 1235--1235
+Overfull \hbox (44.29048pt too wide) in paragraph at lines 1235--1235
 []|\TU/lmr/m/n/10.95 DF=SYSTIMESTAMP|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1237 \endlongtable}
-                     
-? 
 
-Overfull \hbox (49.98096pt too wide) in paragraph at lines 1248--1248
+Overfull \hbox (44.29048pt too wide) in paragraph at lines 1248--1248
 []|\TU/lmr/m/n/10.95 DF=SYSTIMESTAMP|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1250 \endlongtable}
-                     
-? 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1263--1263
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1263--1263
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 [12]
-! Extra }, or forgotten \endgroup.
-l.1265 \endlongtable}
-                     
-? 
-
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1276--1276
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1276--1276
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1278 \endlongtable}
-                     
-? 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1289--1289
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1289--1289
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1291 \endlongtable}
-                     
-? 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1302--1302
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1302--1302
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
- []
-
-! Extra }, or forgotten \endgroup.
-l.1304 \endlongtable}
-                     
-? 
-
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 1315--1315
-[]|\TU/lmr/m/n/10.95 VARCHAR2(50)|  
  []
 
 
@@ -1202,114 +1030,78 @@ Underfull \hbox (badness 2884) in paragraph at lines 1315--1316
  []
 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1319--1319
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1319--1319
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1321--1321
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1321--1321
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 [13]
-! Extra }, or forgotten \endgroup.
-l.1323 \endlongtable}
-                     
-? 
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1336--1336
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1336--1336
 []|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
  []
 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1338--1338
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1338--1338
 []|\TU/lmr/m/n/10.95 VARCHAR2(500)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1342--1342
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1342--1342
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1344--1344
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1344--1344
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1346 \endlongtable}
-                     
-? 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1357--1357
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1357--1357
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1359 \endlongtable}
-                     
-? 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1370--1370
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1370--1370
 []|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1372--1372
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1372--1372
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1374--1374
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1374--1374
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1376 \endlongtable}
-                     
-? 
 
-Overfull \hbox (0.90074pt too wide) in paragraph at lines 1387--1387
-[]|\TU/lmr/m/n/10.95 NUMBER(10,2)|  
- []
-
-
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1393--1393
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1393--1393
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 [14]
-! Extra }, or forgotten \endgroup.
-l.1395 \endlongtable}
-                     
-? 
-
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1406--1406
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1406--1406
 []|\TU/lmr/m/n/10.95 VARCHAR2(100)|  
  []
 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1408--1408
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1408--1408
 []|\TU/lmr/m/n/10.95 VARCHAR2(500)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1416--1416
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1416--1416
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1418--1418
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1418--1418
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
- []
-
-! Extra }, or forgotten \endgroup.
-l.1420 \endlongtable}
-                     
-? 
-
-Overfull \hbox (3.47398pt too wide) in paragraph at lines 1433--1433
-[]|\TU/lmr/m/n/10.95 VARCHAR2(20)|  
  []
 
 
@@ -1323,19 +1115,15 @@ Overfull \hbox (38.96985pt too wide) in paragraph at lines 1433--1434
  []
 
 
-Overfull \hbox (8.94899pt too wide) in paragraph at lines 1435--1435
+Overfull \hbox (3.25851pt too wide) in paragraph at lines 1435--1435
 []|\TU/lmr/m/n/10.95 VARCHAR2(255)|  
  []
 
 
-Overfull \hbox (12.55386pt too wide) in paragraph at lines 1437--1437
+Overfull \hbox (6.86339pt too wide) in paragraph at lines 1437--1437
 []|\TU/lmr/m/n/10.95 DF=SYSDATE|  
  []
 
-! Extra }, or forgotten \endgroup.
-l.1439 \endlongtable}
-                     
-? 
 
 Underfull \hbox (badness 3240) in paragraph at lines 1456--1456
 []|\TU/lmr/bx/n/10.95 USER_- 
@@ -1463,204 +1251,139 @@ Overfull \hbox (5.4944pt too wide) in alignment at lines 1537--1548
  []
 
 [17]
-! Extra }, or forgotten \endgroup.
-l.1556 \subsubsection{最最核心的表USERS与RECIPES创建的}}
-                                              
-? 
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1564.
-
-Overfull \hbox (80.30887pt too wide) in paragraph at lines 1578--1579
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][]  
- []
-
 
 
 [18]
 File: images/media/users.png Graphic file (type bmp)
 <images/media/users.png>
-
-Overfull \hbox (98.30905pt too wide) in paragraph at lines 1606--1607
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (128.30936pt too wide) in paragraph at lines 1607--1608
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- 
- []
-
-
-Overfull \hbox (56.30862pt too wide) in paragraph at lines 1608--1609
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][]  
- []
-
 File: images/media/recipes.png Graphic file (type bmp)
 <images/media/recipes.png>
 
 
 [19]
-Overfull \hbox (116.30923pt too wide) in paragraph at lines 1633--1634
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (104.30911pt too wide) in paragraph at lines 1634--1635
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][]  
- []
-
 File: images/media/recipe_ingredients.png Graphic file (type bmp)
 <images/media/recipe_ingredients.png>
 
 
 [20]
-Overfull \hbox (104.30911pt too wide) in paragraph at lines 1662--1663
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (152.3096pt too wide) in paragraph at lines 1663--1664
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (206.31015pt too wide) in paragraph at lines 1664--1665
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
 File: images/media/comments1.png Graphic file (type bmp)
 <images/media/comments1.png>
 
-Overfull \hbox (110.30917pt too wide) in paragraph at lines 1683--1684
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (188.30997pt too wide) in paragraph at lines 1684--1685
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-File: images/media/followers.png Graphic file (type bmp)
-<images/media/followers.png>
-
 
 [21]
+File: images/media/followers.png Graphic file (type bmp)
+<images/media/followers.png>
 File: images/media/每张表的基数.png Graphic file (type bmp)
 <images/media/每张表的基数.png>
 
 
 [22]
+File: images/media/data_dict_views.png Graphic file (type bmp)
+<images/media/data_dict_views.png>
+
+
+[23]
 File: images/media/view_user_overview.png Graphic file (type bmp)
 <images/media/view_user_overview.png>
 
 
-[23]
+[24]
 File: images/media/view_user_safe_recipes.png Graphic file (type bmp)
 <images/media/view_user_safe_recipes.png>
 
 
-[24]
+[25]
 File: images/media/view_recipe_ingredient.png Graphic file (type bmp)
 <images/media/view_recipe_ingredient.png>
-
-Overfull \hbox (98.30905pt too wide) in paragraph at lines 1840--1841
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (74.3088pt too wide) in paragraph at lines 1841--1842
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
 File: images/media/view_recipe_step.png Graphic file (type bmp)
 <images/media/view_recipe_step.png>
 
 
-[25]
-Overfull \hbox (122.3093pt too wide) in paragraph at lines 1872--1873
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
+[26]
 File: images/media/view_recipe_comment.png Graphic file (type bmp)
 <images/media/view_recipe_comment.png>
 
 
-[26]
-
 [27]
-
-! LaTeX Error: \begin{longtable} on input line 1423 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2013 \end{document}
-                     
-? 
+File: images/media/新用户注册.png Graphic file (type bmp)
+<images/media/新用户注册.png>
 
 
-[28] (./report_fixed1.aux)
+[28]
+Overfull \hbox (62.30869pt too wide) in paragraph at lines 1992--1994
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][]  
+ []
+
+
+Overfull \hbox (92.30899pt too wide) in paragraph at lines 1996--1997
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][]  
+ []
+
+File: images/media/创建新食谱1.png Graphic file (type bmp)
+<images/media/创建新食谱1.png>
+File: images/media/创建新食谱2.png Graphic file (type bmp)
+<images/media/创建新食谱2.png>
+File: images/media/创建新食谱3.png Graphic file (type bmp)
+<images/media/创建新食谱3.png>
+
+
+[29]
+File: images/media/查询食谱1.png Graphic file (type bmp)
+<images/media/查询食谱1.png>
+File: images/media/查询食谱2.png Graphic file (type bmp)
+<images/media/查询食谱2.png>
+File: images/media/查询食谱3.png Graphic file (type bmp)
+<images/media/查询食谱3.png>
+
+
+[30]
+File: images/media/用户查看排行榜.png Graphic file (type bmp)
+<images/media/用户查看排行榜.png>
+File: images/media/用户更新头像.png Graphic file (type bmp)
+<images/media/用户更新头像.png>
+File: images/media/用户发布食谱.png Graphic file (type bmp)
+<images/media/用户发布食谱.png>
+
+
+[31]
+File: images/media/逻辑删除.png Graphic file (type bmp)
+<images/media/逻辑删除.png>
+
+
+[32]
+
+[33]
+
+[34] (./report_fixed1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
-Package rerunfilecheck Info: File `report_fixed1.out' has not changed.
-(rerunfilecheck)             Checksum: 52CBF427F74EFFA7508DE70EBE016544;4925.
- )
-(\end occurred inside a group at level 26)
 
-### semi simple group (level 26) entered at line 1423 (\begingroup)
-### semi simple group (level 25) entered at line 1398 (\begingroup)
-### semi simple group (level 24) entered at line 1379 (\begingroup)
-### semi simple group (level 23) entered at line 1362 (\begingroup)
-### semi simple group (level 22) entered at line 1349 (\begingroup)
-### semi simple group (level 21) entered at line 1328 (\begingroup)
-### semi simple group (level 20) entered at line 1307 (\begingroup)
-### semi simple group (level 19) entered at line 1294 (\begingroup)
-### semi simple group (level 18) entered at line 1281 (\begingroup)
-### semi simple group (level 17) entered at line 1268 (\begingroup)
-### semi simple group (level 16) entered at line 1253 (\begingroup)
-### semi simple group (level 15) entered at line 1240 (\begingroup)
-### semi simple group (level 14) entered at line 1217 (\begingroup)
-### semi simple group (level 13) entered at line 1202 (\begingroup)
-### semi simple group (level 12) entered at line 1183 (\begingroup)
-### semi simple group (level 11) entered at line 1164 (\begingroup)
-### semi simple group (level 10) entered at line 1153 (\begingroup)
-### semi simple group (level 9) entered at line 1128 (\begingroup)
-### semi simple group (level 8) entered at line 1109 (\begingroup)
-### semi simple group (level 7) entered at line 1090 (\begingroup)
-### semi simple group (level 6) entered at line 1043 (\begingroup)
-### semi simple group (level 5) entered at line 1026 (\begingroup)
-### semi simple group (level 4) entered at line 1011 (\begingroup)
-### semi simple group (level 3) entered at line 994 (\begingroup)
-### semi simple group (level 2) entered at line 977 (\begingroup)
-### semi simple group (level 1) entered at line 940 (\begingroup)
-### bottom level 
+
+Package rerunfilecheck Warning: File `report_fixed1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report_fixed1.out':
+(rerunfilecheck)             Before: 52CBF427F74EFFA7508DE70EBE016544;4925
+(rerunfilecheck)             After:  E9BEDA0629A24E0D37BA6B9D983CF125;5325.
+ ) 
 Here is how much of TeX's memory you used:
- 17552 strings out of 475749
- 372005 string characters out of 5772358
- 1216581 words of memory out of 5000000
- 40226 multiletter control sequences out of 15000+600000
+ 17690 strings out of 475749
+ 376312 string characters out of 5772358
+ 1202581 words of memory out of 5000000
+ 40352 multiletter control sequences out of 15000+600000
  564869 words of font info for 86 fonts, out of 8000000 for 9000
  46 hyphenation exceptions out of 8191
- 93i,11n,111p,352b,2503s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,11n,111p,352b,2018s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report_fixed1.pdf (28 pages).
+Output written on report_fixed1.pdf (34 pages).
