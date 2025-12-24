@@ -101,13 +101,13 @@
 
 \subsubsection{AllRecipes网站概述}
 
-AllRecipes是全球最大的食谱分享平台之一，拥有数百万用户和数百万条食谱。该网站以其简洁直观的界面、丰富的食谱内容和强大的社区功能而闻名。以下为五点核心功能：
+AllRecipes是全球最大的食谱分享平台之一，拥有数百万用户和数百万条食谱。该网站界面简洁直观，拥有丰富的食谱内容和强大的社区功能。以下为五点核心功能：
 
 \begin{itemize}
     \item \textbf{食谱发布与分享}：用户可以上传自己创作的食谱，包括食材清单、烹饪步骤、烹饪时间、难度等级等信息；同时支持创作者上传对应的菜品图片。
     \item \textbf{多维度食谱搜索与浏览}：用户可以通过关键词、菜系、食材、难度级别等多个维度进行灵活搜索，找到适合自己的食谱。
-    \item \textbf{用户交互与社交功能}：包括食谱评价、评论、收藏、关注其他用户等丰富的互动方式，建立社区生态，提高用户体验。
-    \item \textbf{个性化食谱管理}：用户可以创建多个食谱收藏清单、购物清单、膳食计划等，使每日的烹饪更加便捷，饮食更有规划。
+    \item \textbf{用户交互与社交功能}：包括食谱评价、评论、收藏、关注其他用户等丰富的互动方式。
+    \item \textbf{个性化食谱管理}：用户可以创建多个食谱收藏清单、购物清单、膳食计划等，使得饮食更有规划。
     \item \textbf{健康饮食支持}：支持用户录入过敏原信息、查看食谱营养成分（热量 / 蛋白质 / 膳食纤维等），并推荐适配饮食需求的安全食谱，帮助用户实现过敏规避、减脂控糖、营养均衡等饮食计划。
 \end{itemize}
 
@@ -217,10 +217,10 @@ AllRecipes 的主要数据对象包括：
 本设计严格遵循\textbf{BCNF（Boyce-Codd Normal Form）} 规范：
 
 \begin{itemize}
-    \item \textbf{第一范式（1NF）}：所有字段包含原子值，不可再分析
-    \item \textbf{第二范式（2NF）}：所有非主键字段完全依赖于主键（特别是针对联合主键的表，如\texttt{RECIPE\_INGREDIENTS}，\texttt{quantity} 依赖于\texttt{recipe\_id} 和\texttt{ingredient\_id} 的组合）。
-    \item \textbf{第三范式（3NF）}：消除了所有传递依赖。例如，在\texttt{RECIPES} 表中，用户信息只存储 \texttt{user\_id}，而不存储 \texttt{username}（通过连接查询获取），避免了数据冗余。
-    \item \textbf{BCNF}：消除了所有异常依赖，主键是唯一的候选键。
+    \item \textbf{第一范式（1NF）}：所有字段包含原子值，不可再分拆；
+    \item \textbf{第二范式（2NF）}：消除了部分函数依赖；
+    \item \textbf{第三范式（3NF）}：消除了所有传递依赖；
+    \item \textbf{BCNF}：满足主键是唯一的候选键。
 \end{itemize}
 
 % \begin{longtable}{|L{3cm}|L{3.5cm}|L{2cm}|L{6.5cm}|}
@@ -292,6 +292,8 @@ AllRecipes 的主要数据对象包括：
 
 \subsection{常见操作归纳}
 
+这是我们归纳的常见操作，但是后续的具体操作演示，我们只实现表格中的部分操作
+
 \subsubsection{查询操作（SELECT）}
 
 \begin{longtable}{|L{2.5cm}|L{4cm}|L{8.5cm}|}
@@ -307,27 +309,27 @@ AllRecipes 的主要数据对象包括：
 \endhead
 \hline
 \endfoot
-\multirow{2}{*}{基础查询} & 按菜系搜索食谱& 根据菜系/发布状态筛选食谱，按评分/浏览量排序\\
+\multirow{2}{*}{搜索功能} & 按菜系搜索食谱& 根据菜系/发布状态筛选食谱，按评分/浏览量排序\\
 \cline{2-3}
-& 查询用户的所有食谱& 获取指定用户发布的所有未删除食谱 \\
+& 按原材料搜索食谱& 获取指定原材料以及其替代品的所有未删除食谱 \\
+\hline
+\multirow{2}{*}{用户功能} & 查询用户的所有食谱& 获取指定用户发布的所有未删除食谱 \\
 \cline{2-3}
 & 查询用户收藏的食谱& 获取指定用户收藏的食谱列✓\\
 \hline
-\multirow{3}{*}{复杂关联查询} & 查询食谱详情 & 获取食谱的基本信息：作者、营养成分及标签等\\
+\multirow{3}{*}{食谱功能} & 查询食谱详情 & 获取食谱的基本信息：作者、营养成分及标签等\\
 \cline{2-3}
 & 查询食谱食材 & 列出食谱所需的所有食材、用量及单位 \\
 \cline{2-3}
 & 查询烹饪步骤 & 按顺序获取食谱的制作步骤和图片\\
 \hline
-\multirow{3}{*}{评价与评论} & 查询食谱评价 & 获取食谱的评分、评论内容及有用性\\
+\multirow{3}{*}{评价功能} & 查询食谱评价 & 获取食谱的评分、评论内容及有用性\\
 \cline{2-3}
 & 查询食谱评论 & 递归查询食谱的评论树（含回复）\\
-\cline{2-3}
-& 查询用户评价 & 获取指定用户发出的所有评价记录\\
 \hline
-\multirow{4}{*}{社交与推荐} & 查询关注/粉丝 & 获取用户的关注列表和粉丝列表 \\
+\multirow{4}{*}{社交功能} & 查询关注/粉丝 & 获取用户的关注列表和粉丝列表 \\
 \cline{2-3}
-& 关注者食谱推荐& 推荐用户关注的创作者发布的新食谱\\
+& 关注者食谱推荐& 推荐用户关注的创作者发布的食谱\\
 \cline{2-3}
 & 特定食材搜索 & 查找包含指定食材（如鸡蛋、面粉）的食谱\\
 \hline
@@ -368,7 +370,7 @@ AllRecipes 的主要数据对象包括：
 \hline
 \multirow{4}{*}{更新 (UPDATE)} & \multirow{2}{*}{编辑} & 更新食谱信息 & 修改食谱详情及更新时间\\
 \cline{3-4}
-& & 逻辑删除 & 将食谱/评论标记为删除状态（保留数据）\\
+& & 逻辑删除 & 将食谱/评论标记为删除状态\\
 \cline{2-4}
 & \multirow{2}{*}{状态} & 禁用账户 & 修改用户账户状态为挂起 \\
 \cline{3-4}
@@ -901,17 +903,17 @@ AllRecipes 的主要数据对象包括：
 \centering
 \begin{tabularx}{\textwidth}{|l|Y|c|l|}
 \hline
-\textbf{模块} & \textbf{表名} & \textbf{数量} & \textbf{说明} \\
+\textbf{模块} & \textbf{表名} & \textbf{数量} \\
 \hline
-\textbf{核心基础} & USERS, INGREDIENTS, UNITS, ALLERGENS, TAGS, USER\_ALLERGIES & 6 & 系统基础数据\\
+\textbf{用户功能} & USERS, INGREDIENTS, UNITS, ALLERGENS, TAGS, USER\_ALLERGIES & 6 \\
 \hline
-\textbf{食谱核心} & RECIPES, RECIPE\_INGREDIENTS, COOKING\_STEPS, NUTRITION\_INFO, INGREDIENT\_ALLERGENS, RECIPE\_TAGS, INGREDIENT\_SUBSTITUTIONS & 7 & 食谱及其属性表 \\
+\textbf{食谱功能} & RECIPES, RECIPE\_INGREDIENTS, COOKING\_STEPS, NUTRITION\_INFO, INGREDIENT\_ALLERGENS, RECIPE\_TAGS, INGREDIENT\_SUBSTITUTIONS & 7 \\
 \hline
-\textbf{用户交互} & RATINGS, RATING\_HELPFULNESS, COMMENTS, COMMENT\_HELPFULNESS, SAVED\_RECIPES, FOLLOWERS, USER\_ACTIVITY\_LOG & 7 & 社交和交互表 \\
+\textbf{评价与社交功能} & RATINGS, RATING\_HELPFULNESS, COMMENTS, COMMENT\_HELPFULNESS, FOLLOWERS, USER\_ACTIVITY\_LOG & 6  \\
 \hline
-\textbf{个人管理} & RECIPE\_COLLECTIONS, COLLECTION\_RECIPES, SHOPPING\_LISTS, SHOPPING\_LIST\_ITEMS, MEAL\_PLANS, MEAL\_PLAN\_ENTRIES & 6 & 个性化管理✓\\
+\textbf{个性化功能} & RECIPE\_COLLECTIONS, COLLECTION\_RECIPES, SHOPPING\_LISTS, SHOPPING\_LIST\_ITEMS, MEAL\_PLANS, MEAL\_PLAN\_ENTRIES & 6 \\
 \hline
-\textbf{总计} & & \textbf{26} & 完整系统 \\
+\textbf{总计} & & \textbf{25} \\
 \hline
 \end{tabularx}
 \caption{表的分类和数量统计}
@@ -920,9 +922,24 @@ AllRecipes 的主要数据对象包括：
 
 \subsubsection{核心表详细设计}
 
-\textbf{用户核心表}
+\paragraph{关于部分派生属性的处理}
 
-\textbf{1. USERS表（用户表）}
+我们考虑到有部分实体具有派生属性，然而，随着数据的不断加入，有些派生属性的计算有比较大的系统开销，因此，有些派生属性我们也将其当作一个基本属性加入到表中。这些属性将在固定的时间由系统一次性自动更新。
+
+还有些关键派生属性的计算需要设计多个表，一般随着它们的更新而更新，其被更新的次数也比较少。为了简化查询代码，我们也把它们当作基本属性设计到物理表里。我们的设想是可以使用触发器，在这些表每次更新之后，也自动更新这些派生属性。比如RECIPES中的烹饪时长是派生属性，但是，这个属性可以使用RECIPES和RECIPE\_STEPS进行计算。我们希望能设计一个触发器，每当RECIPE\_STEPS中某一步骤的时长被更新了，相应地在RECIPES中也自动更新烹饪时长。
+
+\paragraph{关于购物车模型的处理}
+
+上课在ER图小组展示的时候有特别提到购物车模型的处理方法。即由实体用户以及商品，用户与商品是多对多关系，两边都是部分参与。针对这种情况，直接把“购物车”当作一种关系。
+
+我们发现，在AllRecipe上广泛存在这个购物车模型。比如，用户的膳食计划，用户的购买清单，用户的食谱收藏夹。但是我们，在AllRecipe上膳食计划、购物清单、食谱收藏夹也可以有自己的属性（比如收藏夹名称，收藏夹简介之类的），这样一来，使用上课的这种模型会导致转表之后的关系表不符合2NF。我们需要另外一个属性，比如购物清单的编号，来表示一个原料到底被添加到了哪一个用户的哪一个购物清单中。这时主键是用户ID、原料ID和清单ID形成的联合主键。但是，比如清单的名称、描述等属性只函数依赖于清单ID，造成了部分函数依赖。
+
+所以，我们设计了RECIPE_COLLECTIONS, COLLECTION_RECIPES, SHOPPING_LISTS, SHOPPING_LIST_ITEMS, MEAL_PLANS, MEAL_PLAN_ENTRIES6个表。我们把食谱收藏夹、购买清单、膳食计划都当作一个实体。以食谱收藏夹为例，食谱收藏夹与食谱是多对多关系，用户与食谱收藏夹是1对多关系。这样子食谱收藏夹可以有自己的名称和简介，食谱收藏夹中将用户ID作为外键，收藏夹由多对多关系与食谱链接。
+
+这样的模型更符合业务逻辑与需求。
+
+\textbf{用户功能}
+
 \begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
@@ -933,7 +950,7 @@ USERNAME & VARCHAR2(50) & √& UK & 用户名，唯一 \\
 \hline
 EMAIL & VARCHAR2(100) & √& UK & 邮箱，唯一，用于登录和验证 \\
 \hline
-PASSWORD\_HASH & VARCHAR2(255) & √& & 加密后的密码哈希值\\
+PASSWORD\_HASH & VARCHAR2(255) & √& & 加密后的密码哈希值（后暂时未实现）\\
 \hline
 FIRST\_NAME & VARCHAR2(50) & & & 用户名称 \\
 \hline
@@ -950,11 +967,9 @@ LAST\_LOGIN & TIMESTAMP & & & 最后登录时间\\
 ACCOUNT\_STATUS & VARCHAR2(20) & √& CK & active/inactive
 /suspended \\
 \hline
-TOTAL\_FOLLOWERS & NUMBER(10) & √& DF=0 & 粉丝数量
-（冗余字段）\\
+TOTAL\_FOLLOWERS & NUMBER(10) & √& DF=0 & 粉丝数量（派生属性）\\
 \hline
-TOTAL\_RECIPES & NUMBER(10) & √& DF=0 & 发布的食谱数量
-（冗余字段）\\
+TOTAL\_RECIPES & NUMBER(10) & √& DF=0 & 发布的食谱数量（派生属性）\\
 \hline
 CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建记录时间 \\
 \hline
@@ -1048,11 +1063,7 @@ MEAL\_TYPE & VARCHAR2(20) & & CK & breakfast/lunch
 \hline
 DIFFICULTY\_LEVEL & VARCHAR2(20) & & CK & easy/medium/hard \\
 \hline
-PREP\_TIME & NUMBER(5) & & & 准备时间（分钟） \\
-\hline
-COOK\_TIME & NUMBER(5) & √& CK>0 & 烹饪时间（分钟） \\
-\hline
-TOTAL\_TIME & NUMBER(5) & & & 总时间（分钟）\\
+TOTAL\_TIME & NUMBER(5) & √& CK>0& 总时间（分钟）\\
 \hline
 SERVINGS & NUMBER(5) & & & 份数 \\
 \hline
@@ -1064,19 +1075,13 @@ IS\_PUBLISHED & VARCHAR2(1) & √& CK & Y/N，是否发布\\
 \hline
 IS\_DELETED & VARCHAR2(1) & √& CK & Y/N，逻辑删除 \\
 \hline
-VIEW\_COUNT & NUMBER(10) & & DF=0 & 浏览次数 \\
-\hline
-RATING\_COUNT & NUMBER(10) & & DF=0 & 评价数量 \\
-\hline
-AVERAGE\_RATING & NUMBER(3,2) & & DF=0 & 平均评分(0-5) \\
-\hline
 CREATED\_AT & TIMESTAMP & √& DF=SYSDATE & 创建时间 \\
 \hline
 UPDATED\_AT & TIMESTAMP & √& DF=SYSDATE & 最后更新时间\\
 \hline
 \end{longtable}
 
-\textbf{7. RECIPE\_INGREDIENTS 表（食谱食材关联√- 多对多）}
+\textbf{7. RECIPE\_INGREDIENTS 表（食谱食材关联表 - 多对多）}
 \begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
@@ -1165,9 +1170,7 @@ NOTES & VARCHAR2(255) & & & 替代说明 \\
 \hline
 ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \hline
-\end{longtable}
-
-\textbf{用户交互表}
+\end{longtable}                            
 
 \textbf{12. RATINGS 表（食谱评价表）}
 \begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
@@ -1242,20 +1245,18 @@ SYSTIMESTAMP & 投票时间 \\
 \hline
 \end{longtable}
 
-\textbf{16. SAVED\_RECIPES 表（收藏食谱表）}
-\begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
-\hline
-\textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
-\hline
-SAVED\_RECIPE\_ID & NUMBER(10) & √& PK & 收藏记录唯一标识 \\
-\hline
-USER\_ID & NUMBER(10) & √& FK & 收藏者用户ID \\
-\hline
-RECIPE\_ID & NUMBER(10) & √& FK & 被收藏的食谱ID \\
-\hline
-SAVED\_AT & TIMESTAMP & √& DF=SYSDATE & 收藏时间 \\
-\hline
-\end{longtable}
+% \textbf{16. SAVED\_RECIPES 表（收藏食谱表）}（）
+% \begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
+% \hline
+% \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
+% \hline
+% USER\_ID & NUMBER(10) & √& PK1,FK & 联合主键，收藏者用户ID \\
+% \hline
+% RECIPE\_ID & NUMBER(10) & √& PK2,FK & 联合主键， 被收藏的食谱ID \\
+% \hline
+% SAVED\_AT & TIMESTAMP & √& DF=SYSDATE & 收藏时间 \\
+% \hline
+% \end{longtable}
 
 \textbf{17. FOLLOWERS 表（用户关注关关系表- 多对多自引用）}
 \begin{longtable}{|L{3.5cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
@@ -1283,7 +1284,7 @@ ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \hline
 \end{longtable}
 
-\textbf{19. RECIPE\_TAGS 表（食谱标签关联√- 多对多）}
+\textbf{19. RECIPE\_TAGS 表（食谱标签关联表- 多对多）}
 \begin{longtable}{|L{3cm}|L{2.9cm}|c|L{2.4cm}|L{4cm}|}
 \hline
 \textbf{字段名} & \textbf{数据类型} & \textbf{非空} & \textbf{约束} & \textbf{说明} \\
@@ -1447,43 +1448,41 @@ ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 \endhead
 \hline
 \endfoot
-\multirow{3}{*}{用户相关} & \textbf{USER\_OVERVIEW} (用户概览) & \textbf{个人资料页展示}。聚合用户的基本信息、食谱数、粉丝数、关注数及平均评分�✓& Users, Recipes, Followers, Ratings \\
+\multirow{3}{*}{用户功能} & \textbf{USER\_OVERVIEW} (用户概览) & \textbf{个人资料页展示}。聚合用户的基本信息、食谱数、粉丝数、关注数及平均评分�✓& Users, Recipes, Followers, Ratings \\
 \cline{2-4}
 & \textbf{ACTIVE\_USERS} (活跃用户) & \textbf{运营分析}。筛选一定天数内有发布、评分或评论行为的用户& Users, Activity Logs \\
-\cline{2-4}
-& \textbf{USER\_CONTRIBUTION\_SCORE} (贡献评分) & \textbf{排行榜计算}。基于食谱、粉丝、互动量加权计算用户的社区贡献分析& Users, Ratings, Comments \\
 \hline
-\multirow{4}{*}{食谱相关} & \textbf{RECIPE\_DETAIL} (食谱详情) & \textbf{详情页展示}。封装食谱基本信息、作者信息及营养成分，屏蔽已删除数数据& Recipes, Users, Nutrition \\
+\multirow{4}{*}{食谱功能} & \textbf{RECIPE\_DETAIL} (食谱详情) & \textbf{详情页展示}。封装食谱基本信息、作者信息及营养成分，屏蔽已删除数数据& Recipes, Users, Nutrition \\
 \cline{2-4}
 & \textbf{POPULAR\_RECIPES} (热门食谱) & \textbf{推荐算法}。基于评价50\%)、评价数(30\%)、浏览量(20\%)计算热度分& Recipes, Ratings \\
 \cline{2-4}
 & \textbf{RECIPE\_WITH\_INGREDIENTS} (食材清单) & \textbf{详情页展示}。将食谱与食材、单位、过敏原表进行关联展示& Recipes, Ingredients, Units \\
 \cline{2-4}
 & \textbf{RECIPE\_WITH\_STEPS} (烹饪步骤) & \textbf{详情页展示}。按顺序提取烹饪步骤，支持步骤导航（上一/下一步）& Recipes, Cooking\_Steps \\
-\hline
-\multirow{3}{*}{社交互动} & \textbf{USER\_NETWORK} (社交网络) & \textbf{个人中心}。统计用户的社交圈数据（关注/粉丝/收藏/评论数）✓& Users, Followers, Saved\_Recipes \\
 \cline{2-4}
-& \textbf{USER\_FEED} (用户动态& \textbf{首页Feed流}。聚合用户关注对象的最新动态（发布、评分、评论）✓& Followers, Activity\_Log \\
-\cline{2-4}
-& \textbf{TOP\_CONTRIBUTORS} (高级贡献者) & \textbf{社区发现}。按综合指标排名的优质创作者列表�✓& Users, Ratings \\
-\hline
-\multirow{2}{*}{健康与安全} & \textbf{INGREDIENT\_HEALTH\_PROFILE} (食材档案) & \textbf{健康分析}。展示食材的分类、过敏原信息及在食谱中的使用频率✓& Ingredients, Allergens \\
+& \textbf{INGREDIENT\_HEALTH\_PROFILE} (食材档案) & \textbf{健康分析}。展示食材的分类、过敏原信息及在食谱中的使用频率✓& Ingredients, Allergens \\
 \cline{2-4}
 & \textbf{SAFE\_RECIPES\_FOR\_USER} (安全食谱) & \textbf{个性化推荐}。自动过滤掉当前用户过敏原的食谱列表✓& Recipes, User\_Allergies \\
 \hline
-\multirow{2}{*}{规划与购物} & \textbf{MEAL\_PLAN\_SUMMARY} (计划摘要) & \textbf{膳食管理}。统计膳食计划的天数、食谱数及覆盖时段�✓& Meal\_Plans, Meal\_Plan\_Entries \\
+\multirow{3}{*}{社交功能} & \textbf{USER\_NETWORK} (社交网络) & \textbf{个人中心}。统计用户的社交圈数据（关注/粉丝/收藏/评论数）✓& Users, Followers, Saved\_Recipes \\
 \cline{2-4}
-& \textbf{CONSOLIDATED\_SHOPPING\_LIST} (购物清单) & \textbf{工具功能}。合并膳食计划中所有食谱的食材，自动汇总同类食材数量�✓& Meal\_Plans, Ingredients \\
+& \textbf{USER\_CONTRIBUTION\_SCORE} (贡献评分) & \textbf{排行榜计算}。基于食谱、粉丝、互动量加权计算用户的社区贡献分析& Users, Ratings, Comments \\
 \hline
-\multirow{2}{*}{分析报表} & \textbf{RECIPE\_QUALITY\_METRICS} (质量指标) & \textbf{后台审核}。多维度评估食谱质量（图片、步骤完整度、互动率）�✓& Recipes, Comments, Steps \\
+\multirow{2}{*}{个性化功能} & \textbf{MEAL\_PLAN\_SUMMARY} (计划摘要) & \textbf{膳食管理}。统计膳食计划的天数、食谱数及覆盖时段& Meal\_Plans, Meal\_Plan\_Entries \\
 \cline{2-4}
-& \textbf{MONTHLY\_STATISTICS} (月度统计) & \textbf{数据整合}。按月统计新增食谱、活跃用户及互动总量✓& Recipes, Ratings, Comments \\
+& \textbf{RECOMMENDED\_SHOPPING\_LIST} (购物清单) & \textbf{工具功能}。合并膳食计划中所有食谱的食材，自动汇总同类食材数量& Meal\_Plans, Ingredients \\
+\cline{2-4}
+& \textbf{ALL_SAVED_RECIPES} (所有收藏食谱) & \textbf{工具功能}。合并所有个人食谱收藏夹，作为总收藏夹展示& Meal\_Plans, Ingredients \\
+\hline
+\multirow{2}{*}{分析报表} & \textbf{RECIPE\_QUALITY\_METRICS} (质量指标) & \textbf{后台审核}。评估食谱质量（图片、步骤完整度、互动率）& Recipes, Comments, Steps \\
+\cline{2-4}
+& \textbf{MONTHLY\_STATISTICS} (月度统计) & \textbf{数据整合}。按月统计新增食谱、活跃用户及互动总量& Recipes, Ratings, Comments \\
 \hline
 \end{longtable}
 
 \subsection{数据库安全方案的设计}
 
-\subsubsection{用户认证和权限管理}
+% \subsubsection{用户认证和权限管理}
 
 \subsubsection{数据库人员}
 
@@ -1545,7 +1544,7 @@ ADDED\_AT & TIMESTAMP & √& DF=SYSDATE & 添加时间 \\
 
 \subsection{表格创建（可同时包括约束条件的创建）}
 
-为了节省正文篇幅，纸质版我们只展示部分表格的实现代码，以及表的查询结果，完整代码我们将保存在电子版提交的附件。
+为了节省正文篇幅，纸质版我们只展示部分表创建的代码，以及表的查询结果，完整代码我们将保存在电子版提交的附件。
 
 \subsubsection{核心表USERS与RECIPES的创建}
 
@@ -1594,6 +1593,7 @@ CREATE TABLE RECIPES (
     meal_type VARCHAR2(20),
     difficulty_level VARCHAR2(20),
     image_url VARCHAR2(255),
+    total_time NUMBER(5),
     is_published VARCHAR2(1) DEFAULT 'Y' NOT NULL,
     is_deleted VARCHAR2(1) DEFAULT 'N' NOT NULL,
     created_at TIMESTAMP DEFAULT SYSTIMESTAMP,
@@ -1917,6 +1917,8 @@ ORDER BY month DESC;
 
 \subsection{常见操作的实例演示}
 
+我们接下来将复现一个用户在网站上可能会做的比较多的操作。并且按照增删改查分类。
+
 \subsubsection{插入操作}
 
 由于我们的视图中绝大多数都使用了聚合函数或者WITH READ ONLY选项，所以插入操作只能在表上进行。
@@ -1946,7 +1948,9 @@ COMMIT;
 
 实际上这个操作一般在网站上注册用户时由应用程序完成。
 
-\paragraph{新食谱发布}
+\paragraph{新食谱发布}  
+
+  
 
 \begin{lstlisting}[language=SQL]
 -- 第一步：插入食谱主表
@@ -1982,12 +1986,14 @@ INSERT INTO COOKING_STEPS (
 
 INSERT INTO COOKING_STEPS (
     step_id, recipe_id, step_number, instruction, time_required
-)VALUES (seq_cooking_steps.NEXTVAL,15,2,'烧开一锅清水，加入番茄块，煮 5 分钟至番茄软烂',5);
+)VALUES (seq_cooking_steps.NEXTVAL,15,2,
+'烧开一锅清水，加入番茄块，煮 5 分钟至番茄软烂',5);
 
 INSERT INTO COOKING_STEPS (
     step_id, recipe_id, step_number, instruction, time_required
-)VALUES (seq_cooking_steps.NEXTVAL,15,3,'倒入打散的鸡蛋，边倒边搅拌形成蛋花，加盐调味，完成',5);
-\end{lstlisting}[language=SQL]
+)VALUES (seq_cooking_steps.NEXTVAL,15,3,
+'倒入打散的鸡蛋，边倒边搅拌形成蛋花，加盐调味，完成',5);
+\end{lstlisting}
 
 \begin{figure}[H]
 \centering
@@ -2013,6 +2019,8 @@ INSERT INTO COOKING_STEPS (
 
 \paragraph{用户查看某一食谱}
 
+查询食谱一共要显示这个食谱的原料、食谱的烹饪步骤以及食谱的用户评论。
+
 \begin{lstlisting}[language=SQL]
 select * from RECIPE_WITH_INGREDIENTS where recipe_id=1;
 select * from RECIPE_WITH_STEPs where recipe_id=1;
@@ -2037,7 +2045,44 @@ select * from RECIPE_COMMENTS_DETAIL where recipe_id=1;
 \caption{网站显示食谱的用户评论}
 \end{figure}
 
+\paragraph{用户根据食材查询食谱}
+
+食谱网站有根据食材搜索的功能。一般在查询的过程中，我们希望用户输入某种食材，系统能够返回包含该食材或其替代品的所有食谱列表。
+所以，我们设计了如下的SQL查询语句，查询所有含有“猪肉”的食谱，另外应该附带有“五花肉”：
+
+\begin{lstlisting}
+SELECT DISTINCT 
+    r.recipe_name,
+    i.ingredient_name
+FROM RECIPES r
+JOIN RECIPE_INGREDIENTS ri ON r.recipe_id = ri.recipe_id
+JOIN INGREDIENTS i ON ri.ingredient_id = i.ingredient_id
+WHERE i.ingredient_id IN (
+    SELECT ingredient_id
+    FROM INGREDIENTS 
+    WHERE ingredient_name = '猪肉'
+    UNION
+    SELECT sub.substitute_ingredient_id
+    FROM INGREDIENT_SUBSTITUTIONS sub
+    JOIN INGREDIENTS my_inventory ON 
+    sub.original_ingredient_id = my_inventory.ingredient_id
+    WHERE my_inventory.ingredient_name = '猪肉'
+)
+AND r.is_published = 'Y' 
+AND r.is_deleted = 'N';
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{images/media/用户根据食材查询食谱.png}
+\caption{网站显示用户查询结果}
+\end{figure}
+
 \paragraph{用户查看食谱排行榜}
+
+这里面我们也是设计了一个视图，但没在前面展示，其实是可以直接调用视图查询的。
+另外这里的推荐算法实际应用中可以使用更加复杂的模型来实现，我们使用了一个简单的加权评分模型。
+
 \begin{lstlisting}[language=SQL]
 SELECT 
     r.recipe_id,r.recipe_name,r.cuisine_type,r.average_rating,
@@ -2057,12 +2102,11 @@ ORDER BY popularity_score DESC;
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{images/media/用户查看排行榜.png}
+\includegraphics[width=0.7\textwidth]{images/media/用户查看排行榜.png}
 \caption{网站显示食谱排行榜}
 \end{figure}
 
-这里面我们也是寄了一个视图，但没在前面展示，其实是可以直接调用视图查询的。
-另外这里的推荐算法实际应用中可以使用更加复杂的模型来实现，我们使用了一个简单的加权评分模型。
+
 
 \subsubsection{更新操作}
 
@@ -2138,7 +2182,7 @@ WHERE recipe_id IN (
 
 \paragraph{逻辑删除}
 
-只需要将is_deleted字段更新为'Y'即可。
+只需要将is\_deleted字段更新为'Y'即可。
 
 \begin{lstlisting}[language=SQL]
 UPDATE RECIPES
@@ -2267,3 +2311,4 @@ GRANT EXECUTE ON save_recipe TO app_user;
 \subsection{收获或体会及建议}
 
 \end{document}
+*

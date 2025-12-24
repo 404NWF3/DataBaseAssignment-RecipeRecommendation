@@ -163,3 +163,5 @@ SET
 WHERE recipe_id = 10;
 
 SELECT RECIPE_ID, is_deleted from RECIPES WHERE recipe_id = 10;
+
+SELECT * from user_tables;

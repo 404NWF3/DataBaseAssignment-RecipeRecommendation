@@ -135,3 +135,47 @@ ORDER BY month DESC;
 
 select * from user_views;
 
+select * from ingredients;
+
+SELECT DISTINCT 
+    r.recipe_name,
+    i.ingredient_name
+FROM RECIPES r
+JOIN RECIPE_INGREDIENTS ri ON r.recipe_id = ri.recipe_id
+JOIN INGREDIENTS i ON ri.ingredient_id = i.ingredient_id
+WHERE i.ingredient_id IN (
+    SELECT ingredient_id
+    FROM INGREDIENTS 
+    WHERE ingredient_name = '猪肉'
+    UNION
+    SELECT sub.substitute_ingredient_id
+    FROM INGREDIENT_SUBSTITUTIONS sub
+    JOIN INGREDIENTS my_inventory ON sub.original_ingredient_id = my_inventory.ingredient_id
+    WHERE my_inventory.ingredient_name = '猪肉'
+)
+AND r.is_published = 'Y' 
+AND r.is_deleted = 'N';
+
+
+    SELECT ingredient_id
+    FROM INGREDIENTS 
+    WHERE ingredient_name = '猪肉'
+    UNION
+    SELECT sub.substitute_ingredient_id
+    FROM INGREDIENT_SUBSTITUTIONS sub
+    JOIN INGREDIENTS my_inventory ON sub.original_ingredient_id = my_inventory.ingredient_id
+    WHERE my_inventory.ingredient_name = '猪肉';
+
+SELECT * from RECIPE_WITH_INGREDIENTS;
+
+SELECT * from RECIPE_INGREDIENTS;
+
+
+select * from RECIPES;
+select * from RECIPE_INGREDIENTS where recipe_id=3;
+
+SELECT * from INGREDIENTS;
+
+UPDATE RECIPE_INGREDIENTS
+SET INGREDIENT_ID = 12
+WHERE RECIPE_ID = 3 AND INGREDIENT_ID = 13;
