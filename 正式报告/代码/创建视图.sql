@@ -179,3 +179,39 @@ SELECT * from INGREDIENTS;
 UPDATE RECIPE_INGREDIENTS
 SET INGREDIENT_ID = 12
 WHERE RECIPE_ID = 3 AND INGREDIENT_ID = 13;
+
+CREATE OR REPLACE VIEW RECIPE_WITH_INGREDIENTS AS
+SELECT 
+    r.recipe_id,
+    r.recipe_name,
+    r.servings,
+    ri.ingredient_id,
+    i.ingredient_name,
+    i.category AS ingredient_category,
+    ri.quantity,
+    u.unit_name,
+    u.abbreviation,
+    ri.notes
+FROM RECIPES r
+JOIN RECIPE_INGREDIENTS ri ON r.recipe_id = ri.recipe_id
+JOIN INGREDIENTS i ON ri.ingredient_id = i.ingredient_id
+JOIN UNITS u ON ri.unit_id = u.unit_id
+WHERE r.is_deleted = 'N'
+WITH READ ONLY;
+
+SELECT 
+    r.recipe_id,
+    r.recipe_name,
+    r.servings,
+    ri.ingredient_id,
+    i.ingredient_name,
+    i.category AS ingredient_category,
+    ri.quantity,
+    u.unit_name,
+    u.abbreviation,
+    ri.notes
+FROM RECIPES r
+JOIN RECIPE_INGREDIENTS ri ON r.recipe_id = ri.recipe_id
+JOIN INGREDIENTS i ON ri.ingredient_id = i.ingredient_id
+JOIN UNITS u ON ri.unit_id = u.unit_id
+WHERE r.is_deleted = 'N'
